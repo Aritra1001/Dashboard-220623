@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <title>Static Dashboard</title>
+  </head>
+  <body>
+    <div class="main">
+      <div class="row">
+        <!-- sidebar container -->
+        <div class="col-md-2">
+          <div class="sidebar">
+            <section>
+              <div class="sidebar-head">
+                <img
+                  src="./media/logo.PNG"
+                  alt="head"
+                  height="40"
+                  width="40"
+                /><span style="font-size: 20px"><b>Lingua</b></span>
+              </div>
+            </section>
+            <section style="margin-bottom: 100px">
+              <div class="list-item d-flex align-center">
+                <i
+                  class="fa-solid fa-table-columns"
+                  style="margin-top: 4px"
+                ></i>
+                <p style="margin-left: 20px">Dashboard</p>
+              </div>
+              <div class="list-item d-flex align-center">
+                <i class="fa-solid fa-chart-line" style="margin-top: 4px"></i>
+                <p style="margin-left: 20px">Analysis</p>
+              </div>
+              <div class="list-item d-flex align-center">
+                <i class="fa-regular fa-folder" style="margin-top: 4px"></i>
+                <p style="margin-left: 20px">Documents</p>
+              </div>
+              <div class="list-item d-flex align-center">
+                <i class="fa-solid fa-envelope" style="margin-top: 4px"></i>
+                <p style="margin-left: 20px">Inbox</p>
+              </div>
+              <div class="list-item d-flex align-center">
+                <i class="fa-regular fa-clock" style="margin-top: 4px"></i>
+                <p style="margin-left: 20px">History</p>
+              </div>
+              <div class="list-item d-flex align-center">
+                <i class="fa-solid fa-gear" style="margin-top: 4px"></i>
+                <p style="margin-left: 20px">Settings</p>
+              </div>
+            </section>
+            <section>
+              <div class="out">
+                <i
+                  class="fa-solid fa-arrow-right-from-bracket"
+                  style="margin-top: 4px"
+                ></i>
+                <p style="margin-left: 20px">Log Out</p>
+              </div>
+            </section>
+          </div>
+        </div>
+        <div class="col-md-7">
+          <div class="welcome">
+            <div class="welcome-text" style="width: 44%">
+              <p style="font-size: 35px">Welcome back, <b>John!</b></p>
+              <br />
+              <p>
+                Your students completed
+                <span style="color: darkorange"><b>80%</b></span> of the tasks.
+              </p>
+              <p>
+                Progress is
+                <span style="color: darkorange"><b>very good!</b></span>
+              </p>
+            </div>
+            <div class="welcome-img" style="height: 180px">
+              <img src="./media/welcom-img.PNG" alt="welcome" />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6 my-students my-4">
+              <div class="students-head">
+                <p style="font-weight: bold">My Students</p>
+                <p class="text-secondary">View all</p>
+              </div>
+              <div class="student-list ">
+                <div class="student-item my-1">
+                  <img src="./media/student-logo-1.PNG" alt="logo-1" />
+                  <p>Amelia Colier</p>
+                  <img src="./media/bar-1.PNG" alt="bar-1" />
+                  <p>95%</p>
+                </div>
+                <div class="student-item my-1">
+                  <img src="./media/student-logo-2.PNG" alt="logo-2" />
+                  <p>Estelle Baldwin</p>
+                  <img src="./media/bar-2.PNG" alt="bar-2" />
+                  <p>84%</p>
+                </div>
+                <div class="student-item my-1">
+                  <img src="./media/student-logo-3.PNG" alt="logo-3" />
+                  <p>Micheal Watts</p>
+                  <img src="./media/bar-3.PNG" alt="bar-3" />
+                  <p>96%</p>
+                </div>
+                <div class="student-item my-1">
+                  <img src="./media/student-logo-4.PNG" alt="logo-4" />
+                  <p>Amanda Wood</p>
+                  <img src="./media/bar-4.PNG" alt="bar-4" />
+                  <p>72%</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-5  work-hours my-4">
+              <div class="work-head">
+                <p style="font-weight: bold; margin-left: 10px">Working Hours</p>
+                <select>
+                  <option>Today</option>
+                  <option>Tomorrow</option>
+                  <option>Yesterday</option>
+                </select>
+              </div>
+              
+              <div class="work-img my-3 text-center">
+                <img src="./media/work-progress.PNG" alt="work" >
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12 media-box" >
+                <div class="media-head">
+                  <p class="my-2 mx-2" style="font-weight: bold;">Media for lessons</p>
+                  <p class="text-secondary">View all</p>
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="user-details">
+            <div class="user-icons">
+              <i
+                class="fa-solid fa-magnifying-glass"
+                style="margin: 0px 10px; font-size: 20px"
+              ></i>
+              <i
+                class="fa-regular fa-bell"
+                style="margin: 0px 10px; font-size: 20px"
+              ></i>
+            </div>
+            <div class="user-text" style="text-align: right; margin-top: 10px">
+              <p>
+                <b>John Mason</b>
+                <br />
+                username@gmail.com
+              </p>
+            </div>
+            <div class="user-img">
+              <img src="./media/user_bitmoji.PNG" alt="user" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
