@@ -152,11 +152,11 @@ option{
     background-color: #fff;
     margin-top: 10px;
     padding: 20px 10px; 
-    border: 1px solid rgb(197, 197, 197);
+    /* border: 1px solid rgb(197, 197, 197); */
     height: 100px;
-    border-radius: 20px;
+    border-radius: 2rem;
     display: flex;
-    width: 90%;
+    width: 93%;
     justify-content: space-between;
     align-items: center;
 }
@@ -213,4 +213,62 @@ option{
 }
 .media-list-size{
     font-weight: bold;  
+}
+
+.side-container{
+    background-color: #fff;
+    border-radius: 2rem;
+    width: 93%;
+}
+
+.lesson-head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin-left: 2rem;
+}
+
+.lesson-list{
+    margin-left:2rem;
+    width: 80%;
+    background-color: antiquewhite;
+    border-radius: 1.3rem;
+    padding: 1rem;
+}
+
+.lesson-list-head{
+    margin-left: 1rem;
+    /* width: 80%; */
+    /* padding: 1rem; */
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+}
+
+.dots:after {
+    content: '\2807';
+    font-size: 1.5rem;
+}
+
+.lesson-list-body{
+    /* margin-top: -1rem; */
+    margin-left: 1.2rem;
+    font-size: 0.8rem;
+    font-weight:500;
+}
+
+.lesson-list-footer{
+    display: flex;
+    align-items: center;
+    margin-left: 1.5rem;
+    justify-content: space-between;
+    width:80%;
+}
+.lesson-list-footer i:hover{
+    cursor: pointer;
+}
+
+#second-item{
+    background-color: rgb(171, 194, 236);
 }
