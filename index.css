@@ -272,3 +272,44 @@ option{
 #second-item{
     background-color: rgb(171, 194, 236);
 }
+
+.task-completed-head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 2rem;
+    width: 80%;
+}
+
+.task-completed-list{
+    background-color:rgb(220, 248, 248);
+    width: 80%;
+    margin-left: 2rem;
+    padding: 10px 30px; 
+    border-radius: 1.5rem;
+    height: 3.7rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.logo-container{
+    background-color: orange;
+    padding: 8px;
+    width: 2.5rem;
+    height: 2.6rem;
+    border-radius: 5px;
+}
+
+.logo-container i{
+    color: white;
+    font-size: 1.5rem;
+}
+
+#logo-2{
+    background-color: rgb(55, 98, 192);
+}
+
+#logo-3{
+    background-color:coral;
+}
