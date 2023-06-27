@@ -24,77 +24,86 @@
       <div class="row">
         <!-- sidebar container -->
         <div class="col-md-2">
-          <div class="sidebar">
-            <section>
-              <div class="sidebar-head">
-                <img
-                  src="./media/logo.PNG"
-                  alt="head"
-                  height="40"
-                  width="40"
-                /><span style="font-size: 20px"><b>Lingua</b></span>
+          <aside class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <!-- <a class="navbar-brand" href="#">ADMIN PANEL</a> -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+               <!-- code here will be displayed in hamburger -->
+               <div class="sidebar">
+                <section>
+                  <div class="sidebar-head">
+                    <img
+                      src="./media/logo.PNG"
+                      alt="head"
+                    /><span><b>Lingua</b></span>
+                  </div>
+                </section>
+                <section style="margin-bottom: 100px">
+                  <div class="list-item my-3">
+                    <a href="#">
+                      <i
+                        class="fa-solid fa-table-columns"
+                        style="margin-top: 4px"
+                      ></i
+                      ><span class="list-item-text">Dashboard</span></a
+                    >
+                  </div>
+                  <div class="list-item my-3">
+                    <a href="#">
+                      <i
+                        class="fa-solid fa-chart-line"
+                        style="margin-top: 4px"
+                      ></i
+                      ><span class="list-item-text">Analysis</span></a
+                    >
+                  </div>
+                  <div class="list-item my-3">
+                    <a href="#"
+                      ><i class="fa-regular fa-folder" style="margin-top: 4px"></i
+                      ><span class="list-item-text">Documents</span></a
+                    >
+                  </div>
+                  <div class="list-item my-3">
+                    <a href="#"
+                      ><i class="fa-solid fa-envelope" style="margin-top: 4px"></i
+                      ><span class="list-item-text">Inbox</span></a
+                    >
+                  </div>
+                  <div class="list-item my-3">
+                    <a href="#"
+                      ><i class="fa-regular fa-clock" style="margin-top: 4px"></i
+                      ><span class="list-item-text">History</span></a
+                    >
+                  </div>
+                  <div class="list-item my-3">
+                    <a href="#"
+                      ><i class="fa-solid fa-gear" style="margin-top: 4px"></i
+                      ><span class="list-item-text">Settings</span></a
+                    >
+                  </div>
+                </section>
+                <section>
+                  <div class="list-item " id="out">
+                    <a href="#"
+                      ><i
+                        class="fa-solid fa-arrow-right-from-bracket"
+                        style="margin-top: 4px"
+                      ></i
+                      ><span class="list-item-text">Log Out</span></a
+                    >
+                  </div>
+                </section>
               </div>
-            </section>
-            <section style="margin-bottom: 100px">
-              <div class="list-item">
-                <a href="#">
-                  <i
-                    class="fa-solid fa-table-columns"
-                    style="margin-top: 4px"
-                  ></i
-                  ><span class="list-item-text">Dashboard</span></a
-                >
-              </div>
-              <div class="list-item">
-                <a href="#">
-                  <i class="fa-solid fa-chart-line" style="margin-top: 4px"></i
-                  ><span class="list-item-text">Analysis</span></a
-                >
-              </div>
-              <div class="list-item">
-                <a href="#"
-                  ><i class="fa-regular fa-folder" style="margin-top: 4px"></i
-                  ><span class="list-item-text">Documents</span></a
-                >
-              </div>
-              <div class="list-item">
-                <a href="#"
-                  ><i class="fa-solid fa-envelope" style="margin-top: 4px"></i
-                  ><span class="list-item-text">Inbox</span></a
-                >
-              </div>
-              <div class="list-item">
-                <a href="#"
-                  ><i class="fa-regular fa-clock" style="margin-top: 4px"></i
-                  ><span class="list-item-text">History</span></a
-                >
-              </div>
-              <div class="list-item">
-                <a href="#"
-                  ><i class="fa-solid fa-gear" style="margin-top: 4px"></i
-                  ><span class="list-item-text">Settings</span></a
-                >
-              </div>
-            </section>
-            <section>
-              <div class="list-item" id="out">
-                <a href="#"
-                  ><i
-                    class="fa-solid fa-arrow-right-from-bracket"
-                    style="margin-top: 4px"
-                  ></i
-                  ><span class="list-item-text">Log Out</span></a
-                >
-              </div>
-            </section>
-          </div>
+            </div>
+         </aside>
         </div>
-        <div class="col-md-7">
+        <div class="col-md-7 col-xs-6">
           <div class="row">
             <div class="col-md-11 welcome my-3">
               <div class="welcome-text">
-                <p style="font-size: 35px">Welcome back, <b>John!</b></p>
-                <br />
+                <h1>Welcome back, <b>John!</b></h1>
                 <p>
                   Your students completed
                   <span style="color: darkorange"><b>80%</b></span> of the
@@ -105,45 +114,53 @@
                   <span style="color: darkorange"><b>very good!</b></span>
                 </p>
               </div>
-              <div class="welcome-img" style="height: 180px">
-                <img src="./media/welcom-img.PNG" alt="welcome" />
+              <div class="welcome-img" >
+                <!-- <img src="./media/welcom-img.PNG" alt="welcome" /> -->
               </div>
             </div>
           </div>
           <div class="row">
-            <div class="col-md-5 my-students my-3">
+            <div class="col-lg-5 col-md-10 my-students my-2">
               <div class="students-head">
                 <p style="font-weight: bold">My Students</p>
                 <p class="text-secondary">View all</p>
               </div>
               <div class="student-list">
                 <div class="student-item my-1">
-                  <img src="./media/student-logo-1.PNG" alt="logo-1" />
-                  <p>Amelia Colier</p>
-                  <img src="./media/bar-1.PNG" alt="bar-1" />
-                  <p>95%</p>
+                  <img src="./media/student-logo-1.PNG" alt="logo-1" class="logo" />
+                  <p class="my-1">Amelia Colier</p>
+                  <div class="parent-bar-1">
+                    <div class="child-bar-1"></div>
+                  </div>
+                  <p class="my-1 percent">95%</p>
                 </div>
                 <div class="student-item my-1">
-                  <img src="./media/student-logo-2.PNG" alt="logo-2" />
-                  <p>Estelle Baldwin</p>
-                  <img src="./media/bar-2.PNG" alt="bar-2" />
-                  <p>84%</p>
+                  <img src="./media/student-logo-2.PNG" alt="logo-2" class="logo" />
+                  <p class="my-1">Estelle Baldwin</p>
+                  <div class="parent-bar-1">
+                    <div class="child-bar-1 second-color"></div>
+                  </div>
+                  <p class="my-1 percent">84%</p>
                 </div>
                 <div class="student-item my-1">
-                  <img src="./media/student-logo-3.PNG" alt="logo-3" />
-                  <p>Micheal Watts</p>
-                  <img src="./media/bar-3.PNG" alt="bar-3" />
-                  <p>96%</p>
+                  <img src="./media/student-logo-3.PNG" alt="logo-3" class="logo" />
+                  <p class="my-1">Micheal Watts</p>
+                  <div class="parent-bar-1">
+                    <div class="child-bar-1 third-color"></div>
+                  </div>
+                  <p class="my-1 percent">90%</p>
                 </div>
                 <div class="student-item my-1">
-                  <img src="./media/student-logo-4.PNG" alt="logo-4" />
-                  <p>Amanda Wood</p>
-                  <img src="./media/bar-4.PNG" alt="bar-4" />
-                  <p>72%</p>
+                  <img src="./media/student-logo-4.PNG" alt="logo-4" class="logo"/>
+                  <p class="my-1">Amanda Wood</p>
+                  <div class="parent-bar-1">
+                    <div class="child-bar-1 fourth-color"></div>
+                  </div>
+                  <p class="my-1 percent">72%</p>
                 </div>
               </div>
             </div>
-            <div class="col-md-5 work-hours my-3">
+            <div class="col-lg-5 col-md-10 work-hours my-2">
               <div class="work-head">
                 <p style="font-weight: bold; margin-left: 10px">
                   Working Hours
@@ -161,7 +178,7 @@
             </div>
           </div>
           <div class="row">
-            <div class="col-md-11 media-box">
+            <div class="col-md-11 media-box ">
               <div class="media-head">
                 <p class="my-2 mx-2" style="font-weight: bold">
                   Media for lessons
@@ -227,7 +244,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-3">
+        <div class="col-md-3 col-xs-5">
           <div class="row">
             <div class="col-md-12">
               <div class="user-details">
@@ -307,36 +324,51 @@
                   <p style="font-weight: bold">Completed Tasks</p>
                   <p class="text-secondary">View all</p>
                 </div>
-                <div class="task-completed-list  my-2">
+                <div class="task-completed-list my-2">
                   <div class="logo-container">
-                    <i class="fa-solid fa-book" ></i>
+                    <i class="fa-solid fa-book"></i>
                   </div>
                   <div class="task-list-body">
-                    <p style="font-weight: bold;">English-Grammar Test
-                      <br/>
-                    <span class="text-secondary" style="font-weight: 400; font-size: 12px;">Eula Kelly, 6th May</span>
+                    <p style="font-weight: bold">
+                      English-Grammar Test
+                      <br />
+                      <span
+                        class="text-secondary"
+                        style="font-weight: 400; font-size: 12px"
+                        >Eula Kelly, 6th May</span
+                      >
                     </p>
                   </div>
                 </div>
-                <div class="task-completed-list  my-2">
+                <div class="task-completed-list my-2">
                   <div class="logo-container" id="logo-2">
                     <i class="fa-regular fa-envelope"></i>
                   </div>
-                  <div class="task-list-body" >
-                    <p style="font-weight: bold; ">Irregular Verbs Test
-                      <br/>
-                    <span class="text-secondary" style="font-weight: 400; font-size: 12px;">Olive Garzo, 4th May</span>
+                  <div class="task-list-body">
+                    <p style="font-weight: bold">
+                      Irregular Verbs Test
+                      <br />
+                      <span
+                        class="text-secondary"
+                        style="font-weight: 400; font-size: 12px"
+                        >Olive Garzo, 4th May</span
+                      >
                     </p>
                   </div>
                 </div>
-                <div class="task-completed-list  my-2">
+                <div class="task-completed-list my-2">
                   <div class="logo-container" id="logo-3">
-                    <i class="fa-regular fa-file "></i>
+                    <i class="fa-regular fa-file"></i>
                   </div>
-                  <div class="task-list-body " >
-                    <p style="font-weight: bold; ">Spanish Essay
-                      <br/>
-                    <span class="text-secondary" style="font-weight: 400; font-size: 12px;">Olive Garzo, 4th May</span>
+                  <div class="task-list-body">
+                    <p style="font-weight: bold">
+                      Spanish Essay
+                      <br />
+                      <span
+                        class="text-secondary"
+                        style="font-weight: 400; font-size: 12px"
+                        >Olive Garzo, 4th May</span
+                      >
                     </p>
                   </div>
                 </div>
