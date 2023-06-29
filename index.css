@@ -85,6 +85,7 @@ aside{
 .welcome{
     background-color: #fff;
     margin-left: 2.2rem;
+    margin-top: 1rem;
     /* padding: 10px; */
     padding: 1rem;
     border: grey;
@@ -230,16 +231,18 @@ option{
 
 .user-details{
     background-color: #fff;
-    margin-top: 10px;
+    margin-top: 1rem;
     padding: 20px 10px; 
     /* border: 1px solid rgb(197, 197, 197); */
     height: 4.5rem;
     border-radius: 2rem;
     display: flex;
-    width: 93%;
+    width: 22%;
     justify-content: space-between;
     align-items: center;
     overflow-y: hidden;
+    position: absolute;
+    left: 76%;
 }
 
 .media-list{
@@ -300,6 +303,8 @@ option{
     background-color: #fff;
     border-radius: 2rem;
     width: 93%;
+    position: relative;
+    margin-top: 7rem;
 }
 
 .lesson-head{
@@ -308,10 +313,6 @@ option{
     /* align-items: center; */
     width: 80%;
     margin-left: 2rem;
-}
-
-.side-container{
-    margin-top: 2rem;
 }
 
 .lesson-list{
@@ -437,10 +438,27 @@ option{
         font-size: 1.4rem;
         border-radius: 50%;
     }
+    .user-details{
+        margin-top: 1rem;
+        height: 3rem;
+
+    }
+    .user-text{
+        display: none;
+    }
+    .user-img img{
+        height: 2.5rem;
+        width: 2.5rem;
+    }
 
 }
 
 @media only screen and (min-width:768px) and (max-width: 991px){
+    .user-details{
+        left: 69%;
+        width: 28%;
+    }
+    
     .sidebar-head{
         margin-left: -1rem;
     }
@@ -542,7 +560,7 @@ option{
         display: none;
     }
     .side-container{
-        margin-top: 4rem;
+        margin-top: 7rem;
     }
     .lessons{
         margin-top: 1rem;
@@ -781,3 +799,20 @@ option{
         margin-left:0.7rem;
     }
 }
+
+@media only screen and (min-width: 1200px) and (max-width: 1393px){
+    .user-text p{
+        padding-left: 1rem;
+        margin-left: -1rem;
+        font-size: 1rem;
+   }
+   .user-text span{
+    font-size: 0.7rem;
+   }
+}
+
+/* @media only screen and (max-width: 1560px){
+    .user-details{
+        left: 74rem;
+    }
+} */
