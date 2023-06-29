@@ -12,6 +12,9 @@
 /* body{
     background-color:aliceblue;
 } */
+.menu{
+    display: none;
+}
 
 aside{
     height: 100%;    
@@ -243,7 +246,7 @@ option{
     background-color: #fff;
     padding: 0.3rem;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center; 
     font-size: 1rem;
     border-radius: 5rem ;
@@ -305,6 +308,10 @@ option{
     /* align-items: center; */
     width: 80%;
     margin-left: 2rem;
+}
+
+.side-container{
+    margin-top: 2rem;
 }
 
 .lesson-list{
@@ -412,11 +419,63 @@ option{
     background-color:coral;
 }
 
+@media only screen and (max-width: 767px){
+    aside{
+        display: none;  
+    }
+    .menu{
+        display: block;
+        margin-left: 2rem;
+        margin-top: 1rem;
+        background-color:rgb(30, 48, 80);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 3rem;
+        height: 3rem;
+        color:white;
+        font-size: 1.4rem;
+        border-radius: 50%;
+    }
 
+}
 
 @media only screen and (min-width:768px) and (max-width: 991px){
+    .sidebar-head{
+        margin-left: -1rem;
+    }
+    .sidebar-head img{
+        height: 2.5rem;
+        width: 2.5rem;
+    }
+    .sidebar-head span{
+        display: none;
+    }
+    .list-item i{
+        font-size: 1.3rem;
+        /* margin-left: 0.45rem; */
+    } 
+    .list-item-text{
+        display: none;
+    }
+    .welcome{
+        margin-left: 1rem;
+    }
+    .welcome-text h1{
+        font-size: 1.2rem;
+    }
+    .welcome-text p{
+        font-size: 0.8rem;
+    }
+    .welcome-img{
+        margin-top: 3.5rem;
+    }
     .my-students{
+        margin-left: 2.1rem;
         height: 12rem;
+    }
+    .students-head{
+      padding-top: 0.8rem;
     }
     .my-students p{
         font-size: 0.9rem;
@@ -430,7 +489,120 @@ option{
     }
     .work-hours{
         height:12rem;
-        margin-left: 3.4rem;
+        margin-left: 2.1rem;
+    }
+    .work-head{
+        margin-top: -0.5rem;
+    }
+    .work-img{
+        margin-top: -0.3rem;
+    }
+    .work-img img{
+        height: 8rem;
+    }
+    .media-box{
+        margin-left: 1rem;
+    }
+    /* .media-list{
+        justify-content: center;
+    } */
+    .media-list-section{
+        font-size: 0.7rem;
+        width: 1.8rem;
+    }
+    .media-list-subject{
+        font-size: 0.7rem;
+        margin-left: 0.3rem;
+    }
+    .media-list-file{
+        font-size: 0.7rem;
+    }
+    .media-list-view{
+        font-size: 0.7rem;  
+        text-align:center;
+        margin-left: -1rem;
+    }
+    .media-list-view li{
+        list-style-type: none;
+    }
+    .media-list-members{
+        text-align: center;
+    }
+    .media-list-size{
+        font-size: 0.7rem;
+        margin-left: 0.3rem;
+    }
+    .user-icons{
+        margin-top: 0.5rem;
+    }
+    .user-text p{
+        margin-top: 0.5rem;
+    }
+    .user-text span{
+        display: none;
+    }
+    .side-container{
+        margin-top: 4rem;
+    }
+    .lessons{
+        margin-top: 1rem;
+        padding-top: 1rem;
+    }
+    .lesson-head{
+        margin-left: 1.4rem;
+    }
+    .lesson-list{
+        margin: auto;
+    }
+    .lesson-list-head{
+        margin-left: 0rem;
+    }
+    .lesson-list-head p{
+        font-size: 0.9rem;
+    }
+    .lesson-list-body{
+        margin-left: 1.5rem;
+    }
+    .lesson-list-footer{
+        margin-left:1rem;
+    }
+    .task-completed-head{
+        margin-top: 2rem;   
+    }
+    .task-completed-head{
+     margin-left: 1rem;
+     width: 88%;
+    }
+    .task-completed-head p{
+        font-size: 0.9rem;
+    }
+    .task-completed-list{
+        margin: auto;
+        height: 5.7rem;
+    }
+    .logo-container{
+        margin-top: 1rem;
+        margin-left: -0.7rem;
+        width: 3rem;
+    }
+    .logo-container i{
+        font-size: 1rem;
+    }
+    .task-list-body{
+        margin-left: 0.5rem;
+    }
+    .task-list-body p{
+        font-size: 0.75rem;
+    }
+    .task-list-body span{
+        font-size: 0.6rem;
+    }
+}
+
+@media only screen and (min-width: 900px) and (max-width: 991px) { 
+    .task-list-body{
+        margin-left: 1rem;
+        font-size: 1rem;
     }
 }
 
