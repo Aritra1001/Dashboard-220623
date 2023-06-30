@@ -100,7 +100,7 @@ aside{
     background-color: #fff;
     margin-left: 2.2rem;
     margin-top: 1rem;
-    /* padding: 10px; */
+    /* width: 40rem; */
     padding: 1rem;
     border: grey;
     border-radius: 2rem;
@@ -313,6 +313,10 @@ option{
     font-weight: bold;  
 }
 
+.user-icons i{
+    font-size: 1.5rem;
+}
+
 .side-container{
     background-color: #fff;
     border-radius: 2rem;
@@ -418,7 +422,7 @@ option{
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0.5rem;
+    padding: 10px 10px;
 }
 
 .logo-container i{
@@ -432,6 +436,79 @@ option{
 
 #logo-3{
     background-color:coral;
+}
+
+
+
+@media only screen and (max-width: 575px){
+    .user-icons{
+        display: none;
+    }
+    .user-details{
+        width: max-content;
+    }
+    .user-img img{
+        margin-left: 0.5rem;
+    }
+    .media-list-section{
+        font-size: 0.7rem;
+    }
+    .media-list-subject{
+        font-size: 0.7rem;
+        margin-left: 0.3rem;
+    }
+    .media-list-file{
+        font-size: 0.6rem;
+    }
+    .media-list-view li{
+        list-style-type: none;
+        font-size: 0.7rem;
+    }
+    .media-list-members{
+        font-size: 0.6rem;
+    }
+    .media-list-size{
+        font-size: 0.6rem;
+    }
+    .side-container{
+        margin-left: 1.9rem;
+        margin-top: 1rem;
+    }
+    .task-completed-list{
+        width: 75%;
+        margin: auto;
+    }
+    .logo-container{
+       padding: 7px 10px;
+       margin-top: 0.3rem;
+    }
+    .logo-container i{
+        font-size: 1rem;
+        margin: auto; 
+    }
+    .task-list-body{
+        margin-left: 0.7rem;
+        margin-top: -0.4rem;
+    }
+    .task-list-body p{
+        font-size: 0.7rem;
+    }
+    .task-list-body span{
+        font-size: 0.5rem;
+        /* margin-top: -1.5rem;  */
+    }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px){
+    .side-container{
+        margin-top: 2rem;
+        margin-left: 3rem;
+    }
+    .task-completed-list{
+        margin: auto;
+        width: 65%;
+    }
+
 }
 
 @media only screen and (max-width: 767px){
@@ -452,6 +529,36 @@ option{
         font-size: 1.4rem;
         border-radius: 50%;
     }
+    .welcome{
+        padding: 0.5rem;
+        /* justify-content: space; */
+        margin: auto;
+    }
+    .welcome-text{
+        margin-left: 0rem;
+    }
+    .welcome-text h1{
+        font-size: 1.2rem;
+    }
+    .welcome-text p{
+        font-size:0.8rem;
+    }
+    .welcome-img{
+        /* height:10rem;
+        width: 1rem; */
+        /* margin-top: 5rem; */
+        margin-left: 0rem;
+        margin-right: 0rem;
+    }
+    .my-students{
+        margin: auto;
+    }
+    .work-hours{
+        margin: auto;
+    }
+    .media-box{
+        margin: auto;
+    }
     .user-details{
         margin-top: 1rem;
         height: 3rem;
@@ -460,11 +567,29 @@ option{
     .user-text{
         display: none;
     }
+    .user-img{
+        margin-left: -0.5rem;
+    }
     .user-img img{
         height: 2.5rem;
         width: 2.5rem;
     }
-
+    .user-icons{
+        margin-left: 0.5rem;
+    }
+    .user-icons i{
+      font-size: 1rem;
+    }
+   
+    .lesson-head{
+        margin: auto;
+    }
+    .lesson-list{
+        margin: auto;
+    }
+    .task-completed-head{
+        margin: auto;
+    }
 }
 
 @media only screen and (min-width:768px) and (max-width: 991px){

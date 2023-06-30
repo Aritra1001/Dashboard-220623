@@ -8,7 +8,7 @@ const showMenu = ()=>{
     // console.log("Menu btn is clicked");
     if( !toggle ){
         sidebar.style.display = "block";
-        sidebar.style.marginTop = "-0.3rem";
+        // sidebar.style.marginTop = "0rem";
         sidebar.style.marginLeft = "1rem";
         sidebar.style.marginRight = "1rem";
         sidebar.style.borderRadius = "0.5rem"
