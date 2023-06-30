@@ -22,3 +22,23 @@ const showMenu = ()=>{
 
     // console.log("count", count);
 }
+
+// let listItem = document.querySelectorAll(".list-item");
+// // console.log(listItem);
+// listItem.forEach(item=>{
+//     item.addEventListener('click', ()=>{
+//         let activeClass = document.querySelector(".active");
+//         // activeClass.classList.remove("active");
+//         item.classList.add("active");
+//     })
+// })
+
+let listItem = document.querySelectorAll(".list-item");
+// let activeClass = document.querySelector(".active");
+
+listItem.forEach(item =>{
+    item.addEventListener('click', ()=>{
+        document.querySelector(".active")?.classList.remove("active");
+        item.classList.add("active");
+    })
+})

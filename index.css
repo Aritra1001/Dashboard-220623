@@ -55,6 +55,20 @@ aside{
     text-decoration: none;
 }
 
+.active{
+    background: rgb(149, 178, 228);
+   
+    font-weight: 700;
+    /* width: min-content; */
+    /* height: 2.3rem; */
+    border-radius: 0.5rem;
+    padding: 4px; 
+}
+
+.active a{
+    color:#072b61;
+}
+
 .list-item{
     padding: 10px 20px;
     display: flex;
@@ -634,7 +648,7 @@ option{
     }
     .list-item i{
      font-size: 1.7rem;
-     margin-left: 0.45rem;
+     margin-left: 0.9rem;
     }   
     .list-item-text{
         display: none;
@@ -772,6 +786,22 @@ option{
 
 } */
 @media only screen and (min-width: 1200px) and (max-width:1353px){
+    .sidebar-head span{
+        margin-left: 0.5rem;
+    }
+    
+    .list-item:hover{
+        margin-left: 0.5rem;
+    }
+    
+    .list-item a{
+        font-size: 0.9rem;
+    }
+
+    .list-item span{
+        font-size: 0.85rem;
+    }
+
     .logo-container{
         margin-left: -0.9rem;
     }
