@@ -12,6 +12,28 @@
 /* body{
     background-color:aliceblue;
 } */
+.spinner{
+    margin-top: 1rem;   
+    display: none;   
+    overflow-y: hidden;
+    /* background-color: blue; */
+    margin-left: 43%;
+    margin-top: 23%;
+    position: absolute;
+    z-index: 3
+
+}
+
+.layer{
+    height: 100vh;
+    width: 100vw;
+    background-color: aliceblue;
+    opacity: 1;
+    display: none;  
+   position: absolute;
+    overflow-y: hidden;
+    z-index: 1;
+}
 .menu{
     display: none;
 }
@@ -93,7 +115,9 @@ aside{
 .list-item:hover{
     margin-left: 1.2rem;
     cursor: pointer;
-    /* color: */
+}
+.list-item a:hover{
+    color:tomato;
 }
 
 .welcome{
@@ -111,6 +135,7 @@ aside{
     align-items: center;
     transition: all 300ms ease;
     overflow-y: hidden;
+    /* z-index: -1; */
 }   
 
 .welcome:hover{
