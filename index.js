@@ -67,14 +67,17 @@ let spinner =  document.querySelector('.spinner');
 let layer = document.querySelector('.layer');
 
 dashboard.addEventListener('click', ()=>{
-    spinner.style.display = "block";
     layer.style.display = "block";
-    myStudents.style.display = "none";
-    workHours.style.display = "none";
-    mediaBox.style.visibility = "hidden";
-    welcomeHead.style.visibility = "hidden";
-    sideContainer.style.visibility = "hidden";
-    userBox.style.visibility = "hidden"; 
+    spinner.style.display = "block";
+    setTimeout(()=>{
+        myStudents.style.display = "none";
+        workHours.style.display = "none";
+        mediaBox.style.visibility = "hidden";
+        welcomeHead.style.visibility = "hidden";
+        sideContainer.style.visibility = "hidden";
+        userBox.style.visibility = "hidden"; 
+    }, 500)
+   
     setTimeout(()=>{
         layer.style.display = "none";
         welcomeHead.style.visibility = "visible";
@@ -89,13 +92,16 @@ dashboard.addEventListener('click', ()=>{
 })
 analyse.addEventListener('click', ()=>{
     layer.style.display = "block";
-    welcomeHead.style.visibility = "hidden";
-    mediaBox.style.visibility = "hidden";
-    userBox.style.visibility = "hidden";
-    sideContainer.style.visibility = "hidden"; 
-    myStudents.style.display = "none";
-    workHours.style.display = "none";
     spinner.style.display = "block";
+    setTimeout(()=>{
+        welcomeHead.style.visibility = "hidden";
+        mediaBox.style.visibility = "hidden";
+        userBox.style.visibility = "hidden";
+        sideContainer.style.visibility = "hidden"; 
+        myStudents.style.display = "none";
+        workHours.style.display = "none";
+    },500);
+   
     setTimeout(()=>{
         layer.style.display = "none";
         spinner.style.display = "none";
@@ -106,13 +112,16 @@ analyse.addEventListener('click', ()=>{
 
 documents.addEventListener('click', ()=>{
     layer.style.display = "block";
-    welcomeHead.style.visibility = "hidden";
-    sideContainer.style.visibility = "hidden";   
-    myStudents.style.display = "none";
-    workHours.style.display = "none";
-    userBox.style.visibility = "hidden";
-    mediaBox.style.visibility = "hidden";
     spinner.style.display = "block";
+    setTimeout(()=>{
+        welcomeHead.style.visibility = "hidden";
+        sideContainer.style.visibility = "hidden";   
+        myStudents.style.display = "none";
+        workHours.style.display = "none";
+        userBox.style.visibility = "hidden";
+        mediaBox.style.visibility = "hidden";
+    }, 500);
+
     setTimeout(()=>{
         layer.style.display = "none";
         spinner.style.display = "none";
@@ -120,6 +129,36 @@ documents.addEventListener('click', ()=>{
     },1500);
 })
 
-history.addEventListener('click', ()=>{
+// history.addEventListener('click', ()=>{
     
+// })
+
+// View all pop-up for students
+
+let viewStudent = document.querySelector('#viewStudent');
+let background = document.querySelector('.main');
+let sudentDetails = document.querySelector('.studentDetails');
+let stuCloseBtn = document.querySelector('.stuCloseBtn');
+
+viewStudent.addEventListener('mouseenter',()=>{
+    viewStudent.style.cursor = "pointer";       
 })
+
+viewStudent.addEventListener('click', ()=>{
+    sudentDetails.style.display = "block";
+    background.style.filter = "blur(10px)";
+    background.style.opacity = "0.5"
+    background.style.zIndex = "-1";
+})
+
+stuCloseBtn.addEventListener('mouseenter', ()=>{
+    stuCloseBtn.style.cursor = "pointer";
+})
+
+stuCloseBtn.addEventListener('click', ()=>{
+    sudentDetails.style.display = "none";
+    background.style.filter = "blur(0px)";
+    background.style.opacity = "1"
+    background.style.zIndex = "0";
+})
+

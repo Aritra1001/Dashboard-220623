@@ -20,19 +20,23 @@
     <title>Static Dashboard</title>
   </head>
   <body style="background-color: aliceblue">
+    <div class="studentDetails">
+      <div class="stuDetailsContent">
+        <div class="stuDetailsHead">
+          <h3>Student Details</h3>
+          <i class="fa-solid fa-xmark stuCloseBtn"></i>
+        </div>
+      </div>
+    </div>
     <div class="main">
-      
       <div class="user-box">
         <div class="user-details">
           <div class="user-icons">
             <i
               class="fa-solid fa-magnifying-glass"
-              style="margin: 0px 10px;"
+              style="margin: 0px 10px"
             ></i>
-            <i
-              class="fa-regular fa-bell"
-              style="margin: 0px 10px;"
-            ></i>
+            <i class="fa-regular fa-bell" style="margin: 0px 10px"></i>
           </div>
           <div class="user-text">
             <p>
@@ -46,12 +50,12 @@
           </div>
         </div>
       </div>
-      
+
       <div class="row">
         <!-- sidebar container -->
-       
+
         <div class="col-md-2">
-          <div class="menu" onclick=showMenu()>
+          <div class="menu" onclick="showMenu()">
             <i class="fa-solid fa-bars"></i>
           </div>
           <aside>
@@ -121,41 +125,42 @@
             </div>
           </aside>
         </div>
-        
+
         <div class="col-lg-7 col-md-6 col-sm-12">
-            <div class="spinner text-center ">
+          <div class="layer">
+            <div class="spinner text-center">
               <div class="spinner-border text-danger" role="status">
                 <span class="visually-hidden">Loading...</span>
               </div>
             </div>
-          <div class="layer"></div>
+          </div>
+
           <div class="row">
             <!-- <div class="welcome-box"> -->
-              <div class="col-md-11 col-sm-11 col-10 welcome my-3" >
-                <div class="welcome-text">
-                  <h1>Welcome back, <b>John!</b></h1>
-                  <p>
-                    Your students completed
-                    <span style="color: darkorange"><b>80%</b></span> of the
-                    tasks.
-                  </p>
-                  <p>
-                    Progress is
-                    <span style="color: darkorange"><b>very good!</b></span>
-                  </p>
-                </div>
-                <div class="welcome-img">
-                  <!-- <img src="./media/welcom-img.PNG" alt="welcome" /> -->
-                </div>
+            <div class="col-md-11 col-sm-11 col-10 welcome my-3">
+              <div class="welcome-text">
+                <h1>Welcome back, <b>John!</b></h1>
+                <p>
+                  Your students completed
+                  <span style="color: darkorange"><b>80%</b></span> of the
+                  tasks.
+                </p>
+                <p>
+                  Progress is
+                  <span style="color: darkorange"><b>very good!</b></span>
+                </p>
               </div>
+              <div class="welcome-img">
+                <!-- <img src="./media/welcom-img.PNG" alt="welcome" /> -->
+              </div>
+            </div>
             <!-- </div> -->
-            
           </div>
           <div class="row">
             <div class="col-lg-5 col-md-10 col-sm-10 col-9 my-students my-3">
               <div class="students-head">
                 <p style="font-weight: bold">My Students</p>
-                <p class="text-secondary">View all</p>
+                <p class="text-secondary" id="viewStudent">View all</p>
               </div>
               <div class="student-list">
                 <div class="student-item">
@@ -231,7 +236,7 @@
                 <p class="my-2 mx-2" style="font-weight: bold">
                   Media for lessons
                 </p>
-                <p class="text-secondary">View all</p>
+                <p class="view text-secondary">View all</p>
               </div>
               <div class="media-list my-2">
                 <div class="media-list-section section-1">A1</div>
@@ -292,9 +297,9 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-3 col-md-4 col-sm-12 ">
+        <div class="col-lg-3 col-md-4 col-sm-12">
           <!-- <div class="row"> -->
-            <!-- <div class="col-md-12">
+          <!-- <div class="col-md-12">
               <div class="user-details">
                 <div class="user-icons">
                   <i
@@ -327,7 +332,7 @@
                   <div class="col-md-12 lessons">
                     <div class="lesson-head my-2">
                       <p style="font-weight: bold">Lessons</p>
-                      <p class="text-secondary">View all</p>
+                      <p class="view text-secondary">View all</p>
                     </div>
                     <div class="lesson-list my-2">
                       <div class="lesson-list-head">
@@ -367,7 +372,7 @@
                   <div class="col-md-12 task-completed mt-3">
                     <div class="task-completed-head">
                       <p style="font-weight: bold">Completed Tasks</p>
-                      <p class="text-secondary">View all</p>
+                      <p class="view text-secondary">View all</p>
                     </div>
                     <div class="task-completed-list my-2">
                       <div class="logo-container">

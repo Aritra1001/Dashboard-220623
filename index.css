@@ -8,31 +8,29 @@
     user-select: none;
 }
 
-
-/* body{
-    background-color:aliceblue;
-} */
 .spinner{
     margin-top: 1rem;   
     display: none;   
     overflow-y: hidden;
     /* background-color: blue; */
-    margin-left: 43%;
-    margin-top: 23%;
-    position: absolute;
-    z-index: 3
-
+    /* margin-left: 40%;
+    margin-top: 23%; */
+    position: relative;
+    z-index: 3;
+    margin-top: 25%;
+    /* opacity: 1.5; */
 }
 
 .layer{
     height: 100vh;
-    width: 100vw;
+    width: 82%;
     background-color: aliceblue;
-    opacity: 1;
+    opacity: 0.7;
     display: none;  
    position: absolute;
-    overflow-y: hidden;
+    /* overflow-y: hidden; */
     z-index: 1;
+    overflow-x: hidden;
 }
 .menu{
     display: none;
@@ -71,10 +69,11 @@ aside{
     margin-left: 1rem;
 }
 
-.sidebar a{
+.list-item a{
     margin-left: 0.5rem;
     color:#fff;
     text-decoration: none;
+    opacity: 0.7;
 }
 
 .active{
@@ -89,6 +88,7 @@ aside{
 
 .active a{
     color:#072b61;
+    opacity: 1;
 }
 
 .list-item{
@@ -117,7 +117,8 @@ aside{
     cursor: pointer;
 }
 .list-item a:hover{
-    color:tomato;
+    opacity: 1;
+    color:white;
 }
 
 .welcome{
@@ -177,6 +178,40 @@ aside{
 .my-students:hover{
     box-shadow: rgb(51, 145, 228) 0px 0px 5px 5px;
 }
+
+.studentDetails{
+    height: 20rem;
+    width: 47rem ; 
+    padding: 10px 20px; 
+    background: white;
+    position: absolute;
+    top: 31%;
+    left:27%;
+    display: none;
+    z-index: 1;
+    box-shadow: rgb(51, 145, 228) 0px 0px 5px 5px;
+    border-radius: 2rem;
+}
+
+.stuDetailsHead{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 5rem;
+    width: 80%;
+}
+
+.stuDetailsHead h3{
+    overflow-y: hidden;
+    color:sandybrown;
+    font-weight: bold;
+}
+
+.stuDetailsHead .stuCloseBtn{
+    font-size: 1.8rem;
+    color: red;
+}
+
 
 .students-head{
     display: flex;
@@ -282,6 +317,12 @@ option{
     overflow-y: hidden;
     position: absolute;
     left: 76%;
+    box-shadow: rgb(0,0,0,0.35) 0px 5px 10px ;
+    transition: all 300ms ease;
+}
+
+.user-details:hover{
+    box-shadow: rgb(51, 145, 228) 0px 0px 3px 3px;
 }
 
 .media-list{
@@ -348,6 +389,13 @@ option{
     width: 93%;
     position: relative;
     margin-top: 7rem;
+    margin-bottom: 2rem;
+    box-shadow: rgb(0,0,0,0.35) 0px 5px 10px ;
+    transition: all 300ms ease;
+}
+
+.side-container:hover{
+    box-shadow:rgb(51, 145, 228) 0px 0px 5px 5px;
 }
 
 .lesson-head{
