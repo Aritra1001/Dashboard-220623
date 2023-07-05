@@ -133,8 +133,8 @@ documents.addEventListener('click', ()=>{
     
 // })
 
-// View all pop-up for students
 
+// View all pop-up for students
 let viewStudent = document.querySelector('#viewStudent');
 let background = document.querySelector('.main');
 let sudentDetails = document.querySelector('.studentDetails');
@@ -145,10 +145,14 @@ viewStudent.addEventListener('mouseenter',()=>{
 })
 
 viewStudent.addEventListener('click', ()=>{
-    sudentDetails.style.display = "block";
-    background.style.filter = "blur(10px)";
-    background.style.opacity = "0.5"
-    background.style.zIndex = "-1";
+    layer.style.display = "block";
+    spinner.style.display = "block";
+    setTimeout(()=>{
+        sudentDetails.style.display = "block";
+        background.style.filter = "blur(10px)";
+        background.style.opacity = "0.5"
+        // background.style.zIndex = "-1";
+    },1000)
 })
 
 stuCloseBtn.addEventListener('mouseenter', ()=>{
@@ -156,9 +160,109 @@ stuCloseBtn.addEventListener('mouseenter', ()=>{
 })
 
 stuCloseBtn.addEventListener('click', ()=>{
-    sudentDetails.style.display = "none";
-    background.style.filter = "blur(0px)";
-    background.style.opacity = "1"
-    background.style.zIndex = "0";
+        layer.style.display = "none";
+        spinner.style.display = "none";
+        sudentDetails.style.display = "none";
+        background.style.filter = "blur(0px)";
+        background.style.opacity = "1"
+        // background.style.zIndex = "0"; 
 })
 
+// Popup for media box
+let viewMedia = document.querySelector("#media-view");
+let medDetails = document.querySelector('.mediaDetails');
+let medCloseBtn = document.querySelector(".medCloseBtn");
+
+viewMedia.addEventListener('mouseenter', ()=>{
+    viewMedia.style.cursor = "pointer";
+})
+
+viewMedia.addEventListener('click', ()=>{
+    layer.style.display = "block";
+    spinner.style.display = "block";
+    setTimeout(()=>{
+        medDetails.style.display = "block";
+        background.style.filter = "blur(10px)";
+        background.style.opacity = "0.5";
+        // background.style.zIndex = "-1";
+    }, 1000)
+})
+
+medCloseBtn.addEventListener('mouseenter', ()=>{
+    medCloseBtn.style.cursor = "pointer";
+})
+
+medCloseBtn.addEventListener('click', ()=>{
+    layer.style.display = "none";
+    spinner.style.display = "none";
+    medDetails.style.display = "none";
+    background.style.filter = "blur(0px)";
+    background.style.opacity = "1"
+    // background.style.zIndex = "0"; 
+})
+
+// Popup for lessons
+let lessonView = document.querySelector('#lesson-view');
+let lessonDetails = document.querySelector('.lessonDetails');
+let lessCloseBtn = document.querySelector('.lessCloseBtn');
+
+lessonView.addEventListener('mouseenter', ()=>{
+    lessonView.style.cursor = "pointer";
+})
+
+lessonView.addEventListener('click', ()=>{
+    layer.style.display = "block";
+    spinner.style.display = "block";
+    setTimeout(()=>{
+        lessonDetails.style.display = "block";
+        background.style.filter = "blur(10px)";
+        background.style.opacity = "0.5";
+        // background.style.zIndex = "-1";
+    },1000)
+})
+
+lessCloseBtn.addEventListener('mouseenter', ()=>{
+    lessCloseBtn.style.cursor = "pointer";
+})
+
+lessCloseBtn.addEventListener('click', ()=>{
+    layer.style.display = "none";
+    spinner.style.display = "none";
+    lessonDetails.style.display = "none";
+    background.style.filter = "blur(0px)";
+    background.style.opacity = "1";
+    // background.style.zIndex = "0";
+})
+
+// Popup for completed tasks
+let taskView = document.querySelector("#task-view");
+let taskDetails = document.querySelector('.taskDetails');
+let taskCloseBtn = document.querySelector('.taskCloseBtn');
+
+taskView.addEventListener('mouseenter', ()=>{
+    taskView.style.cursor = "pointer";
+})
+
+taskView.addEventListener('click', ()=>{
+    layer.style.display = "block";
+    spinner.style.display = "block";
+    setTimeout(()=>{
+        taskDetails.style.display = "block";
+        background.style.filter = "blur(10px)";
+        background.style.opacity = "0.5";
+        // background.style.zIndex = "-1";
+    },1000)
+})
+
+taskCloseBtn.addEventListener('mouseenter', ()=>{
+    taskCloseBtn.style.cursor = "pointer";
+})
+
+taskCloseBtn.addEventListener('click', ()=>{
+    layer.style.display = "none";
+    spinner.style.display = "none";
+    taskDetails.style.display = "none";
+    background.style.filter = "blur(0px)";
+    background.style.opacity = "1";
+    // background.style.zIndex = "0";
+})

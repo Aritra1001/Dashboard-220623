@@ -8,30 +8,244 @@
     user-select: none;
 }
 
+/* .main{
+    display: none;
+} */
+
 .spinner{
     margin-top: 1rem;   
     display: none;   
     overflow-y: hidden;
-    /* background-color: blue; */
-    /* margin-left: 40%;
-    margin-top: 23%; */
     position: relative;
-    z-index: 3;
     margin-top: 25%;
-    /* opacity: 1.5; */
 }
 
 .layer{
     height: 100vh;
     width: 82%;
     background-color: aliceblue;
-    opacity: 0.7;
+    opacity: 0.8;
     display: none;  
    position: absolute;
     /* overflow-y: hidden; */
     z-index: 1;
     overflow-x: hidden;
 }
+
+.studentDetails{
+    height: 20rem;
+    width: 47rem ; 
+    padding: 10px 20px; 
+    background: lavenderblush;
+    position: absolute;
+    top: 31%;
+    left:27%;
+    display: none;
+    z-index: 1;
+    box-shadow: rgb(51, 145, 228) 0px 0px 5px 5px;
+    border-radius: 2rem;
+}
+
+.stuDetailsHead{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 5rem;
+    width: 80%;
+}
+
+.small-line{
+    width: 50px;
+    border-bottom: 3px solid red;
+    position: relative;
+    top: -0.5rem;
+    left: 5rem;
+}
+
+.stuDetailsHead h3{
+    overflow-y: hidden;
+    font-weight: bold;
+}
+
+.stuDetailsHead .stuCloseBtn{
+    font-size: 1.8rem;
+    color: red;
+}
+
+.stuDetailsBody{
+    margin-top: 1.2rem;
+}
+
+.mediaDetails{
+    background: lavenderblush;
+    height: 25rem;
+    width: 70rem;
+    padding: 10px 20px;
+    position: absolute;
+    top: 27%;
+    left: 15%;
+    border-radius: 2rem;
+    display: none;
+    z-index: 1;
+    box-shadow: rgb(51, 145, 228) 0px 0px 5px 5px;
+}
+
+.small-line-media{
+    width: 50px;   
+}
+
+.medDetailsHead{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 2.5rem;
+    width: 93%;
+    /* overflow-y: hidden; */
+}
+
+.medDetailsHead h3{
+    overflow-y: hidden;
+    font-weight: bold;
+}
+
+.medDetailsHead .medCloseBtn{
+    font-size: 1.8rem;
+    color:red;
+}
+
+.small-line-media{
+    width: 60px;
+    border-bottom: 3px solid red;
+    position: relative;
+    top: -0.5rem;
+    left: 2.6rem;
+    /* margin-top: -0.5rem; */
+    overflow-y: hidden;
+}
+
+.medDetailsBody{
+    margin-top: 1.5rem;
+}
+
+.medDetailsBody .media-list{
+    width: 90%;
+    margin-left: 3rem;
+    /* transition: all 300ms ease; */
+}
+
+.medDetailsBody .media-list:hover{
+    box-shadow: tomato 0px 0px 3px 3px;
+}
+
+.lessonDetails{
+    background: lavenderblush;
+    height: 30rem;
+    width: 40rem;
+    padding: 10px 20px;
+    position: absolute;
+    top: 19%;
+    left: 30%;
+    display: none;
+    z-index: 1;
+    border-radius: 2rem;
+    box-shadow: rgb(51, 145, 228) 0px 0px 5px 5px;
+}
+
+.lessDetailsHead{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 2rem;
+    width: 90%;
+}
+
+.lessDetailsHead h3{
+    overflow-y: hidden;
+    font-weight: bold;
+}
+
+.lessDetailsHead .lessCloseBtn{
+    color: red;
+    font-size: 1.7rem;
+}
+
+.small-line-lessons{
+    width: 40px;
+    border-bottom: 3px solid red;
+    position:relative;
+    left: 2.1rem;
+    top: -0.5rem;
+}
+
+.lessDetailsBody .lesson-list{
+    margin-left: 3.5rem;  
+    transition: all 300ms ease;
+}
+
+.lessDetailsBody .lesson-list:hover{
+    box-shadow: tomato 0px 0px 3px 3px;
+}
+
+.lessDetailsBody .lesson-list .lesson-list-footer{
+    width: 93%;
+}
+
+.taskDetails{
+    background: lavenderblush;
+    height: 30rem;
+    width: 30rem;
+    padding: 10px 20px;
+    position: absolute;
+    top: 19%;
+    left: 37%;
+    display: none;
+    z-index: 1;
+    border-radius: 2rem;
+    box-shadow: rgb(51, 145, 228) 0px 0px 5px 5px;
+}
+
+.taskDetailsHead{
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   margin-left: 1.5rem;
+}
+
+.taskDetailsHead h3{
+    overflow-y: hidden;
+    font-weight: bold;
+}
+
+.taskDetailsHead .taskCloseBtn{
+    color: red;
+    font-size: 1.8rem;
+}
+
+.small-line-task{
+    width:50px;
+    border-bottom: 3px solid red;
+    position: relative;
+    top: -0.5rem;
+    left: 1.7rem;
+}
+
+.taskDetailsBody{
+    height: 20rem;
+    margin-top: 1.5rem;
+}
+
+.taskDetailsBody .task-completed-list{
+    background: bisque;
+    /* margin-top:1rem; */
+    margin-top: 1rem;
+    margin-left: 2.5rem;
+    transition: all 300ms ease;
+}
+
+.taskDetailsBody .task-completed-list:hover{
+    box-shadow: tomato 0px 0px 3px 3px;
+}
+
 .menu{
     display: none;
 }
@@ -179,43 +393,17 @@ aside{
     box-shadow: rgb(51, 145, 228) 0px 0px 5px 5px;
 }
 
-.studentDetails{
-    height: 20rem;
-    width: 47rem ; 
-    padding: 10px 20px; 
-    background: white;
-    position: absolute;
-    top: 31%;
-    left:27%;
-    display: none;
-    z-index: 1;
-    box-shadow: rgb(51, 145, 228) 0px 0px 5px 5px;
-    border-radius: 2rem;
-}
-
-.stuDetailsHead{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-left: 5rem;
-    width: 80%;
-}
-
-.stuDetailsHead h3{
-    overflow-y: hidden;
-    color:sandybrown;
-    font-weight: bold;
-}
-
-.stuDetailsHead .stuCloseBtn{
-    font-size: 1.8rem;
-    color: red;
-}
-
-
 .students-head{
     display: flex;
     justify-content:space-between;
+}
+
+.view{
+    color:grey;
+}
+.view:hover{
+    color: #3762c0; 
+    font-weight: 500;
 }
 
 .student-list{
@@ -251,6 +439,10 @@ aside{
 .fourth-color{
     background: red;
     width: 72%;
+}
+.fifth-color{
+    background:rgb(33, 138, 204);
+    width: 60%;
 }
 .work-hours{
     background-color: #fff;

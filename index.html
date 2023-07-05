@@ -20,15 +20,244 @@
     <title>Static Dashboard</title>
   </head>
   <body style="background-color: aliceblue">
+    <!-- Student Details after clicking on view all -->
     <div class="studentDetails">
       <div class="stuDetailsContent">
         <div class="stuDetailsHead">
-          <h3>Student Details</h3>
+          <h3>Student <span class="text-danger">Details</span></h3>
           <i class="fa-solid fa-xmark stuCloseBtn"></i>
+        </div>
+        <div class="small-line"></div>
+        <div class="stuDetailsBody">
+          <div class="student-list">
+            <div class="student-item">
+              <img src="./media/student-logo-1.PNG" alt="logo-1" class="logo" />
+              <p class="my-1">Amelia Colier</p>
+              <div class="parent-bar-1">
+                <div class="child-bar-1"></div>
+              </div>
+              <p class="my-1 percent">95%</p>
+            </div>
+            <div class="student-item">
+              <img src="./media/student-logo-2.PNG" alt="logo-2" class="logo" />
+              <p class="my-1">Estelle Baldwin</p>
+              <div class="parent-bar-1">
+                <div class="child-bar-1 second-color"></div>
+              </div>
+              <p class="my-1 percent">84%</p>
+            </div>
+            <div class="student-item">
+              <img src="./media/student-logo-3.PNG" alt="logo-3" class="logo" />
+              <p class="my-1">Micheal Watts</p>
+              <div class="parent-bar-1">
+                <div class="child-bar-1 third-color"></div>
+              </div>
+              <p class="my-1 percent">90%</p>
+            </div>
+            <div class="student-item">
+              <img src="./media/student-logo-4.PNG" alt="logo-4" class="logo" />
+              <p class="my-1">Amanda Wood</p>
+              <div class="parent-bar-1">
+                <div class="child-bar-1 fourth-color"></div>
+              </div>
+              <p class="my-1 percent">72%</p>
+            </div>
+            <div class="student-item">
+              <img src="./media/student-logo-3.PNG" alt="logo-3" class="logo" />
+              <p class="my-1">Mitchell Johnson</p>
+              <div class="parent-bar-1">
+                <div class="child-bar-1 fifth-color"></div>
+              </div>
+              <p class="my-1 percent">60%</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
+    <!-- *******END OF STUDENT DETAILS******* -->
+
+    <!-- Media details after clicking on view all -->
+    <div class="mediaDetails">
+      <div class="medDetailsContent">
+        <div class="medDetailsHead">
+          <h3>Media for <span class="text-danger">Lessons</span></h3>
+          <i class="fa-solid fa-xmark medCloseBtn"></i>
+        </div>
+        <div class="small-line-media"></div>
+        <div class="medDetailsBody">
+          <div class="media-list my-2">
+            <div class="media-list-section section-1">A1</div>
+            <div class="media-list-subject">Common English</div>
+            <div class="media-list-file text-muted">Cambridge advanced.pdf</div>
+            <div class="media-list-view">
+              <li>Only view</li>
+            </div>
+
+            <div class="media-list-members text-secondary">48 members</div>
+            <div class="media-list-size">42 MB</div>
+          </div>
+          <div class="media-list my-2">
+            <div class="media-list-section text-primary" id="section-2">B1</div>
+            <div class="media-list-subject">Speaking Club</div>
+            <div class="media-list-file text-secondary">
+              Speaking skill.docs
+            </div>
+            <div class="media-list-view">
+              <li style="color: orange">Edit available</li>
+            </div>
+
+            <div class="media-list-members text-secondary">62 members</div>
+            <div class="media-list-size">24 MB</div>
+          </div>
+          <div class="media-list my-2">
+            <div class="media-list-section text-danger" id="section-3">C1</div>
+            <div class="media-list-subject">Business English</div>
+            <div class="media-list-file text-secondary">
+              English Dictionary.wav
+            </div>
+            <div class="media-list-view">
+              <li>Only View</li>
+            </div>
+
+            <div class="media-list-members text-secondary">53 members</div>
+            <div class="media-list-size">34 MB</div>
+          </div>
+          <div class="media-list my-2">
+            <div class="media-list-section section-1">A2</div>
+            <div class="media-list-subject">Spanish Grammar</div>
+            <div class="media-list-file text-secondary">
+              Easy Learning Book.zip
+            </div>
+            <div class="media-list-view">
+              <li>Only View</li>
+            </div>
+
+            <div class="media-list-members text-secondary">42 members</div>
+            <div class="media-list-size">23 MB</div>
+          </div>
+          <div class="media-list my-2">
+            <div class="media-list-section text-primary" id="section-2">B1</div>
+            <div class="media-list-subject">Speaking Club</div>
+            <div class="media-list-file text-secondary">
+              Speaking skill.docs
+            </div>
+            <div class="media-list-view">
+              <li style="color: orange">Edit available</li>
+            </div>
+
+            <div class="media-list-members text-secondary">62 members</div>
+            <div class="media-list-size">24 MB</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- *******END OF MEDIA DETAILS******* -->
+
+    <!-- Lesson details after clicking on view all -->
+    <div class="lessonDetails">
+      <div class="lessDetailsContent">
+        <div class="lessDetailsHead">
+          <h3>Less<span class="text-danger">ons</span></h3>
+          <i class="fa-solid fa-xmark lessCloseBtn"></i>
+        </div>
+        <div class="small-line-lessons"></div>
+        <div class="lessDetailsBody">
+          <div class="lesson-list my-2">
+            <div class="lesson-list-head">
+              <p style="font-weight: 500">Common English</p>
+              <div class="dots"></div>
+            </div>
+            <div class="lesson-list-body">
+              <p class="text-secondary">Thu 13PM - 15PM</p>
+            </div>
+            <div class="lesson-list-footer my-2">
+              <img src="./media/lesson-img-1.PNG" alt="lesson-1" />
+              <i class="fa-solid fa-circle-plus" style="font-size: 1.5rem"></i>
+            </div>
+          </div>
+          <div class="lesson-list my-2" id="second-item">
+            <div class="lesson-list-head">
+              <p style="font-weight: 500">Speaking Club</p>
+              <div class="dots"></div>
+            </div>
+            <div class="lesson-list-body">
+              <p class="text-secondary">Thu 16PM - 18PM</p>
+            </div>
+            <div class="lesson-list-footer my-2">
+              <img src="./media/lesson-img-1.PNG" alt="lesson-1" />
+              <i class="fa-solid fa-circle-plus" style="font-size: 1.5rem"></i>
+            </div>
+          </div>
+          <div class="lesson-list my-2">
+            <div class="lesson-list-head">
+              <p style="font-weight: 500">Common English</p>
+              <div class="dots"></div>
+            </div>
+            <div class="lesson-list-body">
+              <p class="text-secondary">Thu 13PM - 15PM</p>
+            </div>
+            <div class="lesson-list-footer my-2">
+              <img src="./media/lesson-img-1.PNG" alt="lesson-1" />
+              <i class="fa-solid fa-circle-plus" style="font-size: 1.5rem"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- *******END OF LESSON DETAILS******* -->
+
+    <!-- Task completion details after clicking on view all -->
+    <div class="taskDetails">
+      <div class="taskDetailsContent">
+        <div class="taskDetailsHead">
+          <h3>Completed <span class="text-danger">Tasks</span></h3>
+          <i class="fa-solid fa-xmark taskCloseBtn"></i>
+        </div>
+        <div class="small-line-task"></div>
+        <div class="taskDetailsBody">
+          <div class="task-completed-list">
+            <div class="logo-container">
+              <i class="fa-solid fa-book"></i>
+            </div>
+            <div class="task-list-body">
+              <p>English-Grammar Test</p>
+              <span class="text-muted">Eula Kelly, 6th May</span>
+            </div>
+          </div>
+          <div class="task-completed-list">
+            <div class="logo-container" id="logo-2">
+              <i class="fa-regular fa-envelope"></i>
+            </div>
+            <div class="task-list-body">
+              <p>Irregular Verbs Test</p>
+              <span class="text-muted">Olive Garze, 4th May</span>
+            </div>
+          </div>
+          <div class="task-completed-list">
+            <div class="logo-container" id="logo-3">
+              <i class="fa-regular fa-file"></i>
+            </div>
+            <div class="task-list-body">
+              <p>Spanish Essay</p>
+              <span class="text-muted">Franklin Harvey, 2nd May</span>
+            </div>
+          </div>
+          <div class="task-completed-list">
+            <div class="logo-container">
+              <i class="fa-regular fa-keyboard"></i>
+            </div>
+            <div class="task-list-body">
+              <p>Coding Test</p>
+              <span class="text-muted">Eric Bailley, 2nd May</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ********END OF TASK COMPLETION DETAILS******* -->
+
     <div class="main">
+      <!-- User details -->
       <div class="user-box">
         <div class="user-details">
           <div class="user-icons">
@@ -50,10 +279,9 @@
           </div>
         </div>
       </div>
-
+      <!-- *******END OF USER DETAILS******* -->
       <div class="row">
         <!-- sidebar container -->
-
         <div class="col-md-2">
           <div class="menu" onclick="showMenu()">
             <i class="fa-solid fa-bars"></i>
@@ -125,8 +353,10 @@
             </div>
           </aside>
         </div>
+        <!-- ********END OF SIDEBAR******** -->
 
         <div class="col-lg-7 col-md-6 col-sm-12">
+          <!-- Layer and spinner for showing that content is loading -->
           <div class="layer">
             <div class="spinner text-center">
               <div class="spinner-border text-danger" role="status">
@@ -134,9 +364,10 @@
               </div>
             </div>
           </div>
+          <!-- ********END OF LAYER AND SPINNER****** -->
 
+          <!-- WELCOME BOX -->
           <div class="row">
-            <!-- <div class="welcome-box"> -->
             <div class="col-md-11 col-sm-11 col-10 welcome my-3">
               <div class="welcome-text">
                 <h1>Welcome back, <b>John!</b></h1>
@@ -154,13 +385,15 @@
                 <!-- <img src="./media/welcom-img.PNG" alt="welcome" /> -->
               </div>
             </div>
-            <!-- </div> -->
           </div>
+          <!-- ******END OF WELCOME BOX****** -->
+
+          <!-- STUDENT LIST AND WORK HOURS -->
           <div class="row">
             <div class="col-lg-5 col-md-10 col-sm-10 col-9 my-students my-3">
               <div class="students-head">
                 <p style="font-weight: bold">My Students</p>
-                <p class="text-secondary" id="viewStudent">View all</p>
+                <p class="view" id="viewStudent">View all</p>
               </div>
               <div class="student-list">
                 <div class="student-item">
@@ -230,13 +463,16 @@
               </div>
             </div>
           </div>
+          <!-- ******END OF STUDENT LIST AND WORK HOURS******* -->
+
+          <!-- MEDIA BOX -->
           <div class="row">
             <div class="col-md-11 col-sm-11 col-10 media-box">
               <div class="media-head">
                 <p class="my-2 mx-2" style="font-weight: bold">
                   Media for lessons
                 </p>
-                <p class="view text-secondary">View all</p>
+                <p class="view" id="media-view">View all</p>
               </div>
               <div class="media-list my-2">
                 <div class="media-list-section section-1">A1</div>
@@ -296,6 +532,7 @@
               </div>
             </div>
           </div>
+          <!-- *******END OF MEDIA BOX****** -->
         </div>
         <div class="col-lg-3 col-md-4 col-sm-12">
           <!-- <div class="row"> -->
@@ -325,14 +562,17 @@
             </div> -->
           <!-- </div> -->
           <!-- <div class="layer"></div> -->
+
+          <!-- SIDE CONTAINER -->
           <div class="row">
             <div class="col-md-12 col-sm-11 col-11">
               <div class="side-container">
+                <!-- LESSON SECTION -->
                 <div class="row">
                   <div class="col-md-12 lessons">
                     <div class="lesson-head my-2">
                       <p style="font-weight: bold">Lessons</p>
-                      <p class="view text-secondary">View all</p>
+                      <p class="view" id="lesson-view">View all</p>
                     </div>
                     <div class="lesson-list my-2">
                       <div class="lesson-list-head">
@@ -368,11 +608,14 @@
                     </div>
                   </div>
                 </div>
+                <!-- *******END OF LESSON SECTION******** -->
+
+                <!-- COMPLETED TASK SECTION -->
                 <div class="row">
                   <div class="col-md-12 task-completed mt-3">
                     <div class="task-completed-head">
                       <p style="font-weight: bold">Completed Tasks</p>
-                      <p class="view text-secondary">View all</p>
+                      <p class="view" id="task-view">View all</p>
                     </div>
                     <div class="task-completed-list my-2">
                       <div class="logo-container">
@@ -403,9 +646,11 @@
                     </div>
                   </div>
                 </div>
+                <!-- *******END OF COMPLETED TASK SECTION******** -->
               </div>
             </div>
           </div>
+          <!-- ******END OF SIDE CONTAINER******* -->
         </div>
       </div>
     </div>
