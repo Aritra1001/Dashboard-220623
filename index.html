@@ -31,7 +31,7 @@
         <div class="stuDetailsBody">
           <div class="student-list">
             <div class="student-item">
-              <img src="./media/student-logo-1.PNG" alt="logo-1" class="logo" />
+              <div class="student-profile-logo"></div>
               <p class="my-1">Amelia Colier</p>
               <div class="parent-bar-1">
                 <div class="child-bar-1"></div>
@@ -39,7 +39,7 @@
               <p class="my-1 percent">95%</p>
             </div>
             <div class="student-item">
-              <img src="./media/student-logo-2.PNG" alt="logo-2" class="logo" />
+              <div class="student-profile-logo logo-2"></div>
               <p class="my-1">Estelle Baldwin</p>
               <div class="parent-bar-1">
                 <div class="child-bar-1 second-color"></div>
@@ -47,7 +47,7 @@
               <p class="my-1 percent">84%</p>
             </div>
             <div class="student-item">
-              <img src="./media/student-logo-3.PNG" alt="logo-3" class="logo" />
+              <div class="student-profile-logo logo-3"></div>
               <p class="my-1">Micheal Watts</p>
               <div class="parent-bar-1">
                 <div class="child-bar-1 third-color"></div>
@@ -55,7 +55,7 @@
               <p class="my-1 percent">90%</p>
             </div>
             <div class="student-item">
-              <img src="./media/student-logo-4.PNG" alt="logo-4" class="logo" />
+              <div class="student-profile-logo logo-4"></div>
               <p class="my-1">Amanda Wood</p>
               <div class="parent-bar-1">
                 <div class="child-bar-1 fourth-color"></div>
@@ -63,7 +63,7 @@
               <p class="my-1 percent">72%</p>
             </div>
             <div class="student-item">
-              <img src="./media/student-logo-3.PNG" alt="logo-3" class="logo" />
+              <div class="student-profile-logo logo-5"></div>
               <p class="my-1">Mitchell Johnson</p>
               <div class="parent-bar-1">
                 <div class="child-bar-1 fifth-color"></div>
@@ -162,7 +162,7 @@
         </div>
         <div class="small-line-lessons"></div>
         <div class="lessDetailsBody">
-          <div class="lesson-list my-2">
+          <div class="lesson-list">
             <div class="lesson-list-head">
               <p style="font-weight: 500">Common English</p>
               <div class="dots"></div>
@@ -170,12 +170,12 @@
             <div class="lesson-list-body">
               <p class="text-secondary">Thu 13PM - 15PM</p>
             </div>
-            <div class="lesson-list-footer my-2">
+            <div class="lesson-list-footer">
               <img src="./media/lesson-img-1.PNG" alt="lesson-1" />
               <i class="fa-solid fa-circle-plus" style="font-size: 1.5rem"></i>
             </div>
           </div>
-          <div class="lesson-list my-2" id="second-item">
+          <div class="lesson-list" id="second-item">
             <div class="lesson-list-head">
               <p style="font-weight: 500">Speaking Club</p>
               <div class="dots"></div>
@@ -183,12 +183,12 @@
             <div class="lesson-list-body">
               <p class="text-secondary">Thu 16PM - 18PM</p>
             </div>
-            <div class="lesson-list-footer my-2">
+            <div class="lesson-list-footer">
               <img src="./media/lesson-img-1.PNG" alt="lesson-1" />
               <i class="fa-solid fa-circle-plus" style="font-size: 1.5rem"></i>
             </div>
           </div>
-          <div class="lesson-list my-2">
+          <div class="lesson-list">
             <div class="lesson-list-head">
               <p style="font-weight: 500">Common English</p>
               <div class="dots"></div>
@@ -196,7 +196,7 @@
             <div class="lesson-list-body">
               <p class="text-secondary">Thu 13PM - 15PM</p>
             </div>
-            <div class="lesson-list-footer my-2">
+            <div class="lesson-list-footer">
               <img src="./media/lesson-img-1.PNG" alt="lesson-1" />
               <i class="fa-solid fa-circle-plus" style="font-size: 1.5rem"></i>
             </div>
@@ -261,25 +261,71 @@
       <div class="user-box">
         <div class="user-details">
           <div class="user-icons">
-            <i
-              class="fa-solid fa-magnifying-glass"
-              style="margin: 0px 10px"
-            ></i>
-            <i class="fa-regular fa-bell" style="margin: 0px 10px"></i>
+            <div class="search-btn" tabindex="1">
+              <i
+                class="fa-solid fa-magnifying-glass"
+                style="margin: 0px 10px"
+              ></i> 
+            </div>
+            <div class="notification-btn" tabindex="1">
+              <i class="fa-regular fa-bell" style="margin: 0px 10px"></i>
+            </div>
           </div>
-          <div class="user-text">
+          <!-- <div class="user-text">
             <p>
               <b>John Mason</b>
               <br />
               <span> username@gmail.com</span>
             </p>
-          </div>
-          <div class="user-img">
-            <img src="./media/user_bitmoji.PNG" alt="user" />
-          </div>
+          </div> -->
+          <div class="profile-img" tabindex="1"></div>
         </div>
       </div>
       <!-- *******END OF USER DETAILS******* -->
+
+      <!-- Search Droopdown -->
+      <div class="search-dropdown">
+        <div class="search-input-field">
+          <input type="search" placeholder="search"/>
+        </div>
+      </div>
+
+      <!-- Notification Dropdown -->
+      <div class="notify-dropdown-container">
+        <div class="notify-menu">
+          <div class="notify-menu-item">Notification 1</div>
+          <hr />
+          <div class="notify-menu-item">Notification 2</div>
+          <hr />
+          <div class="notify-menu-item">Notification 3</div>
+          <hr />
+          <div class="notify-menu-item">Notification 4</div>
+        </div>
+      </div>
+      <!-- ******END OF NOTIFICATION DROPDOWN****** -->
+
+      <!-- Profile dropdown -->
+      <div class="profile-dropdown-container">
+        <div class="profile-menu">
+          <div class="profile-menu-item">
+            <p>View Profile</p>
+          </div>
+          <hr />
+          <div class="profile-menu-item">
+            <p>Edit Profile</p>
+          </div>
+          <hr />
+          <div class="profile-menu-item">
+            <p>About Us</p>
+          </div>
+          <hr />
+          <div class="profile-menu-item">
+            <p>Rate Us</p>
+          </div>
+        </div>
+      </div>
+      <!-- *******END OF PROFILE DROPDOWN****** -->
+
       <div class="row">
         <!-- sidebar container -->
         <div class="col-md-2">
@@ -397,11 +443,7 @@
               </div>
               <div class="student-list">
                 <div class="student-item">
-                  <img
-                    src="./media/student-logo-1.PNG"
-                    alt="logo-1"
-                    class="logo"
-                  />
+                  <div class="student-profile-logo"></div>
                   <p class="my-1">Amelia Colier</p>
                   <div class="parent-bar-1">
                     <div class="child-bar-1"></div>
@@ -409,11 +451,7 @@
                   <p class="my-1 percent">95%</p>
                 </div>
                 <div class="student-item">
-                  <img
-                    src="./media/student-logo-2.PNG"
-                    alt="logo-2"
-                    class="logo"
-                  />
+                  <div class="student-profile-logo logo-2"></div>
                   <p class="my-1">Estelle Baldwin</p>
                   <div class="parent-bar-1">
                     <div class="child-bar-1 second-color"></div>
@@ -421,11 +459,7 @@
                   <p class="my-1 percent">84%</p>
                 </div>
                 <div class="student-item">
-                  <img
-                    src="./media/student-logo-3.PNG"
-                    alt="logo-3"
-                    class="logo"
-                  />
+                  <div class="student-profile-logo logo-3"></div>
                   <p class="my-1">Micheal Watts</p>
                   <div class="parent-bar-1">
                     <div class="child-bar-1 third-color"></div>
@@ -433,11 +467,7 @@
                   <p class="my-1 percent">90%</p>
                 </div>
                 <div class="student-item">
-                  <img
-                    src="./media/student-logo-4.PNG"
-                    alt="logo-4"
-                    class="logo"
-                  />
+                  <div class="student-profile-logo logo-4"></div>
                   <p class="my-1">Amanda Wood</p>
                   <div class="parent-bar-1">
                     <div class="child-bar-1 fourth-color"></div>

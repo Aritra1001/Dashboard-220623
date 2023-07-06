@@ -266,3 +266,71 @@ taskCloseBtn.addEventListener('click', ()=>{
     background.style.opacity = "1";
     // background.style.zIndex = "0";
 })
+
+
+// Toggling of search icon
+
+let searchBar = document.querySelector('.search-dropdown');
+let searchBtn = document.querySelector('.search-btn');
+let toggleSearch = false;
+
+searchBtn.addEventListener('click', (event)=>{
+    if(!toggleSearch){
+        event.target.style.transform = "rotate(90deg)";
+        setTimeout(()=>{
+            searchBar.classList.add('show');
+        },200)
+        toggleSearch = true;
+    }
+    else{
+        event.target.style.transform = "";
+        searchBar.classList.remove('show');
+        toggleSearch = false;
+    }
+})
+
+// Toggling of notification menu
+
+let notifyMenu = document.querySelector('.notify-dropdown-container');
+let notifyBtn = document.querySelector('.notification-btn');
+let toggleNotify = false;
+
+notifyBtn.addEventListener('click', (event)=>{
+    if(!toggleNotify){
+        event.target.style.transform = "rotate(90deg)";
+        event.target.style.backgroundColor = "rgb(238, 189, 185)";
+        setTimeout(()=>{
+            notifyMenu.classList.add('show');
+        },200)
+        toggleNotify = true;
+    }
+    else{
+        event.target.style.transform = "";
+        event.target.style.backgroundColor = "";
+        notifyMenu.classList.remove('show');
+        toggleNotify = false;
+    }   
+})
+
+
+// Toggling of profilemenu
+
+let profileMenu = document.querySelector('.profile-dropdown-container');
+let profileImage = document.querySelector('.profile-img');
+// console.log(profileMenu);
+let toggleMenu = false;
+
+profileImage.addEventListener('click', (event)=>{
+   if(!toggleMenu){
+    event.target.style.transform = "rotate(90deg)";
+    setTimeout(()=>{
+        profileMenu.classList.add('show');
+    },200)
+    toggleMenu = true;
+   }
+   else{
+    event.target.style.transform = "";
+    profileMenu.classList.remove('show');
+    toggleMenu = false;
+   }
+})

@@ -124,31 +124,33 @@
 }
 
 .medDetailsBody{
-    margin-top: 1.5rem;
+    margin-top: 1rem;
 }
 
 .medDetailsBody .media-list{
-    width: 90%;
-    margin-left: 3rem;
-    /* transition: all 300ms ease; */
+    width: 80%;
+    margin: auto;
+    transition: all 500ms ease;
 }
 
 .medDetailsBody .media-list:hover{
+    transform: translate(10px);
     box-shadow: tomato 0px 0px 3px 3px;
 }
 
 .lessonDetails{
     background: lavenderblush;
-    height: 30rem;
-    width: 40rem;
+    height: 33rem;
+    width: 35rem;
     padding: 10px 20px;
     position: absolute;
-    top: 19%;
-    left: 30%;
+    top: 15%;
+    left: 34%;
     display: none;
     z-index: 1;
     border-radius: 2rem;
     box-shadow: rgb(51, 145, 228) 0px 0px 5px 5px;
+    overflow-y: hidden;
 }
 
 .lessDetailsHead{
@@ -177,12 +179,30 @@
     top: -0.5rem;
 }
 
+.lessDetailsBody{
+    height: 30rem;
+}
+
 .lessDetailsBody .lesson-list{
-    margin-left: 3.5rem;  
+    margin: auto;
+    margin-top: 1rem;
     transition: all 300ms ease;
+    height: 7.5rem;
+    overflow-y: hidden;
+    width: 25rem;
+    transition: all 400ms ease;
+}
+
+.lessDetailsBody .lesson-list .lesson-list-body{
+    margin-top: -0.8rem;
+}
+
+.lessDetailsBody .lesson-list .lesson-list-footer{
+    margin-top: -0.2rem;
 }
 
 .lessDetailsBody .lesson-list:hover{
+    transform: translate(5px, 5px);
     box-shadow: tomato 0px 0px 3px 3px;
 }
 
@@ -239,10 +259,11 @@
     /* margin-top:1rem; */
     margin-top: 1rem;
     margin-left: 2.5rem;
-    transition: all 300ms ease;
+    transition: all 500ms ease;
 }
 
 .taskDetailsBody .task-completed-list:hover{
+    transform: scale(1.1);
     box-shadow: tomato 0px 0px 3px 3px;
 }
 
@@ -414,7 +435,32 @@ aside{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    margin-top: 0.2rem;
+    margin-top: 0.5rem;
+}
+
+.student-profile-logo{
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBwgu1A5zgPSvfE83nurkuzNEoXs9DMNr8Ww&usqp=CAU);
+    background-position: center;
+    background-size: cover;
+    height: 2.2rem;
+    width: 2.2rem;
+    border-radius: 50%;
+}
+
+.logo-2{
+    background-image: url(https://media.istockphoto.com/id/1154642632/photo/close-up-portrait-of-brunette-woman.jpg?b=1&s=612x612&w=0&k=20&c=7hgSq1L2mpIbpuuw00KELApMpmZfBkZ-RBxn3Qps5zQ=);
+}
+
+.logo-3{
+    background-image: url(https://thumbs.dreamstime.com/b/headshot-portrait-arabic-businessman-posing-office-young-male-employee-glasses-pose-workplace-profile-picture-successful-207320117.jpg);
+}
+
+.logo-4{
+    background-image: url(https://t3.ftcdn.net/jpg/04/32/57/94/240_F_432579409_6vGaEfxzAEoXojwkiE8KQ6b0riuFcoXY.jpg);
+}
+
+.logo-5{
+    background-image: url(https://www.shutterstock.com/image-photo/portrait-smiling-red-haired-millennial-260nw-1194497251.jpg);
 }
 
 .parent-bar-1{
@@ -472,6 +518,7 @@ select{
     border-radius: 10px;
     border: none;
     height: 30px;
+    cursor: pointer;
     /* font-size: 10px; */
 }
 
@@ -503,18 +550,224 @@ option{
     height: 4.5rem;
     border-radius: 2rem;
     display: flex;
-    width: 22%;
+    width: 15%;
     justify-content: space-between;
     align-items: center;
     overflow-y: hidden;
     position: absolute;
-    left: 76%;
+    left: 80%;
     box-shadow: rgb(0,0,0,0.35) 0px 5px 10px ;
     transition: all 300ms ease;
 }
 
 .user-details:hover{
     box-shadow: rgb(51, 145, 228) 0px 0px 3px 3px;
+}
+
+.user-icons{
+    width: 7rem;
+    height: 3.5rem;
+    margin-left: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.user-icons .search-btn{
+    background: cornflowerblue;
+    height: 2.5rem;
+    width: 2.5rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 400ms ease;
+}
+
+.user-icons .search-btn:hover{
+    transform: translate(5px);
+    box-shadow: 0px 0px 2px 2px;
+}
+
+.user-icons .search-btn i{
+    pointer-events: none;
+}
+
+.search-dropdown{
+    background:rgb(127, 167, 241);
+    height: 3rem;
+    width: 11.5rem;
+    padding: 10px;
+    border-radius: 0.5rem;
+    position: absolute;
+    right: 10%;
+    top: 9%;
+    z-index:1;
+    box-shadow: rgb(77, 77, 207) 0px 5px 10px; 
+    display: none;
+}
+
+.search-input-field input{
+    /* width: 7rem; */
+    border: none;
+    border-radius: 0.5rem;
+    padding: 2px 5px 2px 5px;
+    width:10rem;
+    font-size: 0.9rem;
+}
+
+/* .user-icons .search-btn:focus{
+    transform: rotate(100deg);
+    background: red;
+} */
+
+/* .user-icons .search-btn:blurEvent{
+    transform: rotate(100deg);
+    background: red;
+} */
+
+.user-icons .notification-btn{
+    background: darkorange;
+    height: 2.5rem;
+    width: 2.5rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 400ms ease;
+}
+
+.user-icons .notification-btn:hover{
+    transform: translate(5px);
+    box-shadow: 0px 0px 2px 2px;
+}
+
+.user-icons .notification-btn i{
+    pointer-events: none;
+}
+
+.notify-dropdown-container{
+    background: rgb(238, 189, 185);
+    height: 15rem;
+    width: 17rem;
+    padding: 10px 25px;
+    border-radius: 2rem;
+    position: absolute;
+    right: 8.5%;
+    top: 9%;
+    z-index: 1;
+    box-shadow: red 0px 5px 10px;
+    display: none;
+}
+
+.notify-menu{
+    text-align: center;
+}
+
+.notify-menu hr{
+    color: red;
+}
+
+.notify-menu .notify-menu-item{
+    margin-top: 0.7rem;
+    font-weight: 600;
+    transition: all 300ms ease;
+    cursor: pointer;
+}
+
+.notify-menu .notify-menu-item:hover{
+    transform: translate(10px);
+}
+
+/* .user-icons .notification-btn:focus{
+    transform: rotate(90deg);
+    background: red;
+} */
+
+.user-icons i{
+    color: white;
+    /* font-size: 1.5rem; */
+}
+
+.user-text{
+    margin-top: 0.7rem;
+}
+
+.user-text p{
+    font-size: 0.9rem;
+}
+
+.profile-img{
+    background-image: url(https://t3.ftcdn.net/jpg/02/00/90/24/360_F_200902415_G4eZ9Ok3Ypd4SZZKjc8nqJyFVp1eOD6V.jpghttps://t3.ftcdn.net/jpg/02/00/90/24/360_F_200902415_G4eZ9Ok3Ypd4SZZKjc8nqJyFVp1eOD6V.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 3.7rem;
+    width: 3.7rem;
+    border-radius: 50%;
+    border: 1px solid lightgray;
+    cursor:pointer;
+    transition: all 500ms ease;
+}
+
+.profile-img:hover{
+    transform: translateX(-5px);
+    box-shadow:  0px 0px 2px 2px;
+}
+
+/* .profile-img:focus{
+    transform: rotate(90deg);
+} */
+
+/* .transform-profile-img{
+    transform: rotate(90deg);
+} */
+
+.profile-dropdown-container{
+    background-color: lavender;
+    height: 13rem;
+    width: 10rem;
+    padding: 10px 20px;
+    border-radius: 2rem;
+    position: absolute;
+    right: 2.5%;
+    top: 10.4%;
+    z-index: 1;
+    overflow-y: hidden;
+    text-align: center;
+    display: none;
+    box-shadow: violet 0px 5px 10px;
+}
+
+.profile-menu{
+    height: 12rem;
+}
+
+.profile-menu .profile-menu-item{
+    margin-bottom: -1.2rem;
+    overflow-y: hidden;
+}
+
+.profile-menu .profile-menu-item p{
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: rgb(214, 42, 214);
+    transition: all 300ms ease;
+}
+
+.profile-menu .profile-menu-item p:hover{
+    cursor: pointer;
+    /* transform: translate(5px); */
+    transform: scale(1.1);
+}
+
+.profile-menu hr{
+    color: darkmagenta;
+}
+
+.show{
+    display: block;
 }
 
 .media-list{
@@ -569,10 +822,6 @@ option{
 }
 .media-list-size{
     font-weight: bold;  
-}
-
-.user-icons i{
-    font-size: 1.5rem;
 }
 
 .side-container{
@@ -844,8 +1093,7 @@ option{
     }
     .user-icons i{
       font-size: 1rem;
-    }
-   
+    }   
     .lesson-head{
         margin: auto;
     }
