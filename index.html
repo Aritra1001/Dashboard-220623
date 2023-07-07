@@ -24,7 +24,7 @@
     <div class="studentDetails">
       <div class="stuDetailsContent">
         <div class="stuDetailsHead">
-          <h3>Student <span class="text-danger">Details</span></h3>
+          <h3>Student <span>Details</span></h3>
           <i class="fa-solid fa-xmark stuCloseBtn"></i>
         </div>
         <div class="small-line"></div>
@@ -80,7 +80,7 @@
     <div class="mediaDetails">
       <div class="medDetailsContent">
         <div class="medDetailsHead">
-          <h3>Media for <span class="text-danger">Lessons</span></h3>
+          <h3>Media for <span>Lessons</span></h3>
           <i class="fa-solid fa-xmark medCloseBtn"></i>
         </div>
         <div class="small-line-media"></div>
@@ -157,7 +157,7 @@
     <div class="lessonDetails">
       <div class="lessDetailsContent">
         <div class="lessDetailsHead">
-          <h3>Less<span class="text-danger">ons</span></h3>
+          <h3>Lessons</h3>
           <i class="fa-solid fa-xmark lessCloseBtn"></i>
         </div>
         <div class="small-line-lessons"></div>
@@ -210,7 +210,7 @@
     <div class="taskDetails">
       <div class="taskDetailsContent">
         <div class="taskDetailsHead">
-          <h3>Completed <span class="text-danger">Tasks</span></h3>
+          <h3>Completed <span>Tasks</span></h3>
           <i class="fa-solid fa-xmark taskCloseBtn"></i>
         </div>
         <div class="small-line-task"></div>
@@ -265,12 +265,13 @@
               <i
                 class="fa-solid fa-magnifying-glass"
                 style="margin: 0px 10px"
-              ></i> 
+              ></i>
             </div>
             <div class="notification-btn" tabindex="1">
               <i class="fa-regular fa-bell" style="margin: 0px 10px"></i>
             </div>
           </div>
+
           <!-- <div class="user-text">
             <p>
               <b>John Mason</b>
@@ -280,29 +281,28 @@
           </div> -->
           <div class="profile-img" tabindex="1"></div>
         </div>
+        <!-- Search Dropdown -->
+        <div class="search-dropdown">
+          <div class="search-input-field">
+            <input type="search" placeholder="search" />
+          </div>
+        </div>
+        <!--******END OF SEARCH DROPDOWN******  -->
+        <!-- Notification Dropdown -->
+        <div class="notify-dropdown-container">
+          <div class="notify-menu">
+            <div class="notify-menu-item">Notification 1</div>
+            <hr />
+            <div class="notify-menu-item">Notification 2</div>
+            <hr />
+            <div class="notify-menu-item">Notification 3</div>
+            <hr />
+            <div class="notify-menu-item">Notification 4</div>
+          </div>
+        </div>
+        <!-- ******END OF NOTIFICATION DROPDOWN****** -->
       </div>
       <!-- *******END OF USER DETAILS******* -->
-
-      <!-- Search Droopdown -->
-      <div class="search-dropdown">
-        <div class="search-input-field">
-          <input type="search" placeholder="search"/>
-        </div>
-      </div>
-
-      <!-- Notification Dropdown -->
-      <div class="notify-dropdown-container">
-        <div class="notify-menu">
-          <div class="notify-menu-item">Notification 1</div>
-          <hr />
-          <div class="notify-menu-item">Notification 2</div>
-          <hr />
-          <div class="notify-menu-item">Notification 3</div>
-          <hr />
-          <div class="notify-menu-item">Notification 4</div>
-        </div>
-      </div>
-      <!-- ******END OF NOTIFICATION DROPDOWN****** -->
 
       <!-- Profile dropdown -->
       <div class="profile-dropdown-container">
@@ -405,7 +405,7 @@
           <!-- Layer and spinner for showing that content is loading -->
           <div class="layer">
             <div class="spinner text-center">
-              <div class="spinner-border text-danger" role="status">
+              <div class="spinner-border text-primary" role="status">
                 <span class="visually-hidden">Loading...</span>
               </div>
             </div>
@@ -419,12 +419,11 @@
                 <h1>Welcome back, <b>John!</b></h1>
                 <p>
                   Your students completed
-                  <span style="color: darkorange"><b>80%</b></span> of the
-                  tasks.
+                  <span><b>80%</b></span> of the tasks.
                 </p>
                 <p>
                   Progress is
-                  <span style="color: darkorange"><b>very good!</b></span>
+                  <span><b>very good!</b></span>
                 </p>
               </div>
               <div class="welcome-img">
@@ -526,7 +525,7 @@
                   Speaking skill.docs
                 </div>
                 <div class="media-list-view">
-                  <li style="color: orange">Edit available</li>
+                  <li style="color: cornflowerblue">Edit available</li>
                 </div>
 
                 <div class="media-list-members text-secondary">62 members</div>

@@ -278,13 +278,14 @@ searchBtn.addEventListener('click', (event)=>{
     if(!toggleSearch){
         event.target.style.transform = "rotate(90deg)";
         setTimeout(()=>{
-            searchBar.classList.add('show');
+            searchBar.classList.add('show-search');
+            console.log(searchBar.classList);
         },200)
         toggleSearch = true;
     }
     else{
         event.target.style.transform = "";
-        searchBar.classList.remove('show');
+        searchBar.classList.remove('show-search');
         toggleSearch = false;
     }
 })
@@ -297,17 +298,18 @@ let toggleNotify = false;
 
 notifyBtn.addEventListener('click', (event)=>{
     if(!toggleNotify){
-        event.target.style.transform = "rotate(90deg)";
-        event.target.style.backgroundColor = "rgb(238, 189, 185)";
+        event.target.style.transform = "rotate(45deg)";
+        event.target.style.backgroundColor = "cornflowerblue";
         setTimeout(()=>{
-            notifyMenu.classList.add('show');
+            notifyMenu.classList.add('show-notify');
+            console.log(notifyMenu.classList);
         },200)
         toggleNotify = true;
     }
     else{
         event.target.style.transform = "";
         event.target.style.backgroundColor = "";
-        notifyMenu.classList.remove('show');
+        notifyMenu.classList.remove('show-notify');
         toggleNotify = false;
     }   
 })
@@ -318,19 +320,58 @@ notifyBtn.addEventListener('click', (event)=>{
 let profileMenu = document.querySelector('.profile-dropdown-container');
 let profileImage = document.querySelector('.profile-img');
 // console.log(profileMenu);
-let toggleMenu = false;
+let toggleProfile = false;
 
 profileImage.addEventListener('click', (event)=>{
-   if(!toggleMenu){
-    event.target.style.transform = "rotate(90deg)";
+   if(!toggleProfile){
+    event.target.style.transform = "rotate(45deg)";
     setTimeout(()=>{
-        profileMenu.classList.add('show');
+        profileMenu.classList.add('show-profile');
+        console.log(profileMenu.classList);
     },200)
-    toggleMenu = true;
+    toggleProfile = true;
    }
    else{
     event.target.style.transform = "";
-    profileMenu.classList.remove('show');
-    toggleMenu = false;
+    profileMenu.classList.remove('show-profile');
+    toggleProfile = false;
    }
 })
+
+
+// Closing of the dropdown on clicking anywhere on the window
+sidebar.onclick = function(){
+    for(let i = 0; i < searchBar.classList.length; i++ ){
+        if(searchBar.classList[i] === 'show-search'){
+            console.log("matches");
+            searchBtn.style.transform = "";
+            searchBar.classList.remove('show-search');
+             // if(searchBar.classList.contains('show')){
+             // }
+             toggleSearch = false;
+         }
+    }
+    for(let j = 0; j < notifyMenu.classList.length; j++){
+        if(notifyMenu.classList[j] === 'show-notify'){
+            console.log("matches 2");
+            notifyBtn.style.transform = "";
+            notifyMenu.classList.remove('show-notify');
+            toggleNotify = false;
+        }
+    }
+    for(let k = 0; k < profileMenu.classList.length; k++){
+        if(profileMenu.classList[k] === 'show-profile'){
+            console.log("matches-3");
+            profileImage.style.transform = "";
+            profileMenu.classList.remove('show-profile');
+            toggleProfile = false;
+        }
+    }
+}
+
+// Closing of the notify dropdown on clicking anywhere on the window
+// window.onclick = ()=>{
+//     for(let j = 0; j < notifyMenu.classList.length; j++){
+
+//     }
+// }

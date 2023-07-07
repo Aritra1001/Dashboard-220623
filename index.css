@@ -36,7 +36,7 @@
     height: 20rem;
     width: 47rem ; 
     padding: 10px 20px; 
-    background: lavenderblush;
+    background: aliceblue;
     position: absolute;
     top: 31%;
     left:27%;
@@ -54,9 +54,13 @@
     width: 80%;
 }
 
+.stuDetailsHead span{
+    color: rgb(52, 114, 230);
+}
+
 .small-line{
     width: 50px;
-    border-bottom: 3px solid red;
+    border-bottom: 4px solid cornflowerblue;
     position: relative;
     top: -0.5rem;
     left: 5rem;
@@ -77,7 +81,7 @@
 }
 
 .mediaDetails{
-    background: lavenderblush;
+    background: aliceblue;
     height: 25rem;
     width: 70rem;
     padding: 10px 20px;
@@ -108,6 +112,10 @@
     font-weight: bold;
 }
 
+.medDetailsHead span{
+    color: rgb(52, 114, 230);
+}
+
 .medDetailsHead .medCloseBtn{
     font-size: 1.8rem;
     color:red;
@@ -115,7 +123,7 @@
 
 .small-line-media{
     width: 60px;
-    border-bottom: 3px solid red;
+    border-bottom: 4px solid cornflowerblue;
     position: relative;
     top: -0.5rem;
     left: 2.6rem;
@@ -130,16 +138,17 @@
 .medDetailsBody .media-list{
     width: 80%;
     margin: auto;
+    background-color: white;
     transition: all 500ms ease;
 }
 
 .medDetailsBody .media-list:hover{
     transform: translate(10px);
-    box-shadow: tomato 0px 0px 3px 3px;
+    box-shadow: lightskyblue 0px 0px 3px 3px;
 }
 
 .lessonDetails{
-    background: lavenderblush;
+    background: aliceblue;
     height: 33rem;
     width: 35rem;
     padding: 10px 20px;
@@ -166,6 +175,10 @@
     font-weight: bold;
 }
 
+.lessDetailsHead span{
+    color: rgb(52, 114, 230);
+}
+
 .lessDetailsHead .lessCloseBtn{
     color: red;
     font-size: 1.7rem;
@@ -173,7 +186,7 @@
 
 .small-line-lessons{
     width: 40px;
-    border-bottom: 3px solid red;
+    border-bottom: 4px solid cornflowerblue;
     position:relative;
     left: 2.1rem;
     top: -0.5rem;
@@ -203,7 +216,7 @@
 
 .lessDetailsBody .lesson-list:hover{
     transform: translate(5px, 5px);
-    box-shadow: tomato 0px 0px 3px 3px;
+    box-shadow: lightskyblue 0px 0px 3px 3px;
 }
 
 .lessDetailsBody .lesson-list .lesson-list-footer{
@@ -211,7 +224,7 @@
 }
 
 .taskDetails{
-    background: lavenderblush;
+    background: aliceblue;
     height: 30rem;
     width: 30rem;
     padding: 10px 20px;
@@ -236,6 +249,10 @@
     font-weight: bold;
 }
 
+.taskDetailsHead span{
+    color: rgb(52, 114, 230);
+}
+
 .taskDetailsHead .taskCloseBtn{
     color: red;
     font-size: 1.8rem;
@@ -243,7 +260,7 @@
 
 .small-line-task{
     width:50px;
-    border-bottom: 3px solid red;
+    border-bottom: 4px solid cornflowerblue;
     position: relative;
     top: -0.5rem;
     left: 1.7rem;
@@ -255,16 +272,17 @@
 }
 
 .taskDetailsBody .task-completed-list{
-    background: bisque;
+    background: white;
     /* margin-top:1rem; */
     margin-top: 1rem;
     margin-left: 2.5rem;
+    box-shadow: rgba(0,0,0, 0.35) 0px 3px 5px;
     transition: all 500ms ease;
 }
 
 .taskDetailsBody .task-completed-list:hover{
     transform: scale(1.1);
-    box-shadow: tomato 0px 0px 3px 3px;
+    box-shadow: lightskyblue 0px 0px 3px 3px;
 }
 
 .menu{
@@ -387,6 +405,10 @@ aside{
 .welcome-text h1{
     font-size: 2rem;
     overflow-y: hidden;
+}
+
+.welcome-text b{
+    color: cornflowerblue;
 }
 
 .welcome-img{
@@ -542,26 +564,32 @@ option{
     justify-content: space-between;
 }
 
+.user-box{
+    position: absolute;
+    left: 80%;
+    width: 15rem;
+    height: 10rem;
+}
+
 .user-details{
     background-color: #fff;
     margin-top: 1rem;
-    padding: 20px 10px; 
+    padding: 5px 12px; 
     /* border: 1px solid rgb(197, 197, 197); */
     height: 4.5rem;
     border-radius: 2rem;
     display: flex;
-    width: 15%;
+    width: 90%;
     justify-content: space-between;
     align-items: center;
-    overflow-y: hidden;
-    position: absolute;
-    left: 80%;
-    box-shadow: rgb(0,0,0,0.35) 0px 5px 10px ;
+    box-shadow: rgb(0,0,0,0.35) 0px 5px 7px ;
     transition: all 300ms ease;
+    z-index: 1;
 }
 
 .user-details:hover{
-    box-shadow: rgb(51, 145, 228) 0px 0px 3px 3px;
+    box-shadow: none;
+    /* transform: translate(-10px); */
 }
 
 .user-icons{
@@ -582,6 +610,7 @@ option{
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    position: relative;
     transition: all 400ms ease;
 }
 
@@ -594,19 +623,40 @@ option{
     pointer-events: none;
 }
 
+/* .user-icons .search-btn::before{
+    content: '';
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    bottom: 10px;
+    background: red;
+} */
+
 .search-dropdown{
-    background:rgb(127, 167, 241);
+    background:rgb(151, 180, 235);
     height: 3rem;
     width: 11.5rem;
     padding: 10px;
     border-radius: 0.5rem;
     position: absolute;
-    right: 10%;
-    top: 9%;
-    z-index:1;
-    box-shadow: rgb(77, 77, 207) 0px 5px 10px; 
+    top: 50%;
+    right: 12%;
+    top: 10%; 
+    z-index: 1;
+    box-shadow: grey 0px 5px 10px; 
     display: none;
 }
+
+/* .search-dropdown::before{
+    content: '';
+    height: 15px;
+    width: 15px;
+    position: absolute;
+    top: -10px;
+    right: 75px;
+    background: red;
+    transform: rotate(45deg);
+} */
 
 .search-input-field input{
     /* width: 7rem; */
@@ -615,6 +665,10 @@ option{
     padding: 2px 5px 2px 5px;
     width:10rem;
     font-size: 0.9rem;
+}
+
+.show-search{
+    display: block;
 }
 
 /* .user-icons .search-btn:focus{
@@ -628,7 +682,7 @@ option{
 } */
 
 .user-icons .notification-btn{
-    background: darkorange;
+    background: cornflowerblue;
     height: 2.5rem;
     width: 2.5rem;
     border-radius: 50%;
@@ -649,17 +703,26 @@ option{
 }
 
 .notify-dropdown-container{
-    background: rgb(238, 189, 185);
+    background: rgb(184, 202, 235);
     height: 15rem;
     width: 17rem;
     padding: 10px 25px;
     border-radius: 2rem;
-    position: absolute;
-    right: 8.5%;
-    top: 9%;
+    /* position: absolute; */
+   margin-top: 50px;
     z-index: 1;
-    box-shadow: red 0px 5px 10px;
+    box-shadow: grey 0px 5px 10px;
     display: none;
+}
+
+.notify-dropdown-container::before{
+    content: '';
+    height: 15px;
+    width: 15px;
+    position: absolute;
+    top: 45px;
+    background: red;
+    transform: rotate(45deg);
 }
 
 .notify-menu{
@@ -667,7 +730,7 @@ option{
 }
 
 .notify-menu hr{
-    color: red;
+    color: rgb(9, 48, 122);
 }
 
 .notify-menu .notify-menu-item{
@@ -679,6 +742,10 @@ option{
 
 .notify-menu .notify-menu-item:hover{
     transform: translate(10px);
+}
+
+.show-notify{
+    display: block;
 }
 
 /* .user-icons .notification-btn:focus{
@@ -703,17 +770,17 @@ option{
     background-image: url(https://t3.ftcdn.net/jpg/02/00/90/24/360_F_200902415_G4eZ9Ok3Ypd4SZZKjc8nqJyFVp1eOD6V.jpghttps://t3.ftcdn.net/jpg/02/00/90/24/360_F_200902415_G4eZ9Ok3Ypd4SZZKjc8nqJyFVp1eOD6V.jpg);
     background-size: cover;
     background-position: center;
-    height: 3.7rem;
-    width: 3.7rem;
+    height: 3.2rem;
+    width: 3.2rem;
     border-radius: 50%;
-    border: 1px solid lightgray;
+    /* border: 1px solid lightgray; */
     cursor:pointer;
     transition: all 500ms ease;
 }
 
 .profile-img:hover{
     transform: translateX(-5px);
-    box-shadow:  0px 0px 2px 2px;
+    box-shadow: grey 0px 0px 2px 2px;
 }
 
 /* .profile-img:focus{
@@ -725,7 +792,7 @@ option{
 } */
 
 .profile-dropdown-container{
-    background-color: lavender;
+    background-color: rgb(193, 212, 248);
     height: 13rem;
     width: 10rem;
     padding: 10px 20px;
@@ -737,7 +804,7 @@ option{
     overflow-y: hidden;
     text-align: center;
     display: none;
-    box-shadow: violet 0px 5px 10px;
+    box-shadow: grey 0px 5px 10px;
 }
 
 .profile-menu{
@@ -752,7 +819,7 @@ option{
 .profile-menu .profile-menu-item p{
     font-weight: 600;
     font-size: 0.9rem;
-    color: rgb(214, 42, 214);
+    /* color: rgb(214, 42, 214); */
     transition: all 300ms ease;
 }
 
@@ -763,10 +830,10 @@ option{
 }
 
 .profile-menu hr{
-    color: darkmagenta;
+    color: rgb(11, 42, 100);
 }
 
-.show{
+.show-profile{
     display: block;
 }
 
