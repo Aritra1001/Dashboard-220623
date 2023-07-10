@@ -272,12 +272,14 @@ taskCloseBtn.addEventListener('click', ()=>{
 
 let searchBar = document.querySelector('.search-dropdown');
 let searchBtn = document.querySelector('.search-btn');
+let searchIndicator = document.querySelector('.search-indicator');
 let toggleSearch = false;
 
 searchBtn.addEventListener('click', (event)=>{
     if(!toggleSearch){
         event.target.style.transform = "rotate(90deg)";
         setTimeout(()=>{
+            searchIndicator.classList.add('show-search');
             searchBar.classList.add('show-search');
             console.log(searchBar.classList);
         },200)
@@ -285,6 +287,7 @@ searchBtn.addEventListener('click', (event)=>{
     }
     else{
         event.target.style.transform = "";
+        searchIndicator.classList.remove('show-search');
         searchBar.classList.remove('show-search');
         toggleSearch = false;
     }
@@ -294,13 +297,14 @@ searchBtn.addEventListener('click', (event)=>{
 
 let notifyMenu = document.querySelector('.notify-dropdown-container');
 let notifyBtn = document.querySelector('.notification-btn');
+let notifyIndicator = document.querySelector('.notify-indicator');
 let toggleNotify = false;
 
 notifyBtn.addEventListener('click', (event)=>{
     if(!toggleNotify){
         event.target.style.transform = "rotate(45deg)";
-        event.target.style.backgroundColor = "cornflowerblue";
         setTimeout(()=>{
+            notifyIndicator.classList.add('show-notify');
             notifyMenu.classList.add('show-notify');
             console.log(notifyMenu.classList);
         },200)
@@ -308,7 +312,7 @@ notifyBtn.addEventListener('click', (event)=>{
     }
     else{
         event.target.style.transform = "";
-        event.target.style.backgroundColor = "";
+        notifyIndicator.classList.remove('show-notify');
         notifyMenu.classList.remove('show-notify');
         toggleNotify = false;
     }   
@@ -319,6 +323,7 @@ notifyBtn.addEventListener('click', (event)=>{
 
 let profileMenu = document.querySelector('.profile-dropdown-container');
 let profileImage = document.querySelector('.profile-img');
+let profileIndicator = document.querySelector('.profile-indicator');
 // console.log(profileMenu);
 let toggleProfile = false;
 
@@ -326,6 +331,7 @@ profileImage.addEventListener('click', (event)=>{
    if(!toggleProfile){
     event.target.style.transform = "rotate(45deg)";
     setTimeout(()=>{
+        profileIndicator.classList.add('show-profile');
         profileMenu.classList.add('show-profile');
         console.log(profileMenu.classList);
     },200)
@@ -333,6 +339,7 @@ profileImage.addEventListener('click', (event)=>{
    }
    else{
     event.target.style.transform = "";
+    profileIndicator.classList.remove('show-profile');
     profileMenu.classList.remove('show-profile');
     toggleProfile = false;
    }
@@ -345,6 +352,7 @@ sidebar.onclick = function(){
         if(searchBar.classList[i] === 'show-search'){
             console.log("matches");
             searchBtn.style.transform = "";
+            searchIndicator.classList.remove('show-search');
             searchBar.classList.remove('show-search');
              // if(searchBar.classList.contains('show')){
              // }
@@ -355,6 +363,7 @@ sidebar.onclick = function(){
         if(notifyMenu.classList[j] === 'show-notify'){
             console.log("matches 2");
             notifyBtn.style.transform = "";
+            notifyIndicator.classList.remove('show-notify');
             notifyMenu.classList.remove('show-notify');
             toggleNotify = false;
         }
@@ -363,6 +372,7 @@ sidebar.onclick = function(){
         if(profileMenu.classList[k] === 'show-profile'){
             console.log("matches-3");
             profileImage.style.transform = "";
+            profileIndicator.classList.remove('show-profile');
             profileMenu.classList.remove('show-profile');
             toggleProfile = false;
         }
