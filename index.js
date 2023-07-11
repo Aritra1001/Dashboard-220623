@@ -59,6 +59,7 @@ let settings = document.querySelector('.settings')
 
 let welcomeHead = document.querySelector('.welcome');
 let mediaBox = document.querySelector('.media-box');
+let tableBody = document.querySelector('.media-box .div-body');
 let userBox = document.querySelector('.user-details');
 let sideContainer = document.querySelector('.side-container');
 let myStudents = document.querySelector('.my-students');
@@ -73,6 +74,7 @@ dashboard.addEventListener('click', ()=>{
         myStudents.style.display = "none";
         workHours.style.display = "none";
         mediaBox.style.visibility = "hidden";
+        tableBody.style.visibility = "collapse"; 
         welcomeHead.style.visibility = "hidden";
         sideContainer.style.visibility = "hidden";
         userBox.style.visibility = "hidden"; 
@@ -82,6 +84,7 @@ dashboard.addEventListener('click', ()=>{
         layer.style.display = "none";
         welcomeHead.style.visibility = "visible";
         mediaBox.style.visibility = "visible";
+        tableBody.style.visibility = "visible";
         userBox.style.visibility = "visible";
         sideContainer.style.visibility = "visible";
         myStudents.style.display = "block";
@@ -96,6 +99,7 @@ analyse.addEventListener('click', ()=>{
     setTimeout(()=>{
         welcomeHead.style.visibility = "hidden";
         mediaBox.style.visibility = "hidden";
+        tableBody.style.visibility = "collapse";
         userBox.style.visibility = "hidden";
         sideContainer.style.visibility = "hidden"; 
         myStudents.style.display = "none";
@@ -126,6 +130,7 @@ documents.addEventListener('click', ()=>{
         layer.style.display = "none";
         spinner.style.display = "none";
         mediaBox.style.visibility = "visible";
+        tableBody.style.visibility = "visible";
     },1500);
 })
 
@@ -385,3 +390,29 @@ sidebar.onclick = function(){
 
 //     }
 // }
+
+// Doughnut graph
+
+let doughnut = document.querySelector('#doughnut');
+let graph = new Chart(doughnut, {
+    type: "doughnut",
+    data:{
+        labels: ["Done", "Pending"],
+        datasets:[{
+            label: "Task Completion Chart",
+            data: [80, 20],
+            backgroundColor: ["skyblue", "bisque"]
+        }]
+    },
+    options:{
+        aspectRatio: 1.7,
+        responsive: false,
+        plugins:{
+            legend:{
+                display: true,
+                position: 'bottom',
+                align: 'center'
+            }
+        }
+    }
+})
