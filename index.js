@@ -6,24 +6,23 @@ let sidebar = document.querySelector("aside");
 
 // let count = 0;
 let toggle = false;
-const showMenu = ()=>{
-    // console.log("Menu btn is clicked");
-    if( !toggle ){
-        sidebar.style.display = "block";
-        // sidebar.style.marginTop = "0rem";
-        sidebar.style.marginLeft = "1rem";
-        sidebar.style.marginRight = "1rem";
-        sidebar.style.borderRadius = "0.5rem"
-        toggle = true;
-    }
-    else{
-        sidebar.style.display= "none";
-        toggle= false;
-    }
-    // count++;
+const showMenu = () => {
+  // console.log("Menu btn is clicked");
+  if (!toggle) {
+    sidebar.style.display = "block";
+    // sidebar.style.marginTop = "0rem";
+    sidebar.style.marginLeft = "1rem";
+    sidebar.style.marginRight = "1rem";
+    sidebar.style.borderRadius = "0.5rem";
+    toggle = true;
+  } else {
+    sidebar.style.display = "none";
+    toggle = false;
+  }
+  // count++;
 
-    // console.log("count", count);
-}
+  // console.log("count", count);
+};
 
 // let listItem = document.querySelectorAll(".list-item");
 // // console.log(listItem);
@@ -37,382 +36,401 @@ const showMenu = ()=>{
 
 // Switching between different sections of menubar
 
-let listItem = document.querySelectorAll(".list-item");
-// let activeClass = document.querySelector(".active");
+// let listItem = document.querySelectorAll(".list-item");
+// // let activeClass = document.querySelector(".active");
 
-listItem.forEach(item =>{
-    item.addEventListener('click', ()=>{
-        document.querySelector(".active")?.classList.remove("active");
-        item.classList.add("active");
-    })
-})
+// listItem.forEach(item =>{
+//     item.addEventListener('click', ()=>{
+//         document.querySelector(".active")?.classList.remove("active");
+//         item.classList.add("active");
+//     })
+// })
 
 // Changing the contents of the page depending on the menubar
 
-let dashboard = document.querySelector('.dashboard');
+let dashboard = document.querySelector(".dashboard");
 // console.log(dashboard);
-let analyse = document.querySelector('.analysis');
-let documents = document.querySelector('.documents');
-let inbox = document.querySelector('.inbox');
-let history = document.querySelector('.history');
-let settings = document.querySelector('.settings')
+let analyse = document.querySelector(".analysis");
+let documents = document.querySelector(".documents");
+let inbox = document.querySelector(".inbox");
+let history = document.querySelector(".history");
+let settings = document.querySelector(".settings");
 
-let welcomeHead = document.querySelector('.welcome');
-let mediaBox = document.querySelector('.media-box');
-let tableBody = document.querySelector('.media-box .div-body');
-let userBox = document.querySelector('.user-details');
-let sideContainer = document.querySelector('.side-container');
-let myStudents = document.querySelector('.my-students');
-let workHours = document.querySelector('.work-hours');
-let spinner =  document.querySelector('.spinner');
-let layer = document.querySelector('.layer');
+let welcomeHead = document.querySelector(".welcome");
+let mediaBox = document.querySelector(".media-box");
+let tableBody = document.querySelector(".media-box .div-body");
+let userBox = document.querySelector(".user-details");
+let sideContainer = document.querySelector(".side-container");
+let myStudents = document.querySelector(".my-students");
+let workHours = document.querySelector(".work-hours");
+let spinner = document.querySelector(".spinner");
+let layer = document.querySelector(".layer");
 
-dashboard.addEventListener('click', ()=>{
-    layer.style.display = "block";
-    spinner.style.display = "block";
-    setTimeout(()=>{
-        myStudents.style.display = "none";
-        workHours.style.display = "none";
-        mediaBox.style.visibility = "hidden";
-        tableBody.style.visibility = "collapse"; 
-        welcomeHead.style.visibility = "hidden";
-        sideContainer.style.visibility = "hidden";
-        userBox.style.visibility = "hidden"; 
-    }, 500)
-   
-    setTimeout(()=>{
-        layer.style.display = "none";
-        welcomeHead.style.visibility = "visible";
-        mediaBox.style.visibility = "visible";
-        tableBody.style.visibility = "visible";
-        userBox.style.visibility = "visible";
-        sideContainer.style.visibility = "visible";
-        myStudents.style.display = "block";
-        workHours.style.display = "block";
-        spinner.style.display = "none";   
-    },1500);
-    
-})
-analyse.addEventListener('click', ()=>{
-    layer.style.display = "block";
-    spinner.style.display = "block";
-    setTimeout(()=>{
-        welcomeHead.style.visibility = "hidden";
-        mediaBox.style.visibility = "hidden";
-        tableBody.style.visibility = "collapse";
-        userBox.style.visibility = "hidden";
-        sideContainer.style.visibility = "hidden"; 
-        myStudents.style.display = "none";
-        workHours.style.display = "none";
-    },500);
-   
-    setTimeout(()=>{
-        layer.style.display = "none";
-        spinner.style.display = "none";
-        myStudents.style.display = "block";
-        workHours.style.display = "block";
-    },1500)
-})  
+// analyse.addEventListener('click', ()=>{
+//     spinner.style.display = "block";
+//     setTimeout(()=>{
+//         spinner.style.display = "none";
+//     },1000)
+// })
+// dashboard.addEventListener("click", () => {
+//   layer.style.display = "block";
+//   spinner.style.display = "block";
+//   setTimeout(() => {
+//     myStudents.style.display = "none";
+//     workHours.style.display = "none";
+//     mediaBox.style.visibility = "hidden";
+//     tableBody.style.visibility = "collapse";
+//     welcomeHead.style.visibility = "hidden";
+//     sideContainer.style.visibility = "hidden";
+//     userBox.style.visibility = "hidden";
+//   }, 500);
 
-documents.addEventListener('click', ()=>{
-    layer.style.display = "block";
-    spinner.style.display = "block";
-    setTimeout(()=>{
-        welcomeHead.style.visibility = "hidden";
-        sideContainer.style.visibility = "hidden";   
-        myStudents.style.display = "none";
-        workHours.style.display = "none";
-        userBox.style.visibility = "hidden";
-        mediaBox.style.visibility = "hidden";
-    }, 500);
+//   setTimeout(() => {
+//     layer.style.display = "none";
+//     welcomeHead.style.visibility = "visible";
+//     mediaBox.style.visibility = "visible";
+//     tableBody.style.visibility = "visible";
+//     userBox.style.visibility = "visible";
+//     sideContainer.style.visibility = "visible";
+//     myStudents.style.display = "block";
+//     workHours.style.display = "block";
+//     spinner.style.display = "none";
+//   }, 1500);
+// });
+// analyse.addEventListener('click', ()=>{
+//     layer.style.display = "block";
+//     spinner.style.display = "block";
+//     setTimeout(()=>{
+//         welcomeHead.style.visibility = "hidden";
+//         mediaBox.style.visibility = "hidden";
+//         tableBody.style.visibility = "collapse";
+//         userBox.style.visibility = "hidden";
+//         sideContainer.style.visibility = "hidden";
+//         myStudents.style.display = "none";
+//         workHours.style.display = "none";
+//     },500);
 
-    setTimeout(()=>{
-        layer.style.display = "none";
-        spinner.style.display = "none";
-        mediaBox.style.visibility = "visible";
-        tableBody.style.visibility = "visible";
-    },1500);
-})
-
-// history.addEventListener('click', ()=>{
-    
+//     setTimeout(()=>{
+//         layer.style.display = "none";
+//         spinner.style.display = "none";
+//         myStudents.style.display = "block";
+//         workHours.style.display = "block";
+//     },1500)
 // })
 
+// documents.addEventListener("click", () => {
+//   layer.style.display = "block";
+//   spinner.style.display = "block";
+//   setTimeout(() => {
+//     welcomeHead.style.visibility = "hidden";
+//     sideContainer.style.visibility = "hidden";
+//     myStudents.style.display = "none";
+//     workHours.style.display = "none";
+//     userBox.style.visibility = "hidden";
+//     mediaBox.style.visibility = "hidden";
+//     tableBody.style.visibility = "collapse";
+//   }, 500);
+
+//   setTimeout(() => {
+//     layer.style.display = "none";
+//     spinner.style.display = "none";
+//     mediaBox.style.visibility = "visible";
+//     tableBody.style.visibility = "visible";
+//   }, 1500);
+// });
+
+// history.addEventListener('click', ()=>{
+
+// })
 
 // View all pop-up for students
-let viewStudent = document.querySelector('#viewStudent');
-let background = document.querySelector('.main');
-let sudentDetails = document.querySelector('.studentDetails');
-let stuCloseBtn = document.querySelector('.stuCloseBtn');
+let viewStudent = document.querySelector("#viewStudent");
+let background = document.querySelector(".main");
+let sudentDetails = document.querySelector(".studentDetails");
+let stuCloseBtn = document.querySelector(".stuCloseBtn");
 
-viewStudent.addEventListener('mouseenter',()=>{
-    viewStudent.style.cursor = "pointer";       
-})
+viewStudent.addEventListener("mouseenter", () => {
+  viewStudent.style.cursor = "pointer";
+});
 
-viewStudent.addEventListener('click', ()=>{
-    layer.style.display = "block";
-    spinner.style.display = "block";
-    setTimeout(()=>{
-        sudentDetails.style.display = "block";
-        background.style.filter = "blur(10px)";
-        background.style.opacity = "0.5"
-        // background.style.zIndex = "-1";
-    },1000)
-})
+viewStudent.addEventListener("click", () => {
+  layer.style.display = "block";
+  spinner.style.display = "block";
+  setTimeout(() => {
+    sudentDetails.style.display = "block";
+    background.style.filter = "blur(10px)";
+    background.style.opacity = "0.5";
+    // background.style.zIndex = "-1";
+  }, 1000);
+});
 
-stuCloseBtn.addEventListener('mouseenter', ()=>{
-    stuCloseBtn.style.cursor = "pointer";
-})
+stuCloseBtn.addEventListener("mouseenter", () => {
+  stuCloseBtn.style.cursor = "pointer";
+});
 
-stuCloseBtn.addEventListener('click', ()=>{
-        layer.style.display = "none";
-        spinner.style.display = "none";
-        sudentDetails.style.display = "none";
-        background.style.filter = "blur(0px)";
-        background.style.opacity = "1"
-        // background.style.zIndex = "0"; 
-})
+stuCloseBtn.addEventListener("click", () => {
+  layer.style.display = "none";
+  spinner.style.display = "none";
+  sudentDetails.style.display = "none";
+  background.style.filter = "blur(0px)";
+  background.style.opacity = "1";
+  // background.style.zIndex = "0";
+});
 
 // Popup for media box
 let viewMedia = document.querySelector("#media-view");
-let medDetails = document.querySelector('.mediaDetails');
+let medDetails = document.querySelector(".mediaDetails");
 let medCloseBtn = document.querySelector(".medCloseBtn");
 
-viewMedia.addEventListener('mouseenter', ()=>{
-    viewMedia.style.cursor = "pointer";
-})
+viewMedia.addEventListener("mouseenter", () => {
+  viewMedia.style.cursor = "pointer";
+});
 
-viewMedia.addEventListener('click', ()=>{
-    layer.style.display = "block";
-    spinner.style.display = "block";
-    setTimeout(()=>{
-        medDetails.style.display = "block";
-        background.style.filter = "blur(10px)";
-        background.style.opacity = "0.5";
-        // background.style.zIndex = "-1";
-    }, 1000)
-})
+viewMedia.addEventListener("click", () => {
+  layer.style.display = "block";
+  spinner.style.display = "block";
+  setTimeout(() => {
+    medDetails.style.display = "block";
+    background.style.filter = "blur(10px)";
+    background.style.opacity = "0.5";
+    // background.style.zIndex = "-1";
+  }, 1000);
+});
 
-medCloseBtn.addEventListener('mouseenter', ()=>{
-    medCloseBtn.style.cursor = "pointer";
-})
+medCloseBtn.addEventListener("mouseenter", () => {
+  medCloseBtn.style.cursor = "pointer";
+});
 
-medCloseBtn.addEventListener('click', ()=>{
-    layer.style.display = "none";
-    spinner.style.display = "none";
-    medDetails.style.display = "none";
-    background.style.filter = "blur(0px)";
-    background.style.opacity = "1"
-    // background.style.zIndex = "0"; 
-})
+medCloseBtn.addEventListener("click", () => {
+  layer.style.display = "none";
+  spinner.style.display = "none";
+  medDetails.style.display = "none";
+  background.style.filter = "blur(0px)";
+  background.style.opacity = "1";
+  // background.style.zIndex = "0";
+});
 
 // Popup for lessons
-let lessonView = document.querySelector('#lesson-view');
-let lessonDetails = document.querySelector('.lessonDetails');
-let lessCloseBtn = document.querySelector('.lessCloseBtn');
+let lessonView = document.querySelector("#lesson-view");
+let lessonDetails = document.querySelector(".lessonDetails");
+let lessCloseBtn = document.querySelector(".lessCloseBtn");
 
-lessonView.addEventListener('mouseenter', ()=>{
-    lessonView.style.cursor = "pointer";
-})
+lessonView.addEventListener("mouseenter", () => {
+  lessonView.style.cursor = "pointer";
+});
 
-lessonView.addEventListener('click', ()=>{
-    layer.style.display = "block";
-    spinner.style.display = "block";
-    setTimeout(()=>{
-        lessonDetails.style.display = "block";
-        background.style.filter = "blur(10px)";
-        background.style.opacity = "0.5";
-        // background.style.zIndex = "-1";
-    },1000)
-})
+lessonView.addEventListener("click", () => {
+  layer.style.display = "block";
+  spinner.style.display = "block";
+  setTimeout(() => {
+    lessonDetails.style.display = "block";
+    background.style.filter = "blur(10px)";
+    background.style.opacity = "0.5";
+    // background.style.zIndex = "-1";
+  }, 1000);
+});
 
-lessCloseBtn.addEventListener('mouseenter', ()=>{
-    lessCloseBtn.style.cursor = "pointer";
-})
+lessCloseBtn.addEventListener("mouseenter", () => {
+  lessCloseBtn.style.cursor = "pointer";
+});
 
-lessCloseBtn.addEventListener('click', ()=>{
-    layer.style.display = "none";
-    spinner.style.display = "none";
-    lessonDetails.style.display = "none";
-    background.style.filter = "blur(0px)";
-    background.style.opacity = "1";
-    // background.style.zIndex = "0";
-})
+lessCloseBtn.addEventListener("click", () => {
+  layer.style.display = "none";
+  spinner.style.display = "none";
+  lessonDetails.style.display = "none";
+  background.style.filter = "blur(0px)";
+  background.style.opacity = "1";
+  // background.style.zIndex = "0";
+});
 
 // Popup for completed tasks
 let taskView = document.querySelector("#task-view");
-let taskDetails = document.querySelector('.taskDetails');
-let taskCloseBtn = document.querySelector('.taskCloseBtn');
+let taskDetails = document.querySelector(".taskDetails");
+let taskCloseBtn = document.querySelector(".taskCloseBtn");
 
-taskView.addEventListener('mouseenter', ()=>{
-    taskView.style.cursor = "pointer";
-})
+taskView.addEventListener("mouseenter", () => {
+  taskView.style.cursor = "pointer";
+});
 
-taskView.addEventListener('click', ()=>{
-    layer.style.display = "block";
-    spinner.style.display = "block";
-    setTimeout(()=>{
-        taskDetails.style.display = "block";
-        background.style.filter = "blur(10px)";
-        background.style.opacity = "0.5";
-        // background.style.zIndex = "-1";
-    },1000)
-})
+taskView.addEventListener("click", () => {
+  layer.style.display = "block";
+  spinner.style.display = "block";
+  setTimeout(() => {
+    taskDetails.style.display = "block";
+    background.style.filter = "blur(10px)";
+    background.style.opacity = "0.5";
+    // background.style.zIndex = "-1";
+  }, 1000);
+});
 
-taskCloseBtn.addEventListener('mouseenter', ()=>{
-    taskCloseBtn.style.cursor = "pointer";
-})
+taskCloseBtn.addEventListener("mouseenter", () => {
+  taskCloseBtn.style.cursor = "pointer";
+});
 
-taskCloseBtn.addEventListener('click', ()=>{
-    layer.style.display = "none";
-    spinner.style.display = "none";
-    taskDetails.style.display = "none";
-    background.style.filter = "blur(0px)";
-    background.style.opacity = "1";
-    // background.style.zIndex = "0";
-})
-
+taskCloseBtn.addEventListener("click", () => {
+  layer.style.display = "none";
+  spinner.style.display = "none";
+  taskDetails.style.display = "none";
+  background.style.filter = "blur(0px)";
+  background.style.opacity = "1";
+  // background.style.zIndex = "0";
+});
 
 // Toggling of search icon
 
-let searchBar = document.querySelector('.search-dropdown');
-let searchBtn = document.querySelector('.search-btn');
-let searchIndicator = document.querySelector('.search-indicator');
+let searchBar = document.querySelector(".search-dropdown");
+let searchBtn = document.querySelector(".search-btn");
+let searchIndicator = document.querySelector(".search-indicator");
 let toggleSearch = false;
 
-searchBtn.addEventListener('click', (event)=>{
-    if(!toggleSearch){
-        event.target.style.transform = "rotate(90deg)";
-        setTimeout(()=>{
-            searchIndicator.classList.add('show-search');
-            searchBar.classList.add('show-search');
-            console.log(searchBar.classList);
-        },200)
-        toggleSearch = true;
-    }
-    else{
-        event.target.style.transform = "";
-        searchIndicator.classList.remove('show-search');
-        searchBar.classList.remove('show-search');
-        toggleSearch = false;
-    }
-})
+searchBtn.addEventListener("click", (event) => {
+  if (!toggleSearch) {
+    event.target.style.transform = "rotate(90deg)";
+    setTimeout(() => {
+      searchIndicator.classList.add("show-search");
+      searchBar.classList.add("show-search");
+      console.log(searchBar.classList);
+    }, 200);
+    toggleSearch = true;
+  } else {
+    event.target.style.transform = "";
+    searchIndicator.classList.remove("show-search");
+    searchBar.classList.remove("show-search");
+    toggleSearch = false;
+  }
+});
 
 // Toggling of notification menu
 
-let notifyMenu = document.querySelector('.notify-dropdown-container');
-let notifyBtn = document.querySelector('.notification-btn');
-let notifyIndicator = document.querySelector('.notify-indicator');
+let notifyMenu = document.querySelector(".notify-dropdown-container");
+let notifyBtn = document.querySelector(".notification-btn");
+let notifyIndicator = document.querySelector(".notify-indicator");
 let toggleNotify = false;
 
-notifyBtn.addEventListener('click', (event)=>{
-    if(!toggleNotify){
-        event.target.style.transform = "rotate(45deg)";
-        setTimeout(()=>{
-            notifyIndicator.classList.add('show-notify');
-            notifyMenu.classList.add('show-notify');
-            console.log(notifyMenu.classList);
-        },200)
-        toggleNotify = true;
-    }
-    else{
-        event.target.style.transform = "";
-        notifyIndicator.classList.remove('show-notify');
-        notifyMenu.classList.remove('show-notify');
-        toggleNotify = false;
-    }   
-})
-
+notifyBtn.addEventListener("click", (event) => {
+  if (!toggleNotify) {
+    event.target.style.transform = "rotate(45deg)";
+    setTimeout(() => {
+      notifyIndicator.classList.add("show-notify");
+      notifyMenu.classList.add("show-notify");
+      console.log(notifyMenu.classList);
+    }, 200);
+    toggleNotify = true;
+  } else {
+    event.target.style.transform = "";
+    notifyIndicator.classList.remove("show-notify");
+    notifyMenu.classList.remove("show-notify");
+    toggleNotify = false;
+  }
+});
 
 // Toggling of profilemenu
 
-let profileMenu = document.querySelector('.profile-dropdown-container');
-let profileImage = document.querySelector('.profile-img');
-let profileIndicator = document.querySelector('.profile-indicator');
+let profileMenu = document.querySelector(".profile-dropdown-container");
+let profileImage = document.querySelector(".profile-img");
+let profileIndicator = document.querySelector(".profile-indicator");
 // console.log(profileMenu);
 let toggleProfile = false;
 
-profileImage.addEventListener('click', (event)=>{
-   if(!toggleProfile){
-    event.target.style.transform = "rotate(45deg)";
-    setTimeout(()=>{
-        profileIndicator.classList.add('show-profile');
-        profileMenu.classList.add('show-profile');
-        console.log(profileMenu.classList);
-    },200)
+profileImage.addEventListener("click", (event) => {
+  if (!toggleProfile) {
+    setTimeout(() => {
+      profileIndicator.classList.add("show-profile");
+      profileMenu.classList.add("show-profile");
+      console.log(profileMenu.classList);
+    }, 100);
     toggleProfile = true;
-   }
-   else{
-    event.target.style.transform = "";
-    profileIndicator.classList.remove('show-profile');
-    profileMenu.classList.remove('show-profile');
+  } else {
+    profileIndicator.classList.remove("show-profile");
+    profileMenu.classList.remove("show-profile");
     toggleProfile = false;
-   }
-})
+  }
+});
 
-
-// Closing of the dropdown on clicking anywhere on the window
-sidebar.onclick = function(){
-    for(let i = 0; i < searchBar.classList.length; i++ ){
-        if(searchBar.classList[i] === 'show-search'){
-            console.log("matches");
-            searchBtn.style.transform = "";
-            searchIndicator.classList.remove('show-search');
-            searchBar.classList.remove('show-search');
-             // if(searchBar.classList.contains('show')){
-             // }
-             toggleSearch = false;
-         }
+// Closing of the dropdown on clicking anywhere on the sidebar
+sidebar.onclick = function () {
+  for (let i = 0; i < searchBar.classList.length; i++) {
+    if (searchBar.classList[i] === "show-search") {
+      console.log("matches");
+      searchBtn.style.transform = "";
+      searchIndicator.classList.remove("show-search");
+      searchBar.classList.remove("show-search");
+      // if(searchBar.classList.contains('show')){
+      // }
+      toggleSearch = false;
     }
-    for(let j = 0; j < notifyMenu.classList.length; j++){
-        if(notifyMenu.classList[j] === 'show-notify'){
-            console.log("matches 2");
-            notifyBtn.style.transform = "";
-            notifyIndicator.classList.remove('show-notify');
-            notifyMenu.classList.remove('show-notify');
-            toggleNotify = false;
-        }
+  }
+  for (let j = 0; j < notifyMenu.classList.length; j++) {
+    if (notifyMenu.classList[j] === "show-notify") {
+      console.log("matches 2");
+      notifyBtn.style.transform = "";
+      notifyIndicator.classList.remove("show-notify");
+      notifyMenu.classList.remove("show-notify");
+      toggleNotify = false;
     }
-    for(let k = 0; k < profileMenu.classList.length; k++){
-        if(profileMenu.classList[k] === 'show-profile'){
-            console.log("matches-3");
-            profileImage.style.transform = "";
-            profileIndicator.classList.remove('show-profile');
-            profileMenu.classList.remove('show-profile');
-            toggleProfile = false;
-        }
+  }
+  for (let k = 0; k < profileMenu.classList.length; k++) {
+    if (profileMenu.classList[k] === "show-profile") {
+      console.log("matches-3");
+      profileIndicator.classList.remove("show-profile");
+      profileMenu.classList.remove("show-profile");
+      toggleProfile = false;
     }
-}
-
-// Closing of the notify dropdown on clicking anywhere on the window
-// window.onclick = ()=>{
-//     for(let j = 0; j < notifyMenu.classList.length; j++){
-
-//     }
-// }
+  }
+};
 
 // Doughnut graph
 
-let doughnut = document.querySelector('#doughnut');
+let doughnut = document.querySelector("#doughnut");
 let graph = new Chart(doughnut, {
-    type: "doughnut",
-    data:{
-        labels: ["Done", "Pending"],
-        datasets:[{
-            label: "Task Completion Chart",
-            data: [80, 20],
-            backgroundColor: ["skyblue", "bisque"]
-        }]
+  type: "doughnut",
+  data: {
+    labels: ["Done", "Pending"],
+    datasets: [
+      {
+        label: "Task Completion Chart",
+        data: [80, 20],
+        backgroundColor: ["skyblue", "bisque"],
+      },
+    ],
+  },
+  options: {
+    aspectRatio: 1.8,
+    responsive: false,
+    plugins: {
+      legend: {
+        display: true,
+        position: "bottom",
+        align: "center",
+      },
     },
-    options:{
-        aspectRatio: 1.7,
-        responsive: false,
-        plugins:{
-            legend:{
-                display: true,
-                position: 'bottom',
-                align: 'center'
-            }
-        }
-    }
-})
+  },
+});
+
+// Dynamic swtiching of tabs
+
+window.onload = () => {
+  let tab_switchers = document.querySelectorAll("[data-switcher]");
+  // console.log(tab_switchers);
+  for (let i = 0; i < tab_switchers.length; i++) {
+    const tab_switcher = tab_switchers[i];
+    const page_id = tab_switcher.dataset.tab;
+    // console.log(page_id);
+
+    tab_switcher.addEventListener("click", () => {
+      document.querySelector(".list-item.active").classList.remove("active");
+      tab_switcher.parentNode.classList.add("active");
+      switchPage(page_id);
+    });
+  }
+};
+
+function switchPage(page_id) {
+  console.log(page_id);
+  const currPage = document.querySelector(".page.active-page");
+  console.log(currPage);
+  currPage.classList.remove("active-page");
+
+  const nextPage = document.querySelector(`.page[data-page='${page_id}']`);
+  nextPage.classList.add("active-page");
+}
