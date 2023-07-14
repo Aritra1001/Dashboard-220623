@@ -280,15 +280,15 @@
   position: absolute;
   top: 0.5rem;
   right: 6.5rem;
-  background: white;
+  /* background: white; */
   padding: 5px 10px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   height: 4.5rem;
   width: 15rem;
-  border-radius: 1.5rem;
-  box-shadow: rgb(0, 0, 0, 0.35) 0px 3px 6px;
+  /* border-radius: 1.5rem; */
+  /* box-shadow: rgb(0, 0, 0, 0.35) 0px 3px 6px; */
   transition: all 300ms ease;
 }
 
@@ -298,7 +298,7 @@
 }
 
 .user-icons {
-  width: 7rem;
+  width: 8.5rem;
   height: 3.5rem;
   /* margin-left: 0.5rem; */
   display: flex;
@@ -519,7 +519,7 @@
   display: block;
 }
 
-/* .layer {
+.layer {
   height: 100%;
   width: 100vw;
   background-color: aliceblue;
@@ -528,9 +528,7 @@
   position: absolute;
   z-index: 1;
   overflow-x: hidden;
-} */
-
-
+}
 
 .spinner {
   margin-top: 1rem;
@@ -547,15 +545,23 @@
 }
 
 aside {
-  height: 100%;
-  overflow-y: hidden;
+  height: 100vh;
+}
+
+.sidebar-body{
+  margin-top: 3.5rem;
+}
+
+.sidebar-bottom{
+  margin-top: 5.4rem;
+  margin-bottom: 1rem;
 }
 
 .sidebar {
   color: white;
   padding: 30px 20px;
   background-color: rgb(30, 48, 80);
-  height: 100vh;
+  height: 100%;
   /* width: 15%; */
 }
 
@@ -604,7 +610,7 @@ aside {
   color: white;
   text-decoration: none;
   opacity: 0.7;
-  margin-left: 0.5rem;
+  margin-left: 1rem;
 }
 
 .list-item a[data-switcher]:hover {
@@ -614,7 +620,8 @@ aside {
 
 .list-item.active {
   background: rgb(149, 178, 228);
-}
+  border-radius: 0.5rem;
+} 
 
 .list-item.active a {
   color: #072b61;
@@ -628,6 +635,10 @@ aside {
 
 .page.active-page {
   display: block;
+}
+
+main{
+  height: 100vh;
 }
 
 .welcome {
@@ -653,7 +664,6 @@ aside {
 .welcome-text {
   margin-top: 1.2rem;
   margin-left: 1rem;
-  /* overflow-y: hidden ; */
 }
 
 .welcome-text h1 {

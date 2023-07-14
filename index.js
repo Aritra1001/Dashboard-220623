@@ -24,16 +24,6 @@ const showMenu = () => {
   // console.log("count", count);
 };
 
-// let listItem = document.querySelectorAll(".list-item");
-// // console.log(listItem);
-// listItem.forEach(item=>{
-//     item.addEventListener('click', ()=>{
-//         let activeClass = document.querySelector(".active");
-//         // activeClass.classList.remove("active");
-//         item.classList.add("active");
-//     })
-// })
-
 // Switching between different sections of menubar
 
 // let listItem = document.querySelectorAll(".list-item");
@@ -59,89 +49,41 @@ let settings = document.querySelector(".settings");
 let welcomeHead = document.querySelector(".welcome");
 let mediaBox = document.querySelector(".media-box");
 let tableBody = document.querySelector(".media-box .div-body");
-let userBox = document.querySelector(".user-details");
+let userBox = document.querySelector(".user-box");
 let sideContainer = document.querySelector(".side-container");
 let myStudents = document.querySelector(".my-students");
 let workHours = document.querySelector(".work-hours");
 let spinner = document.querySelector(".spinner");
 let layer = document.querySelector(".layer");
 
-// analyse.addEventListener('click', ()=>{
-//     spinner.style.display = "block";
-//     setTimeout(()=>{
-//         spinner.style.display = "none";
-//     },1000)
-// })
-// dashboard.addEventListener("click", () => {
-//   layer.style.display = "block";
-//   spinner.style.display = "block";
-//   setTimeout(() => {
-//     myStudents.style.display = "none";
-//     workHours.style.display = "none";
-//     mediaBox.style.visibility = "hidden";
-//     tableBody.style.visibility = "collapse";
-//     welcomeHead.style.visibility = "hidden";
-//     sideContainer.style.visibility = "hidden";
-//     userBox.style.visibility = "hidden";
-//   }, 500);
+// Functions for view all popups
+const showLayer = () => {
+  layer.style.display = "block";
+  spinner.style.display = "block";
+};
 
-//   setTimeout(() => {
-//     layer.style.display = "none";
-//     welcomeHead.style.visibility = "visible";
-//     mediaBox.style.visibility = "visible";
-//     tableBody.style.visibility = "visible";
-//     userBox.style.visibility = "visible";
-//     sideContainer.style.visibility = "visible";
-//     myStudents.style.display = "block";
-//     workHours.style.display = "block";
-//     spinner.style.display = "none";
-//   }, 1500);
-// });
-// analyse.addEventListener('click', ()=>{
-//     layer.style.display = "block";
-//     spinner.style.display = "block";
-//     setTimeout(()=>{
-//         welcomeHead.style.visibility = "hidden";
-//         mediaBox.style.visibility = "hidden";
-//         tableBody.style.visibility = "collapse";
-//         userBox.style.visibility = "hidden";
-//         sideContainer.style.visibility = "hidden";
-//         myStudents.style.display = "none";
-//         workHours.style.display = "none";
-//     },500);
+const showContent = () => {
+  layer.style.display = "none";
+  spinner.style.display = "none";
+  sudentDetails.style.display = "block";
+  background.style.filter = "blur(10px)";
+  background.style.opacity = "0.3";
+  sidebar.style.opacity = "0.1";
+  userBox.style.opacity = "0.1";
+};
 
-//     setTimeout(()=>{
-//         layer.style.display = "none";
-//         spinner.style.display = "none";
-//         myStudents.style.display = "block";
-//         workHours.style.display = "block";
-//     },1500)
-// })
+const showMainContent = () => {
+  sudentDetails.style.display = "none";
+  background.style.filter = "blur(0px)";
+  background.style.opacity = "1";
+  sidebar.style.opacity = "1";
+  userBox.style.opacity = "1";
+};
 
-// documents.addEventListener("click", () => {
-//   layer.style.display = "block";
-//   spinner.style.display = "block";
-//   setTimeout(() => {
-//     welcomeHead.style.visibility = "hidden";
-//     sideContainer.style.visibility = "hidden";
-//     myStudents.style.display = "none";
-//     workHours.style.display = "none";
-//     userBox.style.visibility = "hidden";
-//     mediaBox.style.visibility = "hidden";
-//     tableBody.style.visibility = "collapse";
-//   }, 500);
-
-//   setTimeout(() => {
-//     layer.style.display = "none";
-//     spinner.style.display = "none";
-//     mediaBox.style.visibility = "visible";
-//     tableBody.style.visibility = "visible";
-//   }, 1500);
-// });
-
-// history.addEventListener('click', ()=>{
-
-// })
+const hideLayer = () => {
+  layer.style.display = "none";
+  spinner.style.display = "none";
+};
 
 // View all pop-up for students
 let viewStudent = document.querySelector("#viewStudent");
@@ -154,13 +96,9 @@ viewStudent.addEventListener("mouseenter", () => {
 });
 
 viewStudent.addEventListener("click", () => {
-  layer.style.display = "block";
-  spinner.style.display = "block";
+  showLayer();
   setTimeout(() => {
-    sudentDetails.style.display = "block";
-    background.style.filter = "blur(10px)";
-    background.style.opacity = "0.5";
-    // background.style.zIndex = "-1";
+    showContent();
   }, 1000);
 });
 
@@ -169,12 +107,7 @@ stuCloseBtn.addEventListener("mouseenter", () => {
 });
 
 stuCloseBtn.addEventListener("click", () => {
-  layer.style.display = "none";
-  spinner.style.display = "none";
-  sudentDetails.style.display = "none";
-  background.style.filter = "blur(0px)";
-  background.style.opacity = "1";
-  // background.style.zIndex = "0";
+  showMainContent();
 });
 
 // Popup for media box
@@ -187,13 +120,9 @@ viewMedia.addEventListener("mouseenter", () => {
 });
 
 viewMedia.addEventListener("click", () => {
-  layer.style.display = "block";
-  spinner.style.display = "block";
+  showLayer();
   setTimeout(() => {
-    medDetails.style.display = "block";
-    background.style.filter = "blur(10px)";
-    background.style.opacity = "0.5";
-    // background.style.zIndex = "-1";
+    showContent();
   }, 1000);
 });
 
@@ -202,12 +131,7 @@ medCloseBtn.addEventListener("mouseenter", () => {
 });
 
 medCloseBtn.addEventListener("click", () => {
-  layer.style.display = "none";
-  spinner.style.display = "none";
-  medDetails.style.display = "none";
-  background.style.filter = "blur(0px)";
-  background.style.opacity = "1";
-  // background.style.zIndex = "0";
+  showMainContent();
 });
 
 // Popup for lessons
@@ -220,13 +144,9 @@ lessonView.addEventListener("mouseenter", () => {
 });
 
 lessonView.addEventListener("click", () => {
-  layer.style.display = "block";
-  spinner.style.display = "block";
+  showLayer();
   setTimeout(() => {
-    lessonDetails.style.display = "block";
-    background.style.filter = "blur(10px)";
-    background.style.opacity = "0.5";
-    // background.style.zIndex = "-1";
+    showContent();
   }, 1000);
 });
 
@@ -235,12 +155,7 @@ lessCloseBtn.addEventListener("mouseenter", () => {
 });
 
 lessCloseBtn.addEventListener("click", () => {
-  layer.style.display = "none";
-  spinner.style.display = "none";
-  lessonDetails.style.display = "none";
-  background.style.filter = "blur(0px)";
-  background.style.opacity = "1";
-  // background.style.zIndex = "0";
+  showMainContent();
 });
 
 // Popup for completed tasks
@@ -253,13 +168,9 @@ taskView.addEventListener("mouseenter", () => {
 });
 
 taskView.addEventListener("click", () => {
-  layer.style.display = "block";
-  spinner.style.display = "block";
+  showLayer();
   setTimeout(() => {
-    taskDetails.style.display = "block";
-    background.style.filter = "blur(10px)";
-    background.style.opacity = "0.5";
-    // background.style.zIndex = "-1";
+    showContent();
   }, 1000);
 });
 
@@ -268,12 +179,7 @@ taskCloseBtn.addEventListener("mouseenter", () => {
 });
 
 taskCloseBtn.addEventListener("click", () => {
-  layer.style.display = "none";
-  spinner.style.display = "none";
-  taskDetails.style.display = "none";
-  background.style.filter = "blur(0px)";
-  background.style.opacity = "1";
-  // background.style.zIndex = "0";
+  showMainContent();
 });
 
 // Toggling of search icon
@@ -420,7 +326,13 @@ window.onload = () => {
     tab_switcher.addEventListener("click", () => {
       document.querySelector(".list-item.active").classList.remove("active");
       tab_switcher.parentNode.classList.add("active");
-      switchPage(page_id);
+      // layer.style.display = "block";
+      // spinner.style.display = "block";
+      showLayer();
+      setTimeout(() => {
+        hideLayer();
+        switchPage(page_id);
+      }, 800);
     });
   }
 };

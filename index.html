@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="./media/favicon.ico" />
     <link rel="stylesheet" href="./index.css" />
+    <link rel="stylesheet" href="./style.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -19,6 +20,9 @@
       crossorigin="anonymous"
     />
     <title>Static Dashboard</title>
+    <!-- <style>
+      @import url("style.css");
+    </style> -->
   </head>
   <body style="background-color: aliceblue">
     <!-- Student Details after clicking on view all -->
@@ -324,14 +328,14 @@
         </div>
         <aside>
           <div class="sidebar">
-            <section>
+            <section class="sidebar-logo">
               <div class="sidebar-head">
                 <img src="./media/logo.PNG" alt="head" /><span
                   ><b>Lingua</b></span
                 >
               </div>
             </section>
-            <section style="margin-bottom: 100px">
+            <section class="sidebar-body">
               <ul class="menu-list" style="padding-left: 0">
                 <li class="list-item active my-3">
                   <a data-switcher data-tab="1" class="dashboard">
@@ -377,8 +381,8 @@
                 </li>
               </ul>
             </section>
-            <section>
-              <ul style="padding-left: 0;">
+            <section class="sidebar-bottom">
+              <ul style="padding-left: 0">
                 <li class="list-item" id="out">
                   <a data-switcher
                     ><i
@@ -395,7 +399,7 @@
       </div>
       <!-- ********END OF SIDEBAR******** -->
       <div class="col-md-10">
-        <div class="main">
+        <main>
           <div class="page active-page" data-page="1">
             <div class="row">
               <div class="col-md-8 col-sm-12">
@@ -413,9 +417,7 @@
                         <span><b>very good!</b></span>
                       </p>
                     </div>
-                    <div class="welcome-img">
-                     
-                    </div>
+                    <div class="welcome-img"></div>
                   </div>
                 </div>
                 <!-- ******END OF WELCOME BOX****** -->
@@ -657,12 +659,101 @@
               </div>
             </div>
           </div>
-        </div>
-        <div class="page" data-page="2">Analysis Page</div>
-        <div class="page" data-page="3">Documents Page</div>
-        <div class="page" data-page="4">Inbox Page</div>
-        <div class="page" data-page="5">History</div>
-        <div class="page" data-page="6">Settings</div>
+          <div class="page" data-page="2">
+            <div class="container">
+              <div class="a-welcome my-3">
+                <h1>Welcome Back</h1>
+                <span class="text-muted">Check your last activity today</span>
+              </div>
+            </div>
+            <div class="container">
+              <div class="row my-2">
+                <div class="col-md-3">
+                  <div class="insights common-properties">
+                    <section class="insights-content">
+                      <div class="left-content text-center">
+                        <span>Total Orders</span>
+                        <h2>947</h2>
+                        <div class="percent">
+                          <i class="fa-sharp fa-solid fa-arrow-up"></i>&nbsp;
+                          <span>+5%</span>
+                        </div>
+                      </div>
+                      <div class="right-content">
+                        
+                      </div>
+                    </section>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="insights common-properties">
+                    <section class="insights-content">
+                      <div class="left-content text-center">
+                        <span>Total Sales</span>
+                        <h2>$28,407</h2>
+                        <div class="percent">
+                          <i class="fa-sharp fa-solid fa-arrow-up"></i>&nbsp;
+                          <span>+3%</span>
+                        </div>
+                      </div>
+                      <div class="right-content"></div>
+                    </section>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="insights common-properties">
+                    <section class="insights-content">
+                      <div class="left-content text-center">
+                        <span>Online Sessions</span>
+                        <h2>54,778</h2>
+                        <div class="percent">
+                          <i class="fa-sharp fa-solid fa-arrow-up"></i> &nbsp;
+                          <span>+2%</span>
+                        </div>
+                      </div>
+                      <div class="right-content"></div>
+                    </section>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="insights common-properties">
+                    <section class="insights-content">
+                      <div class="left-content text-center">
+                        <span>Average Order Value</span>
+                        <h2>$28.92</h2>
+                        <div class="percent low-percent">
+                          <i class="fa-solid fa-arrow-down"></i>&nbsp;
+                          <span>-2%</span>
+                        </div>
+                      </div>
+                      <div class="right-content"></div>
+                    </section>
+                  </div>
+                </div>
+              </div>
+              <div class="row my-3">
+                <div class="col-md-9">
+                  <div class="total-sales common-properties"></div>
+                </div>
+                <div class="col-md-3">
+                  <div class="sales-distribution common-properties"></div>
+                </div>
+              </div>
+              <div class="row my-2">
+                <div class="col-md-6">
+                  <div class="recent-orders common-properties"></div>
+                </div>
+                <div class="col-md-6">
+                  <div class="customers common-properties"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="page" data-page="3">Documents Page</div>
+          <div class="page" data-page="4">Inbox Page</div>
+          <div class="page" data-page="5">History</div>
+          <div class="page" data-page="6">Settings</div>
+        </main>
       </div>
     </div>
 
