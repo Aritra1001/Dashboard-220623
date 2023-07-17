@@ -5,6 +5,7 @@
     border-radius: 0.7rem;
     background: white;
     font-family: 'Poppins', sans-serif;
+    padding: 0.5rem 0.5rem;
 }
 
 .a-welcome h1{
@@ -34,6 +35,7 @@
     margin: 0.2rem 0.4rem;
     display: flex;
     align-items: center;
+    justify-content: space-evenly;
 }
 
 .insights-content .left-content h2{
@@ -72,20 +74,34 @@
     color: red;
 }
 
+.insight-graph-container{
+   padding: 10px;
+   background: lightcyan;
+}
+
+.loss{
+    background: #fbb7b7;
+}
+
 .total-sales{
-    height: 20rem;
+    height: 19rem;
+}
+
+.head h4{
+    height: 1.5rem;
+    font-size: 1.2rem;
 }
 
 .sales-distribution{
-    height: 20rem;
+    height: 19rem;
 }
 
 .recent-orders{
-    height: 12.5rem;
+    height: 13.5rem;
 }
 
 .customers{
-    height: 12.5rem;
+    height: 13.5rem;
 }
 
 

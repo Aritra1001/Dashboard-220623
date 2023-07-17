@@ -680,7 +680,14 @@
                         </div>
                       </div>
                       <div class="right-content">
-                        
+                        <div class="insight-graph-container">
+                          <canvas
+                            id="insightGraph1"
+                            aria-label="chart"
+                            height="50"
+                            width="80"
+                          ></canvas>
+                        </div>
                       </div>
                     </section>
                   </div>
@@ -696,7 +703,16 @@
                           <span>+3%</span>
                         </div>
                       </div>
-                      <div class="right-content"></div>
+                      <div class="right-content">
+                        <div class="insight-graph-container">
+                          <canvas
+                            id="insightGraph2"
+                            aria-label="chart"
+                            height="50"
+                            width="80"
+                          ></canvas>
+                        </div>
+                      </div>
                     </section>
                   </div>
                 </div>
@@ -711,7 +727,16 @@
                           <span>+2%</span>
                         </div>
                       </div>
-                      <div class="right-content"></div>
+                      <div class="right-content">
+                        <div class="insight-graph-container">
+                          <canvas
+                            id="insightGraph3"
+                            aria-label="chart"
+                            height="50"
+                            width="80"
+                          ></canvas>
+                        </div>
+                      </div>
                     </section>
                   </div>
                 </div>
@@ -726,25 +751,65 @@
                           <span>-2%</span>
                         </div>
                       </div>
-                      <div class="right-content"></div>
+                      <div class="right-content">
+                        <div class="insight-graph-container loss">
+                          <canvas
+                            id="insightGraph4"
+                            aria-label="chart"
+                            height="50"
+                            width="80"
+                          ></canvas>
+                        </div>
+                      </div>
                     </section>
                   </div>
                 </div>
               </div>
               <div class="row my-3">
                 <div class="col-md-9">
-                  <div class="total-sales common-properties"></div>
+                  <div class="total-sales common-properties">
+                    <section class="head">
+                      <h4>Total Sales</h4>
+                    </section>
+                    <section class="content">
+                      <div class="sales-graph-container">
+                        <canvas
+                          id="sales-graph"
+                          aria-label="chart"
+                      
+                        ></canvas>
+                      </div>
+                    </section>
+                  </div>
                 </div>
                 <div class="col-md-3">
-                  <div class="sales-distribution common-properties"></div>
+                  <div class="sales-distribution common-properties">
+                    <section class="head">
+                      <h4>Sales Distribution</h4>
+                    </section>
+                    <section class="content">
+                      <canvas
+                        id="distribution-graph"
+                        aria-label="chart"
+                      ></canvas>
+                    </section>
+                  </div>
                 </div>
               </div>
               <div class="row my-2">
                 <div class="col-md-6">
-                  <div class="recent-orders common-properties"></div>
+                  <div class="recent-orders common-properties">
+                    <section class="head">
+                      <h4>Recent Orders</h4>
+                    </section>
+                  </div>
                 </div>
                 <div class="col-md-6">
-                  <div class="customers common-properties"></div>
+                  <div class="customers common-properties">
+                    <section class="head">
+                      <h4>Customers</h4>
+                    </section>
+                  </div>
                 </div>
               </div>
             </div>

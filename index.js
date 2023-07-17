@@ -296,7 +296,7 @@ let graph = new Chart(doughnut, {
       {
         label: "Task Completion Chart",
         data: [80, 20],
-        backgroundColor: ["skyblue", "bisque"],
+        backgroundColor: ["cornflowerblue", "bisque"],
       },
     ],
   },
@@ -312,6 +312,7 @@ let graph = new Chart(doughnut, {
     },
   },
 });
+
 
 // Dynamic swtiching of tabs
 
@@ -346,3 +347,216 @@ function switchPage(page_id) {
   const nextPage = document.querySelector(`.page[data-page='${page_id}']`);
   nextPage.classList.add("active-page");
 }
+
+// Insight Graphs
+
+// Insight Graph 1
+let graph1 = document.getElementById('insightGraph1');
+// console.log(graph1);
+let chart1 = new Chart(graph1, {
+   type: "line",
+   data:{
+      labels:['white-shirt', 'black-trouser', 'formal-shirts', 't-shirt', 'kurta'],
+      datasets:[{
+        label:"Total Orders",
+        data: [20, 30, 25, 30, 27],
+        borderColor: ['cornflowerblue'],
+        borderWidth: 2,
+        pointRadius: 0
+      }],
+   },
+   options:{
+    responsive: false,
+    plugins:{
+      tooltip:{
+        enabled: false
+      },
+      legend:{
+        display: false
+      }
+    },
+    scales:{
+      x:{
+        display: false
+      },
+      y:{
+        display: false
+      }
+    }
+   }
+})
+
+// *******End Insight Graph1********
+
+// Insight Graph2
+
+let graph2 = document.getElementById('insightGraph2');
+let chart2 = new Chart(graph2, {
+  type: "line",
+  data:{
+    labels: ['white-shirt', 'black-trouser', 'formal-shirts', 't-shirt', 'kurta'],
+    datasets:[{
+      label:"Total sales",
+      data:[25, 20, 30, 25, 27],
+      borderColor: ['cornflowerblue'],
+      borderWidth: 2,
+      pointRadius: 0
+    }]
+  },
+  options:{
+    responsive: false,
+    plugins:{
+      tooltip:{
+        enabled: false
+      },
+      legend:{
+        display: false
+      }
+    },
+    scales:{
+      x:{
+        display: false
+      },
+      y:{
+        display: false
+      }
+    }
+  }
+})
+
+// ******End Insight Graph2*******
+
+// Insight Graph3
+
+let graph3 = document.getElementById('insightGraph3');
+let chart3 = new Chart(graph3, {
+  type: "line",
+  data:{
+    labels:['white-shirt', 'black-trouser', 'formal-shirts', 't-shirt', 'kurta'],
+    datasets:[{
+      label: "Online Sessions",
+      data: [40, 30, 35, 45, 37],
+      borderColor: ['cornflowerblue'],
+      borderWidth: 2,
+      pointRadius: 0
+    }]
+  },
+  options:{
+    responsive: false,
+    plugins:{
+      tooltip:{
+        enabled: false
+      },
+      legend:{
+        display: false
+      }
+    },
+    scales:{
+      x:{
+        display: false
+      }, 
+      y:{
+        display: false
+      }
+    }
+  }
+})
+
+// *******End Insight Graph3******
+
+// Insight Graph4
+
+let graph4 = document.getElementById('insightGraph4');
+let chart4 = new Chart(graph4, {
+  type: "line",
+  data:{
+    labels: ['white-shirt', 'black-trouser', 'formal-shirts', 't-shirt', 'kurta'],
+    datasets: [{
+      label: "Average Order value",
+      data: [35, 25, 30, 25, 22],
+      borderColor: ['red'],
+      borderWidth: 2,
+      pointRadius: 0
+    }]
+  },
+  options:{
+    responsive: false,
+    plugins:{
+      tooltip:{
+        enabled: false
+      },
+      legend:{
+        display: false
+      }
+    },
+    scales:{
+      x:{
+        display: false
+      },
+      y:{
+        display: false
+      }
+    },
+  },
+})
+
+// ******End Insight Graph4********
+
+
+// Total sales Graph
+
+let dataset1 = {
+  label: "Online Sales",
+  data: [20000, 19000, 27000, 24000, 22000, 23000, 24500, 15000, 20000, 17000, 30000, 27000],
+  backgroundColor: ['cornflowerblue'],
+  barPercentage: 0.5,
+  borderRadius: 10
+}
+
+let dataset2 = {
+  label: "Offline Sales",
+  data: [8000, 5000, 7000, 7000, 10000, 6000, 4000, 2000, 5000, 8000, 6000, 5500],
+  backgroundColor: ['bisque'],
+  barPercentage: 0.5,
+  borderRadius: 10
+}
+
+let combinedData = {
+  labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+  datasets: [dataset1, dataset2]
+}
+
+let graph5 = document.getElementById('sales-graph');
+let chart5 = new Chart(graph5, {
+  type: "bar",
+  data: combinedData,
+  options:{
+    responsive: true,
+    // layout:{
+    //   height: "500px",
+    //   width: "500px"
+    // },
+    aspectRatio: 3.7,
+    plugins:{
+      legend:{
+        display: true,
+        position: 'top',
+        align: 'right'
+      }
+    },
+    scales:{
+      y:{
+        min: 0,
+        max: 35000
+      }
+    }
+  }
+})
+
+// ******End of Total sales graph*******
+
+
+// Sales distribution radial bar chart
+
+
+// *******End of sales distribution chart******** 
