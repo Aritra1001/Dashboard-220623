@@ -311,13 +311,13 @@
     <!-- *******END OF PROFILE DROPDOWN****** -->
 
     <!-- Layer and spinner for showing that content is loading -->
-    <div class="layer">
+    <!-- <div class="layer">
       <div class="spinner text-center">
         <div class="spinner-border text-primary" role="status">
           <span class="visually-hidden">Loading...</span>
         </div>
       </div>
-    </div>
+    </div> -->
     <!-- ********END OF LAYER AND SPINNER****** -->
 
     <div class="row">
@@ -400,6 +400,15 @@
       <!-- ********END OF SIDEBAR******** -->
       <div class="col-md-10">
         <main>
+          <div class="layer-container show-layer">
+            <div class="layer">
+              <div class="spinner">
+                <div class="spinner-border text-primary" role="status">
+                  <span class="visually-hidden">Loading...</span>
+                </div>
+              </div>
+            </div>
+          </div>
           <div class="page active-page" data-page="1">
             <div class="row">
               <div class="col-md-8 col-sm-12">
@@ -504,7 +513,10 @@
                       </div>
                     </section>
                     <section class="div-body">
-                      <table style="border-collapse: separate">
+                      <table
+                        class="media-table"
+                        style="border-collapse: separate"
+                      >
                         <tr class="media-row">
                           <td class="media-list-section section-1">A1</td>
                           <td>Common English</td>
@@ -773,11 +785,7 @@
                     </section>
                     <section class="content">
                       <div class="sales-graph-container">
-                        <canvas
-                          id="sales-graph"
-                          aria-label="chart"
-                      
-                        ></canvas>
+                        <canvas id="sales-graph" aria-label="chart"></canvas>
                       </div>
                     </section>
                   </div>
@@ -788,10 +796,12 @@
                       <h4>Sales Distribution</h4>
                     </section>
                     <section class="content">
-                      <canvas
-                        id="distribution-graph"
-                        aria-label="chart"
-                      ></canvas>
+                      <div class="distibution-graph-container">
+                        <canvas
+                          id="distribution-graph"
+                          aria-label="chart"
+                        ></canvas>
+                      </div>
                     </section>
                   </div>
                 </div>
@@ -802,12 +812,57 @@
                     <section class="head">
                       <h4>Recent Orders</h4>
                     </section>
+                    <section class="content">
+                      <div class="table-container">
+                        <table
+                          class="order-table"
+                          style="border-collapse: separate"
+                        >
+                          <thead>
+                            <tr>
+                              <td>Product Name</td>
+                              <td>Date</td>
+                              <td>Price</td>
+                              <td>Status</td>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>White Shirt</td>
+                              <td>Jul 15, 2023</td>
+                              <td>$50</td>
+                              <td>Shipped</td>
+                            </tr>
+
+                            <tr>
+                              <td>Jacket</td>
+                              <td>Jul 13, 2023</td>
+                              <td>$70</td>
+                              <td>Delivered</td>
+                            </tr>
+
+                            <tr>
+                              <td>T-shirt</td>
+                              <td>Jul 10, 2023</td>
+                              <td>$30</td>
+                              <td>Delivered</td>
+                            </tr>
+                            <hr />
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
                   </div>
                 </div>
                 <div class="col-md-6">
                   <div class="customers common-properties">
                     <section class="head">
                       <h4>Customers</h4>
+                    </section>
+                    <section class="content">
+                      <div class="customer-graph-container">
+                        <canvas id="customer-graph" aria-label="chart"></canvas>
+                      </div>
                     </section>
                   </div>
                 </div>

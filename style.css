@@ -1,107 +1,170 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 /* font-family: 'Poppins', sans-serif; */
 
-.common-properties{
-    border-radius: 0.7rem;
-    background: white;
-    font-family: 'Poppins', sans-serif;
-    padding: 0.5rem 0.5rem;
+.common-properties {
+  border-radius: 0.7rem;
+  background: white;
+  font-family: "Poppins", sans-serif;
+  padding: 0.5rem 0.5rem;
 }
 
-.a-welcome h1{
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.5rem;
-    height: 2rem;
-    margin-bottom: 0;
-    font-weight: 800;
+.a-welcome h1 {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.5rem;
+  height: 2rem;
+  margin-bottom: 0;
+  font-weight: 800;
 }
 
-.a-welcome span{
-    font-size: 0.9rem;
-    font-weight: 500;
+.a-welcome span {
+  font-size: 0.9rem;
+  font-weight: 500;
 }
 
-.container{
-    margin-left: -1rem;
+.container {
+  margin-left: -1rem;
 }
 
-.insights{
-    height: 8rem;
-    width: 100%;
-    padding: 0.5rem;
+.insights {
+  height: 8rem;
+  width: 100%;
+  padding: 0.5rem;
 }
 
-.insights-content{
-    margin: 0.2rem 0.4rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
+.insights-content {
+  margin: 0.2rem 0.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
 }
 
-.insights-content .left-content h2{
-    height: 2.5rem;
+.insights-content .left-content h2 {
+  height: 2.5rem;
 }
 
-.left-content span{
-    font-size: 0.85rem;
-    font-weight: 500;
+.left-content span {
+  font-size: 0.85rem;
+  font-weight: 500;
 }
 
-.left-content .percent{
-    background: lightseagreen;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 3.5rem;
-    padding: 0.2rem;
-    margin: 0 auto;
-    background: #adf3de;
-    color: darkgreen;
-    border-radius: 0.3rem;
-    filter: contrast(1.2);
+.left-content .percent {
+  background: lightseagreen;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 3.5rem;
+  padding: 0.2rem;
+  margin: 0 auto;
+  background: #adf3de;
+  color: darkgreen;
+  border-radius: 0.3rem;
+  filter: contrast(1.2);
 }
 
-.left-content .percent{
-    font-size: 13px;
+.left-content .percent {
+  font-size: 13px;
 }
 
 .left-content .percent i {
-    transform: rotate(40deg);
+  transform: rotate(40deg);
 }
 
-.left-content .low-percent{
+.left-content .low-percent {
+  background: #fbb7b7;
+  color: red;
+}
+
+.insight-graph-container {
+  padding: 10px;
+  /* background: lightcyan; */
+}
+
+/* .loss{
     background: #fbb7b7;
-    color: red;
+} */
+
+.total-sales {
+  height: 19rem;
 }
 
-.insight-graph-container{
-   padding: 10px;
-   background: lightcyan;
+.sales-graph-container {
+  margin: 0 auto;
+  padding: 0 0.5rem;
 }
 
-.loss{
-    background: #fbb7b7;
+.head h4 {
+  height: 1.5rem;
+  font-size: 1.2rem;
 }
 
-.total-sales{
-    height: 19rem;
+/* .content{
+    padding: 1rem;
+} */
+
+.sales-distribution {
+  height: 19rem;
 }
 
-.head h4{
-    height: 1.5rem;
-    font-size: 1.2rem;
+.sales-distribution .distibution-graph-container {
+  /* border: 1px solid black; */
+  margin: auto;
+  height: 250px;
+  width: 250px;
 }
 
-.sales-distribution{
-    height: 19rem;
+.recent-orders {
+  height: 13.5rem;
 }
 
-.recent-orders{
-    height: 13.5rem;
+.table-container {
+  /* margin-left: 0.5rem; */
+  /* border: 1px solid black; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.customers{
-    height: 13.5rem;
+table.order-table {
+  width: 80%;
+  margin: 0 0.7rem;
+  border-spacing: 0px 13px;
 }
 
+.order-table tr td {
+  font-size: 0.9rem;
+}
 
+table.order-table thead tr td {
+  font-weight: bold;
+}
+
+.order-table tbody tr td {
+  /* margin-bottom: 10px; */
+  border-bottom: 1px solid rgb(211, 210, 210);
+}
+
+.order-table tr td:nth-child(4) {
+  padding-left: 1rem;
+}
+
+/* .order-table tbody tr td:nth-child(1),
+.order-table tbody tr td:nth-child(2),
+.order-table tbody tr td:nth-child(3){
+    padding-bottom: 5px;
+} */
+
+
+.order-table tbody tr td:nth-child(4) {
+  font-weight: 500;
+  /* background-color: red; */
+  width: 50px;
+  padding: 1px 3px;
+  text-align: center;
+
+  border-radius: 5px;
+ 
+}
+
+.customers {
+  height: 13.5rem;
+}

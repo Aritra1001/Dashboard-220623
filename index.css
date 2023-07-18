@@ -519,24 +519,35 @@
   display: block;
 }
 
+/* .layer-container{
+
+}  */
+
+.show-layer{
+  display: none;
+}
+
 .layer {
   height: 100%;
-  width: 100vw;
+  width: 82%;
   background-color: aliceblue;
-  opacity: 0.8;
-  display: none;
+  /* opacity: 0.8; */
   position: absolute;
   z-index: 1;
   overflow-x: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .spinner {
   margin-top: 1rem;
   display: none;
   overflow-y: hidden;
-  position: absolute;
-  margin-top: 23%;
-  margin-left: 55%;
+  margin-top: -4.5rem;
+  /* position: absolute; */
+  /* margin-top: 23%;
+  margin-left: 55%; */
   
 }
 
@@ -847,29 +858,29 @@ option {
   width: 110%;
 }
 
-table {
+table.media-table {
   border-spacing: 0 0.8rem;
   width: 84%;
   margin-left: 1.3rem;
 }
 
-table tr {
+table.media-table tr {
   background: white;
   padding: 1rem;
   box-shadow: rgb(0, 0, 0, 0.35) 0px 3px 3px;
   transition: all 300ms ease;
 }
 
-table tr:hover {
+table.media-table tr:hover {
   box-shadow: none;
 }
 
-tr td {
+.media-table tr td {
   padding: 10px;
   /* margin-top: 1rem; */
 }
 
-tr td:nth-child(1) {
+.media-table tr td:nth-child(1) {
   font-weight: bold;
   padding-left: 13px;
   /* margin-left: 1rem; */
@@ -891,19 +902,19 @@ tr td:nth-child(1) {
   background-color: rgb(247, 168, 168);
 }
 
-tr td:nth-child(2) {
+.media-table tr td:nth-child(2) {
   font-weight: bold;
   padding-left: 40px;
 }
 
-tr td:nth-child(3),
-tr td:nth-child(5) {
+.media-table tr td:nth-child(3),
+.media-table tr td:nth-child(5) {
   color: grey;
   font-size: 0.8rem;
   font-weight: 500;
 }
 
-tr td:nth-child(6) {
+.media-table tr td:nth-child(6) {
   font-weight: bold;
   font-size: 0.8rem;
 }
