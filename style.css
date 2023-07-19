@@ -1,10 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
-/* font-family: 'Poppins', sans-serif; */
 
 .common-properties {
   border-radius: 0.7rem;
   background: white;
-  font-family: "Poppins", sans-serif;
   padding: 0.5rem 0.5rem;
 }
 
@@ -39,7 +36,7 @@
 }
 
 .insights-content .left-content h2 {
-  height: 2.5rem;
+  height: 2.6rem;
 }
 
 .left-content span {
@@ -93,7 +90,7 @@
 }
 
 .head h4 {
-  height: 1.5rem;
+  height: 1.6rem;
   font-size: 1.2rem;
 }
 
@@ -124,46 +121,83 @@
   align-items: center;
 }
 
-table.order-table {
-  width: 80%;
-  margin: 0 0.7rem;
-  border-spacing: 0px 13px;
+.order-table {
+  width: 97%;
+  border-collapse: collapse;
+  border-radius: 7px 7px 0 0;
+  overflow: hidden;
 }
 
-.order-table tr td {
+.order-table thead tr{
+  background-color: rgb(126, 166, 240);
+  color: white;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+}
+
+.order-table th,
+.order-table td{
+  padding: 6px 5px;
+}
+
+.order-table tbody tr{
+  border-bottom: 1px solid #dddddd;
   font-size: 0.9rem;
 }
 
-table.order-table thead tr td {
-  font-weight: bold;
+.order-table td img{
+  height: 1.8rem;
+  width: 1.8rem;
+  margin-right: 0.5rem;
 }
 
-.order-table tbody tr td {
-  /* margin-bottom: 10px; */
-  border-bottom: 1px solid rgb(211, 210, 210);
+.order-table td p{
+  margin-bottom: 0px;
+  width: 60%;
+  text-align: center;
+  border-radius: 1rem;
+  color: grey;
 }
 
-.order-table tr td:nth-child(4) {
-  padding-left: 1rem;
+.order-table tbody tr:nth-of-type(even){
+  background-color: #f3f3f3;
 }
 
-/* .order-table tbody tr td:nth-child(1),
-.order-table tbody tr td:nth-child(2),
+.order-table tbody tr:last-of-type{
+  border-bottom: 2px solid rgb(126, 166, 240);
+}
+
 .order-table tbody tr td:nth-child(3){
-    padding-bottom: 5px;
-} */
-
+  font-weight: 500;
+}
 
 .order-table tbody tr td:nth-child(4) {
   font-weight: 500;
-  /* background-color: red; */
-  width: 50px;
-  padding: 1px 3px;
-  text-align: center;
-
-  border-radius: 5px;
- 
 }
+
+.shipped{
+  background: #fff0c2;
+}
+
+.delivered{
+  background: #adf3de;
+}
+
+/* .order-table tr td {
+  font-size: 0.9rem;
+} */
+
+/* table.order-table thead tr td {
+  font-weight: bold;
+} */
+
+/* .order-table tbody tr td {
+  border-bottom: 1px solid rgb(211, 210, 210);
+} */
+
+/* .order-table tr td:nth-child(4) {
+  padding-left: 1rem;
+} */
 
 .customers {
   height: 13.5rem;

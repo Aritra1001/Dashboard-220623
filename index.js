@@ -87,7 +87,7 @@ const hideLayer = () => {
 
 // View all pop-up for students
 let viewStudent = document.querySelector("#viewStudent");
-let background = document.querySelector(".main");
+let background = document.querySelector("main");
 let sudentDetails = document.querySelector(".studentDetails");
 let stuCloseBtn = document.querySelector(".stuCloseBtn");
 
@@ -286,6 +286,7 @@ sidebar.onclick = function () {
 };
 
 // Doughnut graph
+Chart.defaults.font.family = "Poppins, sans-serif";  //Changing the font-family of the charts
 
 let doughnut = document.querySelector("#doughnut");
 let graph = new Chart(doughnut, {
@@ -378,6 +379,9 @@ let chart1 = new Chart(graph1, {
   },
   options: {
     responsive: false,
+    font:{
+      family: 'Poppins'
+    },
     plugins: {
       tooltip: {
         enabled: false,
@@ -719,22 +723,22 @@ let chart6 = new Chart(document.getElementById("distribution-graph"), config);
 
 
 // Table last column Styling
-let tableData = document.querySelectorAll('.order-table tbody tr td:nth-child(4)');
-console.log(tableData);
+// let tableData = document.querySelectorAll('.order-table tbody tr td:nth-child(4)');
+// console.log(tableData);
 
-for(let i = 0; i < tableData.length; i++){
-  if(tableData[i].firstChild.data === 'Shipped'){
-    tableData[i].style.color = "orange";
-    tableData[i].style.backgroundColor = "#fff0c2";
-  }
-  else if(tableData[i].firstChild.data === 'Delivered'){
-    tableData[i].style.color = "green";
-    tableData[i].style.backgroundColor = "#adf3de";
-  }
-  else{
-    tableData[i].style.color = "red";
-  }
-}
+// for(let i = 0; i < tableData.length; i++){
+//   if(tableData[i].firstChild.data === 'Shipped'){
+//     tableData[i].style.color = "orange";
+//     tableData[i].style.backgroundColor = "#fff0c2";
+//   }
+//   else if(tableData[i].firstChild.data === 'Delivered'){
+//     tableData[i].style.color = "green";
+//     tableData[i].style.backgroundColor = "#adf3de";
+//   }
+//   else{
+//     tableData[i].style.color = "red";
+//   }
+// }
 
 // ******End of table last column styling*******
 
