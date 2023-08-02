@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap");
 
 * {
   margin: 0;
@@ -383,8 +384,8 @@
     right: 12%; */
   z-index: 1;
   box-shadow: grey 0px 5px 10px;
-  margin-left: 80%;
-  margin-top: 5.2rem;
+  margin-left: 75%;
+  margin-top: 4.8rem;
   display: none;
 }
 
@@ -402,8 +403,8 @@
   width: 12px;
   background: rgb(151, 180, 235);
   position: absolute;
-  top: 4.9rem;
-  right: 16.2rem;
+  top: 4.5rem;
+  right: 17.8rem;
   transform: rotate(45deg);
   z-index: 2;
   display: none;
@@ -420,8 +421,8 @@
   padding: 10px 25px;
   border-radius: 2rem;
   position: absolute;
-  margin-top: 5.2rem;
-  margin-left: 77%;
+  margin-top: 4.8rem;
+  margin-left: 75%;
   z-index: 1;
   box-shadow: grey 0px 5px 10px;
   display: none;
@@ -451,8 +452,8 @@
   width: 12px;
   background: rgb(151, 180, 235);
   position: absolute;
-  top: 4.8rem;
-  right: 12.7rem;
+  top: 4.5rem;
+  right: 13.5rem;
   z-index: 2;
   transform: rotate(45deg);
   display: none;
@@ -469,8 +470,8 @@
   padding: 10px;
   border-radius: 2rem;
   position: absolute;
-  margin-top: 5.5rem;
-  margin-left: 88%;
+  margin-top: 5rem;
+  margin-left: 86%;
   z-index: 1;
   text-align: center;
   display: none;
@@ -509,8 +510,8 @@
   width: 12px;
   background: rgb(151, 180, 235);
   position: absolute;
-  top: 5.2rem;
-  right: 5.7rem;
+  top: 4.7rem;
+  right: 8.8rem;
   z-index: 2;
   transform: rotate(45deg);
   display: none;
@@ -520,7 +521,7 @@
   display: block;
 }
 
-.show-layer{
+.show-layer {
   display: none;
 }
 
@@ -542,7 +543,6 @@
   position: absolute;
   margin-top: 21%;
   margin-left: 40%;
-  
 }
 
 .menu {
@@ -591,7 +591,7 @@ aside {
   margin-left: 1rem;
 }
 
-.sidebar-body{
+.sidebar-body {
   margin-top: 70px;
 }
 
@@ -611,12 +611,12 @@ aside {
   cursor: pointer;
 }
 
-.list-item a{
+.list-item a {
   display: flex;
   align-items: center;
 }
 
-.list-item i{
+.list-item i {
   font-size: 25px;
   /* margin-top: 10px; */
 }
@@ -641,7 +641,7 @@ aside {
 .list-item.active {
   background: rgb(149, 178, 228);
   border-radius: 0.5rem;
-} 
+}
 
 .list-item.active a {
   color: #072b61;
@@ -649,7 +649,7 @@ aside {
   opacity: 1;
 }
 
-.sidebar-bottom{
+.sidebar-bottom {
   margin-top: 40px;
 }
 
@@ -661,7 +661,7 @@ aside {
   display: block;
 }
 
-main{
+main {
   height: 100vh;
 }
 
@@ -696,7 +696,8 @@ main{
   font-weight: 100;
 }
 
-.welcome-text h1 span, .welcome-text p span {
+.welcome-text h1 span,
+.welcome-text p span {
   color: cornflowerblue;
   font-weight: 900;
 }
@@ -717,7 +718,7 @@ main{
   border-radius: 1rem;
   /* border: grey; */
   /* box-shadow: rgba(0, 0, 0, 0.35) 0px 3px 6px; */
-  height: 15.1rem;
+  height: 15.5rem;
   /* margin-left: 2.3rem; */
   transition: all 300ms ease;
 }
@@ -736,21 +737,50 @@ main{
 
 .view {
   color: grey;
+  font-size: 0.85rem;
 }
 .view:hover {
   color: #3762c0;
   font-weight: 500;
 }
 
-.student-list {
+/* .student-list {
   margin-top: -0.5rem;
-}
+} */
 
-.student-item {
+/* .student-item {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   margin-top: 0.5rem;
+} */
+
+.my-students .div-head {
+  margin-bottom: 0rem;
+}
+
+.students-head p {
+  margin-bottom: 0;
+}
+
+.student-table {
+  border-collapse: collapse;
+}
+
+.student-table-data img {
+  height: 2.3rem;
+  width: 2.3rem;
+  border-radius: 50%;
+}
+
+.student-table td {
+  padding: 6.5px 15px;
+}
+
+.student-table tbody tr td:nth-child(2),
+.student-table tbody tr td:nth-child(4) {
+  font-weight: bold;
+  font-size: 0.8rem;
 }
 
 .student-profile-logo {
@@ -815,11 +845,11 @@ main{
   background-color: #fff;
   padding: 0.5rem;
   /* padding-left: 30px; */
-  /* margin-left: 4.5rem; */
+  /* margin-left: 4rem; */
   border: grey;
   border-radius: 1rem;
   /* box-shadow: rgba(0, 0, 0, 0.35) 0px 3px 6px; */
-  height: 15.1rem;
+  height: 15.5rem;
   transition: all 300ms ease;
   /* overflow-y: hidden; */
 }
@@ -837,11 +867,16 @@ select {
   color: darkorange;
   background-color: antiquewhite;
   padding: 3px 5px 5px 5px;
-  border-radius: 10px;
+  border-radius: 5px;
   border: none;
   height: 30px;
   cursor: pointer;
-  /* font-size: 10px; */
+  width: 120px;
+  border-right: 13px solid antiquewhite;
+}
+
+select:focus {
+  outline: none;
 }
 
 option {
@@ -849,6 +884,7 @@ option {
 }
 
 .work-graph {
+  /* height: 150px; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -875,25 +911,24 @@ table.media-table {
 
 table.media-table tr {
   background: white;
-  padding: 1rem;
-  /* box-shadow: rgb(0, 0, 0, 0.35) 0px 3px 3px; */
-  transition: all 300ms ease;
 }
 
-table.media-table tr:hover {
+/* table.media-table tr:hover {
   box-shadow: none;
-}
+} */
 
 .media-table tr td {
-  padding: 10px;
+  padding: 8px;
   /* margin-top: 1rem; */
 }
 
-.media-table tr td:nth-child(1) {
+.media-table tr td:nth-child(1) p {
   font-weight: bold;
-  padding-left: 13px;
-  /* margin-left: 1rem; */
-  width: 30px;
+  margin-bottom: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2px;
 }
 
 .section-1 {
@@ -914,6 +949,7 @@ table.media-table tr:hover {
 .media-table tr td:nth-child(2) {
   font-weight: bold;
   padding-left: 40px;
+  font-size: 0.8rem;
 }
 
 .media-table tr td:nth-child(3),
@@ -923,25 +959,22 @@ table.media-table tr:hover {
   font-weight: 500;
 }
 
+.media-table tr td:nth-child(4),
 .media-table tr td:nth-child(6) {
   font-weight: bold;
   font-size: 0.8rem;
 }
 
-.media-row li {
-  font-weight: bold;
-}
-
 .side-container {
   background-color: #fff;
   border-radius: 2rem;
-  width: 90%;
+  /* width: 90%; */
   /* height: %; */
   padding: 0.5rem;
   /* position: relative; */
   margin-top: 6.4rem;
-  margin-bottom: 0.7rem;
-  box-shadow: rgb(0, 0, 0, 0.35) 0px 5px 7px;
+  /* margin-bottom: 0.7rem; */
+  /* box-shadow: rgb(0, 0, 0, 0.35) 0px 5px 7px; */
   transition: all 300ms ease;
 }
 
@@ -949,9 +982,9 @@ table.media-table tr:hover {
   box-shadow: none;
 }
 
-.lessons {
+/* .lessons {
   margin-left: 0.3rem;
-}
+} */
 
 .lesson-head {
   display: flex;
@@ -1011,12 +1044,8 @@ table.media-table tr:hover {
   background-color: rgb(171, 194, 236);
 }
 
-.task-completed {
-  margin-left: 0.3rem;
-  padding: 0.5rem;
-}
-
 .task-completed-head {
+  margin-top: 1.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1026,7 +1055,7 @@ table.media-table tr:hover {
 
 .task-completed-list {
   background-color: rgb(220, 248, 248);
-  width: 80%;
+  width: 85%;
   margin: 0.5rem auto;
   padding: 10px 30px;
   border-radius: 1.5rem;
@@ -1045,8 +1074,8 @@ table.media-table tr:hover {
   font-weight: 500;
 }
 .task-list-body p {
-  font-size: 0.9rem;
-  font-weight: 650;
+  font-size: 0.8rem;
+  font-weight: 600;
   margin-bottom: 0;
 }
 

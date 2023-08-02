@@ -405,30 +405,30 @@
               <div class="row">
                 <div class="col-md-8 col-sm-12">
                   <!-- WELCOME BOX -->
-                  <!-- <div class="container"> -->
+                  <div class="container">
                     <div class="row">
                       <div class="col-md-12 col-sm-11 col-10 welcome my-3">
                         <div class="welcome-text">
                           <h1>Welcome back, <span>John!</span></h1>
                           <p>
                             Your students completed
-                            <span><b>80%</b></span> of the tasks.
+                            <span>80%</span> of the tasks.
                           </p>
                           <p>
                             Progress is
-                            <span><b>very good!</b></span>
+                            <span>very good!</span>
                           </p>
                         </div>
                         <div class="welcome-img"></div>
                       </div>
                     </div>
-                  <!-- </div> -->
+                  </div>
                   <!-- ******END OF WELCOME BOX****** -->
 
                   <!-- STUDENT LIST AND WORK HOURS -->
-                  <!-- <div class="container"> -->
+                  <div class="container">
                     <div class="row my-3">
-                      <div class="col-md-6  my-students ">
+                      <div class="col-lg-6 col-md-10 my-students">
                         <section class="div-head">
                           <div class="students-head">
                             <p style="font-weight: bold">My Students</p>
@@ -436,7 +436,7 @@
                           </div>
                         </section>
                         <section class="div-body">
-                          <div class="student-list">
+                          <!-- <div class="student-list">
                             <div class="student-item">
                               <div class="student-profile-logo"></div>
                               <p class="my-1">Amelia Colier</p>
@@ -469,17 +469,81 @@
                               </div>
                               <p class="my-1 percent">72%</p>
                             </div>
-                          </div>
+                          </div> -->
+                          <table class="student-table">
+                            <tbody>
+                              <tr class="student-table-row">
+                                <td class="student-table-data">
+                                  <img
+                                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBwgu1A5zgPSvfE83nurkuzNEoXs9DMNr8Ww&usqp=CAU"
+                                    alt="profile-img"
+                                  />
+                                </td>
+                                <td>Amelia Colier</td>
+                                <td>
+                                  <div class="parent-bar-1">
+                                    <div class="child-bar-1"></div>
+                                  </div>
+                                </td>
+                                <td>95%</td>
+                              </tr>
+                              <tr class="student-table-row">
+                                <td class="student-table-data">
+                                  <img
+                                    src="https://media.istockphoto.com/id/1154642632/photo/close-up-portrait-of-brunette-woman.jpg?b=1&s=612x612&w=0&k=20&c=7hgSq1L2mpIbpuuw00KELApMpmZfBkZ-RBxn3Qps5zQ="
+                                    alt="profile-img"
+                                  />
+                                </td>
+                                <td>Estelle Baldwin</td>
+                                <td>
+                                  <div class="parent-bar-1">
+                                    <div class="child-bar-1 second-color"></div>
+                                  </div>
+                                </td>
+                                <td>84%</td>
+                              </tr>
+                              <tr class="student-table-row">
+                                <td class="student-table-data">
+                                  <img
+                                    src="https://thumbs.dreamstime.com/b/headshot-portrait-arabic-businessman-posing-office-young-male-employee-glasses-pose-workplace-profile-picture-successful-207320117.jpg"
+                                    alt="profile-img"
+                                  />
+                                </td>
+                                <td>Micheal Watts</td>
+                                <td>
+                                  <div class="parent-bar-1">
+                                    <div class="child-bar-1 third-color"></div>
+                                  </div>
+                                </td>
+                                <td>90%</td>
+                              </tr>
+                              <tr class="student-table-row">
+                                <td class="student-table-data">
+                                  <img
+                                    src="https://t3.ftcdn.net/jpg/04/32/57/94/240_F_432579409_6vGaEfxzAEoXojwkiE8KQ6b0riuFcoXY.jpg"
+                                    alt="profile-img"
+                                  />
+                                </td>
+                                <td>Amanda Wood</td>
+                                <td>
+                                  <div class="parent-bar-1">
+                                    <div class="child-bar-1 fourth-color"></div>
+                                  </div>
+                                </td>
+                                <td>72%</td>
+                              </tr>
+                            </tbody>
+                          </table>
                         </section>
                       </div>
-                      <div class="col-md-6  work-hours ">
+                      <div class="col-lg-5 offset-lg-1 col-md-10 work-hours">
                         <section class="div-head">
                           <div class="work-head">
                             <p style="font-weight: bold">Work Status</p>
-                            <select>
-                              <option>Today</option>
-                              <option>Tomorrow</option>
-                              <option>Yesterday</option>
+                            <select style="font-size: 13px">
+                              <option value="Today">Today</option>
+                              <option value="Tomorrow">Tomorrow</option>
+                              <option value="Yesterday">Yesterday</option>
                             </select>
                           </div>
                         </section>
@@ -489,177 +553,190 @@
                           </div>
                         </section>
                       </div>
-                    
                     </div>
-                  <!-- </div> -->
+                  </div>
                   <!-- ******END OF STUDENT LIST AND WORK HOURS******* -->
 
                   <!-- MEDIA BOX -->
-                  <!-- <div class="container"> -->
-                  <div class="row">
-                    <div
-                      class="col-md-12 col-sm-11 col-10 media-box"
-                      style="padding-left: 0px; padding-right: 0px"
-                    >
-                      <section class="div-head">
-                        <div class="media-head">
-                          <p style="font-weight: bold">Media for lessons</p>
-                          <p class="view" id="media-view">View all</p>
-                        </div>
-                      </section>
-                      <section class="div-body">
-                        <table
-                          class="media-table"
-                          style="border-collapse: separate"
-                        >
-                          <tr class="media-row">
-                            <td class="media-list-section section-1">A1</td>
-                            <td>Common English</td>
-                            <td>Cambridge advanced.pdf</td>
-                            <td><li>Only View</li></td>
-                            <td>48 members</td>
-                            <td>42MB</td>
-                          </tr>
-                          <tr class="media-row">
-                            <td id="section-2">B1</td>
-                            <td class="subject-margin">Speaking Club</td>
-                            <td>Speaking skill.docs</td>
-                            <td>
-                              <li style="color: cornflowerblue">
-                                Edit available
-                              </li>
-                            </td>
-                            <td>62 members</td>
-                            <td>24MB</td>
-                          </tr>
-                          <tr class="media-row">
-                            <td id="section-3">C2</td>
-                            <td>Business English</td>
-                            <td>English Dictionary.wav</td>
-                            <td><li>Only View</li></td>
-                            <td>53 members</td>
-                            <td>34 MB</td>
-                          </tr>
-                          <tr class="media-row">
-                            <td class="section-1">A2</td>
-                            <td>Spanish Grammar</td>
-                            <td>Easy Learning Book.zip</td>
-                            <td><li>Only View</li></td>
-                            <td>42 members</td>
-                            <td>23MB</td>
-                          </tr>
-                        </table>
-                      </section>
+                  <div class="container">
+                    <div class="row">
+                      <div
+                        class="col-md-12 col-sm-11 col-10 media-box"
+                        style="padding-left: 0px; padding-right: 0px"
+                      >
+                        <section class="div-head">
+                          <div class="media-head">
+                            <p style="font-weight: bold">Media for lessons</p>
+                            <p class="view" id="media-view">View all</p>
+                          </div>
+                        </section>
+                        <section class="div-body">
+                          <table
+                            class="media-table"
+                            style="border-collapse: separate"
+                          >
+                            <tr class="media-row">
+                              <td class="media-list-section">
+                                <p class="section-1">A1</p>
+                              </td>
+                              <td>Common English</td>
+                              <td>Cambridge advanced.pdf</td>
+                              <td><li>Only View</li></td>
+                              <td>48 members</td>
+                              <td>42MB</td>
+                            </tr>
+                            <tr class="media-row">
+                              <td><p id="section-2">B1</p></td>
+                              <td class="subject-margin">Speaking Club</td>
+                              <td>Speaking skill.docs</td>
+                              <td>
+                                <li style="color: cornflowerblue">
+                                  Edit available
+                                </li>
+                              </td>
+                              <td>62 members</td>
+                              <td>24MB</td>
+                            </tr>
+                            <tr class="media-row">
+                              <td><p id="section-3">C2</p></td>
+                              <td>Business English</td>
+                              <td>English Dictionary.wav</td>
+                              <td><li>Only View</li></td>
+                              <td>53 members</td>
+                              <td>34 MB</td>
+                            </tr>
+                            <tr class="media-row">
+                              <td><p class="section-1">C1</p></td>
+                              <td>Spanish Grammar</td>
+                              <td>Easy Learning Book.zip</td>
+                              <td><li>Only View</li></td>
+                              <td>42 members</td>
+                              <td>23MB</td>
+                            </tr>
+                          </table>
+                        </section>
+                      </div>
                     </div>
                   </div>
-                  <!-- </div> -->
                   <!-- *******END OF MEDIA BOX****** -->
                 </div>
                 <div class="col-md-4 col-sm-12">
                   <!-- SIDE CONTAINER -->
-                  <div class="row">
-                    <div class="col-md-12 col-sm-11 col-11">
-                      <div class="side-container">
-                        <!-- LESSON SECTION -->
-                        <div class="row">
-                          <div class="col-md-12 lessons">
-                            <section class="div-head">
-                              <div class="lesson-head">
-                                <p style="font-weight: bold">Lessons</p>
-                                <p class="view" id="lesson-view">View all</p>
-                              </div>
-                            </section>
-                            <section class="div-body">
-                              <div class="lesson-list my-2">
-                                <div class="lesson-list-head">
-                                  <p style="font-weight: 500">Common English</p>
-                                  <div class="dots"></div>
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-md-12 col-sm-11 col-11">
+                        <div class="side-container">
+                          <!-- LESSON SECTION -->
+                          <div class="row">
+                            <div class="col-md-12 lessons">
+                              <section class="div-head">
+                                <div class="lesson-head">
+                                  <p style="font-weight: bold">Lessons</p>
+                                  <p class="view" id="lesson-view">View all</p>
                                 </div>
-                                <div class="lesson-list-body">
-                                  <p class="text-secondary">Thu 13PM - 15PM</p>
+                              </section>
+                              <section class="div-body">
+                                <div class="lesson-list my-2">
+                                  <div class="lesson-list-head">
+                                    <p style="font-weight: 500">
+                                      Common English
+                                    </p>
+                                    <div class="dots"></div>
+                                  </div>
+                                  <div class="lesson-list-body">
+                                    <p class="text-secondary">
+                                      Thu 13PM - 15PM
+                                    </p>
+                                  </div>
+                                  <div class="lesson-list-footer my-2">
+                                    <img
+                                      src="./media/lesson-img-1.PNG"
+                                      alt="lesson-1"
+                                    />
+                                    <i
+                                      class="fa-solid fa-circle-plus"
+                                      style="font-size: 1.5rem"
+                                    ></i>
+                                  </div>
                                 </div>
-                                <div class="lesson-list-footer my-2">
-                                  <img
-                                    src="./media/lesson-img-1.PNG"
-                                    alt="lesson-1"
-                                  />
-                                  <i
-                                    class="fa-solid fa-circle-plus"
-                                    style="font-size: 1.5rem"
-                                  ></i>
+                                <div class="lesson-list my-2" id="second-item">
+                                  <div class="lesson-list-head">
+                                    <p style="font-weight: 500">
+                                      Speaking Club
+                                    </p>
+                                    <div class="dots"></div>
+                                  </div>
+                                  <div class="lesson-list-body">
+                                    <p class="text-secondary">
+                                      Thu 16PM - 18PM
+                                    </p>
+                                  </div>
+                                  <div class="lesson-list-footer my-2">
+                                    <img
+                                      src="./media/lesson-img-1.PNG"
+                                      alt="lesson-1"
+                                    />
+                                    <i
+                                      class="fa-solid fa-circle-plus"
+                                      style="font-size: 1.5rem"
+                                    ></i>
+                                  </div>
                                 </div>
-                              </div>
-                              <div class="lesson-list my-2" id="second-item">
-                                <div class="lesson-list-head">
-                                  <p style="font-weight: 500">Speaking Club</p>
-                                  <div class="dots"></div>
-                                </div>
-                                <div class="lesson-list-body">
-                                  <p class="text-secondary">Thu 16PM - 18PM</p>
-                                </div>
-                                <div class="lesson-list-footer my-2">
-                                  <img
-                                    src="./media/lesson-img-1.PNG"
-                                    alt="lesson-1"
-                                  />
-                                  <i
-                                    class="fa-solid fa-circle-plus"
-                                    style="font-size: 1.5rem"
-                                  ></i>
-                                </div>
-                              </div>
-                            </section>
+                              </section>
+                            </div>
                           </div>
-                        </div>
-                        <!-- *******END OF LESSON SECTION******** -->
+                          <!-- *******END OF LESSON SECTION******** -->
 
-                        <!-- COMPLETED TASK SECTION -->
-                        <div class="row">
-                          <div class="col-md-12 task-completed">
-                            <section class="div-head">
-                              <div class="task-completed-head">
-                                <p style="font-weight: bold">Completed Tasks</p>
-                                <p class="view" id="task-view">View all</p>
-                              </div>
-                            </section>
-                            <section class="div-body">
-                              <div class="task-completed-list">
-                                <div class="logo-container">
-                                  <i class="fa-solid fa-book"></i>
+                          <!-- COMPLETED TASK SECTION -->
+                          <div class="row">
+                            <div class="col-md-12 task-completed">
+                              <section class="div-head">
+                                <div class="task-completed-head">
+                                  <p style="font-weight: bold">
+                                    Completed Tasks
+                                  </p>
+                                  <p class="view" id="task-view">View all</p>
                                 </div>
-                                <div class="task-list-body">
-                                  <p>English-Grammar Test</p>
-                                  <span class="text-muted"
-                                    >Eula Kelly, 6th May</span
-                                  >
+                              </section>
+                              <section class="div-body">
+                                <div class="task-completed-list">
+                                  <div class="logo-container">
+                                    <i class="fa-solid fa-book"></i>
+                                  </div>
+                                  <div class="task-list-body">
+                                    <p>English-Grammar Test</p>
+                                    <span class="text-muted"
+                                      >Eula Kelly, 6th May</span
+                                    >
+                                  </div>
                                 </div>
-                              </div>
-                              <div class="task-completed-list">
-                                <div class="logo-container" id="logo-2">
-                                  <i class="fa-regular fa-envelope"></i>
+                                <div class="task-completed-list">
+                                  <div class="logo-container" id="logo-2">
+                                    <i class="fa-regular fa-envelope"></i>
+                                  </div>
+                                  <div class="task-list-body">
+                                    <p>Irregular Verbs Test</p>
+                                    <span class="text-muted"
+                                      >Olive Garze, 4th May</span
+                                    >
+                                  </div>
                                 </div>
-                                <div class="task-list-body">
-                                  <p>Irregular Verbs Test</p>
-                                  <span class="text-muted"
-                                    >Olive Garze, 4th May</span
-                                  >
+                                <div class="task-completed-list">
+                                  <div class="logo-container" id="logo-3">
+                                    <i class="fa-regular fa-file"></i>
+                                  </div>
+                                  <div class="task-list-body">
+                                    <p>Spanish Essay</p>
+                                    <span class="text-muted"
+                                      >Franklin Harvey, 2nd May</span
+                                    >
+                                  </div>
                                 </div>
-                              </div>
-                              <div class="task-completed-list">
-                                <div class="logo-container" id="logo-3">
-                                  <i class="fa-regular fa-file"></i>
-                                </div>
-                                <div class="task-list-body">
-                                  <p>Spanish Essay</p>
-                                  <span class="text-muted"
-                                    >Franklin Harvey, 2nd May</span
-                                  >
-                                </div>
-                              </div>
-                            </section>
+                              </section>
+                            </div>
                           </div>
+                          <!-- *******END OF COMPLETED TASK SECTION******** -->
                         </div>
-                        <!-- *******END OF COMPLETED TASK SECTION******** -->
                       </div>
                     </div>
                   </div>

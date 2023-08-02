@@ -286,9 +286,23 @@ sidebar.onclick = function () {
 };
 
 // Doughnut graph
-Chart.defaults.font.family = "Poppins, sans-serif";  //Changing the font-family of the charts
+Chart.defaults.font.family = "Poppins, sans-serif"; //Changing the font-family of the charts
 
 let doughnut = document.querySelector("#doughnut");
+const doughnutLabel = {
+  beforeDatasetsDraw: (chart, args, pluginOptions)=>{
+    const {ctx, data} = chart;
+    ctx.save();
+    const xCoor = chart.getDatasetMeta(0).data[0].x;
+    const yCoor = chart.getDatasetMeta(0).data[0].y;
+    ctx.font = "bold 20px Poppins";
+    ctx.fillStyle = "black";
+    ctx.textAlign = "center";
+    ctx.textBaseline = "middle";
+    ctx.fillText('70%', xCoor, yCoor);
+  }
+
+}
 let graph = new Chart(doughnut, {
   type: "doughnut",
   data: {
@@ -296,23 +310,31 @@ let graph = new Chart(doughnut, {
     datasets: [
       {
         label: "Task Completion Chart",
-        data: [80, 20],
-        backgroundColor: ["cornflowerblue", "bisque"],
+        data: [70, 15, 15],
+        backgroundColor: ["cornflowerblue", "bisque", "lightgrey"],
       },
     ],
   },
   options: {
+    borderWidth: 0,
     aspectRatio: 1.8,
-    responsive: false,
+    responsive: true,
+    cutout: "80%",
     plugins: {
       legend: {
+        labels: {
+          usePointStyle: true,
+          boxWidth: 7
+        },
         display: true,
         position: "bottom",
         align: "center",
       },
     },
   },
+  plugins:[doughnutLabel]
 });
+
 
 // Dynamic swtiching of tabs
 
@@ -371,16 +393,16 @@ let chart1 = new Chart(graph1, {
         borderWidth: 2,
         pointRadius: 0,
         fill: {
-          target: 'origin',
-          above:'rgb(204, 219, 247)',
-        }
+          target: "origin",
+          above: "rgb(204, 219, 247)",
+        },
       },
     ],
   },
   options: {
     responsive: false,
-    font:{
-      family: 'Poppins'
+    font: {
+      family: "Poppins",
     },
     plugins: {
       tooltip: {
@@ -424,9 +446,9 @@ let chart2 = new Chart(graph2, {
         borderWidth: 2,
         pointRadius: 0,
         fill: {
-          target: 'origin',
-          above:'rgb(204, 219, 247)',
-        }
+          target: "origin",
+          above: "rgb(204, 219, 247)",
+        },
       },
     ],
   },
@@ -474,9 +496,9 @@ let chart3 = new Chart(graph3, {
         borderWidth: 2,
         pointRadius: 0,
         fill: {
-          target: 'origin',
-          above:'rgb(204, 219, 247)',
-        }
+          target: "origin",
+          above: "rgb(204, 219, 247)",
+        },
       },
     ],
   },
@@ -523,10 +545,10 @@ let chart4 = new Chart(graph4, {
         borderColor: ["red"],
         borderWidth: 2,
         pointRadius: 0,
-        fill:{
-          target: 'origin',
-          above: '#ffd9d9'
-        }
+        fill: {
+          target: "origin",
+          above: "#ffd9d9",
+        },
       },
     ],
   },
@@ -607,6 +629,10 @@ let chart5 = new Chart(graph5, {
     aspectRatio: 3.7,
     plugins: {
       legend: {
+        labels: {
+          usePointStyle: true,
+          boxWidth: 5
+        },
         display: true,
         position: "top",
         align: "right",
@@ -623,104 +649,109 @@ let chart5 = new Chart(graph5, {
 
 // ******End of Total sales graph*******
 
-
 // Sales distribution radial bar chart
 
 let data = {
-   datasets:[{
+  datasets: [
+    {
       label: "Online Sales",
       data: [18],
-      backgroundColor: ['cornflowerblue'],
+      backgroundColor: ["cornflowerblue"],
       borderRadius: 10,
       borderWidth: 5,
-      borderColor: ['white'],
+      borderColor: ["white"],
       // align: "left",
-      circumference: (ctx)=>{
-        return ctx.dataset.data[0] / 18 * 270;
-      }
-   },
-   {
+      circumference: (ctx) => {
+        return (ctx.dataset.data[0] / 18) * 270;
+      },
+    },
+    {
       label: "Offline Sales",
       data: [14],
-      backgroundColor: ['bisque'],
+      backgroundColor: ["bisque"],
       borderRadius: 10,
       borderWidth: 5,
-      borderColor: ['white'],
+      borderColor: ["white"],
       // align: "left",
-      circumference: (ctx)=>{
-        return ctx.dataset.data[0] / 18 * 270;
-      }
-   },
-   {
+      rotation: 40,
+      circumference: (ctx) => {
+        return (ctx.dataset.data[0] / 18) * 270;
+      },
+    },
+    {
       label: "Returns",
       data: [8],
-      backgroundColor: ['rgba(255, 26, 104, 0.5)'],
+      backgroundColor: ["rgba(255, 26, 104, 0.5)"],
       borderRadius: 10,
       borderWidth: 5,
-      borderColor: ['white'],
+      borderColor: ["white"],
       // align: "left",
-      circumference: (ctx)=>{
-        return ctx.dataset.data[0] / 18 * 270;
-      }
-   }
-  ]
-}
+      rotation: 80,
+      circumference: (ctx) => {
+        return (ctx.dataset.data[0] / 18) * 270;
+      },
+    },
+  ],
+};
 
 let config = {
-  type: 'doughnut',
+  type: "doughnut",
   data,
-  options:{
+  options: {
     // aspectRatio: 1,
     responsive: true,
-    plugins:{
-      legend:{
-        onClick: (evt, legendItem, legend)=>{
+    rotation: 15,
+    plugins: {
+      legend: {
+        position: "bottom",
+        align: "left",
+        onClick: (evt, legendItem, legend) => {
           // console.log("evt", evt);
           // console.log("legendItem",legendItem.text);
           console.log("legend", legend);
-          const datasets = legend.legendItems.map((dataset, index)=>{
+          const datasets = legend.legendItems.map((dataset, index) => {
             return dataset.text;
           });
           console.log("datasets", datasets);
           const index = datasets.indexOf(legendItem.text);
           console.log("index", index);
-          if(legend.chart.isDatasetVisible(index) === true){
+          if (legend.chart.isDatasetVisible(index) === true) {
             legend.chart.hide(index);
-          }else{
+          } else {
             legend.chart.show(index);
           }
         },
-        labels:{
-          generateLabels: (chart)=>{
+        labels: {
+          usePointStyle: true,
+          boxWidth: 5,
+          // position: "bottom",
+          generateLabels: (chart) => {
             let visibility = [];
-            for(let i = 0; i < chart.data.datasets.length; i++){
-              if(chart.isDatasetVisible(i) === false){
+            for (let i = 0; i < chart.data.datasets.length; i++) {
+              if (chart.isDatasetVisible(i) === false) {
                 visibility.push(true);
-              }else{
+              } else {
                 visibility.push(false);
               }
             }
 
             console.log("chart", chart);
-            return chart.data.datasets.map(
-              (dataset, index)=>({
-                text: dataset.label,
-                fillStyle: dataset.backgroundColor,
-                strokeStyle: dataset.borderColor,
-                // fontColor: dataset.backgroundColor,
-                hidden: visibility[index]
-            })
-            )
-          }
-        }
-      }
-    }
-  }
-}
+            return chart.data.datasets.map((dataset, index) => ({
+              text: dataset.label,
+              fillStyle: dataset.backgroundColor,
+              strokeStyle: dataset.borderColor,
+              // fontColor: dataset.backgroundColor,
+              hidden: visibility[index],
+            }));
+          },
+        },
+      },
+    },
+  },
+};
 
 let chart6 = new Chart(document.getElementById("distribution-graph"), config);
 // *******End of sales distribution chart********
-
 
 // Table last column Styling
 // let tableData = document.querySelectorAll('.order-table tbody tr td:nth-child(4)');
@@ -742,45 +773,52 @@ let chart6 = new Chart(document.getElementById("distribution-graph"), config);
 
 // ******End of table last column styling*******
 
-
 // Customer chart
 
 let data1 = {
-  labels:["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
-  datasets:[
+  labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
+  datasets: [
     {
       label: "Loyal Customers",
-      data: [1000, 1500, 2240, 2000, 2500, 1900 ],
-      borderColor: ['cornflowerblue'],
-      backgroundColor: ['cornflowerblue'],
-      borderWidth: 1
+      data: [1000, 1500, 2240, 2000, 2500, 1900],
+      borderColor: ["cornflowerblue"],
+      backgroundColor: ["cornflowerblue"],
+      borderWidth: 2,
     },
     {
       label: "New Customers",
-      data: [500, 1200, 1050, 1500, 900, 750 ],
-      borderColor: ['bisque'],
-      backgroundColor: ['bisque'],
-      borderWidth:1
-    }
-  ]
-}
+      data: [500, 1200, 1050, 1500, 900, 750],
+      borderColor: ["bisque"],
+      backgroundColor: ["bisque"],
+      borderWidth: 2,
+    },
+  ],
+};
 
 let config1 = {
-  type: 'line',
+  type: "line",
   data: data1,
-  options:{
+  options: {
+    plugins:{
+      legend:{
+        labels:{
+          usePointStyle: true,
+          boxWidth: 5
+        }
+      }
+    },
     responsive: true,
     aspectRatio: 3.7,
     tension: 0.4,
-    scales:{
-      y:{
+    scales: {
+      y: {
         beginAtZero: true,
         min: 0,
-        max: 3000
-      }
-    }
-  }
-}
+        max: 3000,
+      },
+    },
+  },
+};
 
-let chart7 = new Chart(document.getElementById('customer-graph'), config1)
+let chart7 = new Chart(document.getElementById("customer-graph"), config1);
 // ********End of Customer Chart********
