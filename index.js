@@ -191,7 +191,7 @@ let toggleSearch = false;
 
 searchBtn.addEventListener("click", (event) => {
   if (!toggleSearch) {
-    event.target.style.transform = "rotate(90deg)";
+    // event.target.style.transform = "rotate(90deg)";
     setTimeout(() => {
       searchIndicator.classList.add("show-search");
       searchBar.classList.add("show-search");
@@ -199,7 +199,7 @@ searchBtn.addEventListener("click", (event) => {
     }, 200);
     toggleSearch = true;
   } else {
-    event.target.style.transform = "";
+    // event.target.style.transform = "";
     searchIndicator.classList.remove("show-search");
     searchBar.classList.remove("show-search");
     toggleSearch = false;
@@ -215,7 +215,7 @@ let toggleNotify = false;
 
 notifyBtn.addEventListener("click", (event) => {
   if (!toggleNotify) {
-    event.target.style.transform = "rotate(45deg)";
+    // event.target.style.transform = "rotate(45deg)";
     setTimeout(() => {
       notifyIndicator.classList.add("show-notify");
       notifyMenu.classList.add("show-notify");
@@ -223,7 +223,7 @@ notifyBtn.addEventListener("click", (event) => {
     }, 200);
     toggleNotify = true;
   } else {
-    event.target.style.transform = "";
+    // event.target.style.transform = "";
     notifyIndicator.classList.remove("show-notify");
     notifyMenu.classList.remove("show-notify");
     toggleNotify = false;
@@ -311,18 +311,29 @@ let graph = new Chart(doughnut, {
       {
         label: "Task Completion Chart",
         data: [70, 15, 15],
-        backgroundColor: ["cornflowerblue", "bisque", "lightgrey"],
+        backgroundColor: ["rgb(19, 64, 160)", "orange", "lightgrey"],
       },
     ],
   },
   options: {
+    // layout:{
+    //   padding:20
+    // },
     borderWidth: 0,
     aspectRatio: 1.8,
     responsive: true,
-    cutout: "80%",
+    cutout: "85%",
     plugins: {
       legend: {
+        // maxWidth: '200',
+        // itemWidth: 100,
+        color: 'black',
         labels: {
+          color:'black',
+          font:{
+            // color: 'black',
+            weight: 'bold'
+          },
           usePointStyle: true,
           boxWidth: 7
         },
@@ -616,6 +627,18 @@ let combinedData = {
   datasets: [dataset1, dataset2],
 };
 
+// const legendMargin = {
+//   id: 'legendMargin',
+//   beforeInit: (chart, legend, options)=>{
+//     console.log("fit", chart.legend.fit);
+//     const fitValue = chart.legend.fit;
+//     chart.legend.fit = function fit(){
+//       fitValue.bind(chart.legend)();
+//       return this.height += 50;
+//     }
+//   }
+// }
+
 let graph5 = document.getElementById("sales-graph");
 let chart5 = new Chart(graph5, {
   type: "bar",
@@ -629,13 +652,21 @@ let chart5 = new Chart(graph5, {
     aspectRatio: 3.7,
     plugins: {
       legend: {
+        position: 'top',
+        align:'end',
         labels: {
+          // padding: {
+          //   left: 10
+          // },
+          font:{
+            weight: 'bold'
+          },
           usePointStyle: true,
           boxWidth: 5
         },
-        display: true,
-        position: "top",
-        align: "right",
+        // display: true,
+        // position: "top",
+        // align: "right",
       },
     },
     scales: {
@@ -645,6 +676,7 @@ let chart5 = new Chart(graph5, {
       },
     },
   },
+  // plugins: [legendMargin]
 });
 
 // ******End of Total sales graph*******
@@ -703,8 +735,11 @@ let config = {
     rotation: 15,
     plugins: {
       legend: {
-        position: "bottom",
-        align: "left",
+        position: "chartArea",
+        align: "start",
+        // position:'left',
+        // align: 'end',
+        // marginTop: 100,
         onClick: (evt, legendItem, legend) => {
           // console.log("evt", evt);
           // console.log("legendItem",legendItem.text);
@@ -722,6 +757,9 @@ let config = {
           }
         },
         labels: {
+          font:{
+            weight: 'bold'
+          },
           usePointStyle: true,
           boxWidth: 5,
           // position: "bottom",
@@ -801,7 +839,11 @@ let config1 = {
   options: {
     plugins:{
       legend:{
+        align: 'end',
         labels:{
+          font:{
+            weight: 'bold'
+          },
           usePointStyle: true,
           boxWidth: 5
         }

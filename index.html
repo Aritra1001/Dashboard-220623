@@ -24,7 +24,7 @@
       @import url("style.css");
     </style> -->
   </head>
-  <body style="background-color: aliceblue">
+  <body style="background-color: ghostwhite">
     <!-- Student Details after clicking on view all -->
     <div class="studentDetails">
       <div class="stuDetailsContent">
@@ -243,21 +243,24 @@
           <div class="search-btn" tabindex="1">
             <i
               class="fa-solid fa-magnifying-glass"
-              style="margin: 0px 10px"
+              style="margin: 0px 10px; color: grey"
             ></i>
           </div>
           <div class="notification-btn" tabindex="1">
-            <i class="fa-regular fa-bell" style="margin: 0px 10px"></i>
+            <i
+              class="fa-regular fa-bell"
+              style="margin: 0px 10px; color: grey"
+            ></i>
           </div>
         </div>
 
-        <!-- <div class="user-text">
-        <p>
-          <b>John Mason</b>
-          <br />
-          <span> username@gmail.com</span>
-        </p>
-      </div> -->
+        <div class="user-text">
+          <p >
+            <b>John Mason</b>
+            <br />
+            <span> username@gmail.com</span>
+          </p>
+        </div>
         <div class="profile-img" tabindex="1"></div>
       </div>
     </div>
@@ -539,7 +542,7 @@
                       <div class="col-lg-5 offset-lg-1 col-md-10 work-hours">
                         <section class="div-head">
                           <div class="work-head">
-                            <p style="font-weight: bold">Work Status</p>
+                            <p style="font-weight: bold">Working Hours</p>
                             <select style="font-size: 13px">
                               <option value="Today">Today</option>
                               <option value="Tomorrow">Tomorrow</option>
@@ -590,9 +593,7 @@
                               <td class="subject-margin">Speaking Club</td>
                               <td>Speaking skill.docs</td>
                               <td>
-                                <li style="color: cornflowerblue">
-                                  Edit available
-                                </li>
+                                <li style="color: orange">Edit available</li>
                               </td>
                               <td>62 members</td>
                               <td>24MB</td>
@@ -636,9 +637,9 @@
                                 </div>
                               </section>
                               <section class="div-body">
-                                <div class="lesson-list my-2">
+                                <div class="lesson-list my-3">
                                   <div class="lesson-list-head">
-                                    <p style="font-weight: 500">
+                                    <p style="font-weight: 600">
                                       Common English
                                     </p>
                                     <div class="dots"></div>
@@ -659,9 +660,9 @@
                                     ></i>
                                   </div>
                                 </div>
-                                <div class="lesson-list my-2" id="second-item">
+                                <div class="lesson-list my-3" id="second-item">
                                   <div class="lesson-list-head">
-                                    <p style="font-weight: 500">
+                                    <p style="font-weight: 600">
                                       Speaking Club
                                     </p>
                                     <div class="dots"></div>
@@ -699,15 +700,20 @@
                                 </div>
                               </section>
                               <section class="div-body">
-                                <div class="task-completed-list">
+                                <!-- <div class="task-completed-list">
                                   <div class="logo-container">
                                     <i class="fa-solid fa-book"></i>
                                   </div>
                                   <div class="task-list-body">
-                                    <p>English-Grammar Test</p>
-                                    <span class="text-muted"
-                                      >Eula Kelly, 6th May</span
-                                    >
+                                    <div class="task-list-body-text">
+                                      <p>English-Grammar Test</p>
+                                      <span class="text-muted"
+                                        >Eula Kelly, 6th May</span
+                                      >
+                                    </div>
+                                    <div class="task-list-body-icon">
+                                      <i class="fa-solid fa-angle-right"></i>
+                                    </div>
                                   </div>
                                 </div>
                                 <div class="task-completed-list">
@@ -715,10 +721,15 @@
                                     <i class="fa-regular fa-envelope"></i>
                                   </div>
                                   <div class="task-list-body">
-                                    <p>Irregular Verbs Test</p>
-                                    <span class="text-muted"
-                                      >Olive Garze, 4th May</span
-                                    >
+                                    <div class="task-list-body-text">
+                                      <p>Irregular Verbs Test</p>
+                                      <span class="text-muted"
+                                        >Olive Garze, 4th May</span
+                                      >
+                                    </div>
+                                    <div class="task-list-body-icon">
+                                      <i class="fa-solid fa-angle-right"></i>
+                                    </div>
                                   </div>
                                 </div>
                                 <div class="task-completed-list">
@@ -726,12 +737,71 @@
                                     <i class="fa-regular fa-file"></i>
                                   </div>
                                   <div class="task-list-body">
-                                    <p>Spanish Essay</p>
-                                    <span class="text-muted"
-                                      >Franklin Harvey, 2nd May</span
-                                    >
+                                    <div class="task-list-body-text">
+                                      <p>Spanish Essay</p>
+                                      <span class="text-muted"
+                                        >Franklin Harvey, 2nd May</span
+                                      >
+                                    </div>
+                                    <div class="task-list-body-icon">
+                                      <i class="fa-solid fa-angle-right"></i>
+                                    </div>
                                   </div>
-                                </div>
+                                </div> -->
+                                <table class="task-complete-table">
+                                  <tbody>
+                                    <tr>
+                                      <td>
+                                        <div class="logo-container">
+                                          <i class="fa-solid fa-book"></i>
+                                        </div>
+                                      </td>
+                                      <td>
+                                        <p>
+                                          English-Grammar Test
+                                        </p>
+                                        <span class="text-muted"
+                                          >Eula Kelly, 6th May</span
+                                        >
+                                      </td>
+                                      <td>
+                                        <i class="fa-solid fa-angle-right text-muted"></i>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>
+                                        <div class="logo-container" id="logo-2">
+                                          <i class="fa-regular fa-envelope"></i>
+                                        </div>
+                                      </td>
+                                      <td>
+                                        <p>Irregular Verbs Test</p>
+                                        <span class="text-muted"
+                                          >Olive Garze, 4th May</span
+                                        >
+                                      </td>
+                                      <td>
+                                        <i class="fa-solid fa-angle-right text-muted"></i>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>
+                                        <div class="logo-container" id="logo-3">
+                                          <i class="fa-regular fa-file"></i>
+                                        </div>
+                                      </td>
+                                      <td>
+                                        <p>Spanish Essay</p>
+                                        <span class="text-muted"
+                                          >Franklin Harvey, 2nd May</span
+                                        >
+                                      </td>
+                                      <td>
+                                        <i class="fa-solid fa-angle-right text-muted"></i>
+                                      </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
                               </section>
                             </div>
                           </div>
