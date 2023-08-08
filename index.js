@@ -57,6 +57,7 @@ let spinner = document.querySelector(".spinner");
 let layer = document.querySelector(".show-layer");
 
 // Functions for view all popups
+let background = document.querySelector("main");
 const showLayer = () => {
   layer.style.display = "block";
   spinner.style.display = "block";
@@ -65,7 +66,6 @@ const showLayer = () => {
 const showContent = () => {
   layer.style.display = "none";
   spinner.style.display = "none";
-  sudentDetails.style.display = "block";
   background.style.filter = "blur(10px)";
   background.style.opacity = "0.3";
   sidebar.style.opacity = "0.1";
@@ -73,7 +73,6 @@ const showContent = () => {
 };
 
 const showMainContent = () => {
-  sudentDetails.style.display = "none";
   background.style.filter = "blur(0px)";
   background.style.opacity = "1";
   sidebar.style.opacity = "1";
@@ -87,7 +86,6 @@ const hideLayer = () => {
 
 // View all pop-up for students
 let viewStudent = document.querySelector("#viewStudent");
-let background = document.querySelector("main");
 let sudentDetails = document.querySelector(".studentDetails");
 let stuCloseBtn = document.querySelector(".stuCloseBtn");
 
@@ -96,9 +94,11 @@ viewStudent.addEventListener("mouseenter", () => {
 });
 
 viewStudent.addEventListener("click", () => {
+  // console.log("ViewStudent is clicked")
   showLayer();
   setTimeout(() => {
     showContent();
+    sudentDetails.style.display = "block";
   }, 1000);
 });
 
@@ -107,6 +107,7 @@ stuCloseBtn.addEventListener("mouseenter", () => {
 });
 
 stuCloseBtn.addEventListener("click", () => {
+  sudentDetails.style.display = "none";
   showMainContent();
 });
 
@@ -120,9 +121,11 @@ viewMedia.addEventListener("mouseenter", () => {
 });
 
 viewMedia.addEventListener("click", () => {
+  // console.log("viewMedia is clicked");
   showLayer();
   setTimeout(() => {
     showContent();
+    medDetails.style.display = "block";
   }, 1000);
 });
 
@@ -131,6 +134,7 @@ medCloseBtn.addEventListener("mouseenter", () => {
 });
 
 medCloseBtn.addEventListener("click", () => {
+  medDetails.style.display = "none";
   showMainContent();
 });
 
@@ -144,9 +148,11 @@ lessonView.addEventListener("mouseenter", () => {
 });
 
 lessonView.addEventListener("click", () => {
+  // console.log("viewLesson is clicked");
   showLayer();
   setTimeout(() => {
     showContent();
+    lessonDetails.style.display = "block";
   }, 1000);
 });
 
@@ -155,6 +161,7 @@ lessCloseBtn.addEventListener("mouseenter", () => {
 });
 
 lessCloseBtn.addEventListener("click", () => {
+  lessonDetails.style.display = "none";
   showMainContent();
 });
 
@@ -168,9 +175,11 @@ taskView.addEventListener("mouseenter", () => {
 });
 
 taskView.addEventListener("click", () => {
+  // console.log("viewTask is clicked");
   showLayer();
   setTimeout(() => {
     showContent();
+    taskDetails.style.display = "block";
   }, 1000);
 });
 
@@ -179,6 +188,7 @@ taskCloseBtn.addEventListener("mouseenter", () => {
 });
 
 taskCloseBtn.addEventListener("click", () => {
+  taskDetails.style.display = "none";
   showMainContent();
 });
 

@@ -34,48 +34,70 @@
         </div>
         <div class="small-line"></div>
         <div class="stuDetailsBody">
-          <div class="student-list">
-            <div class="student-item">
-              <div class="student-profile-logo"></div>
-              <p class="my-1">Amelia Colier</p>
-              <div class="parent-bar-1">
-                <div class="child-bar-1"></div>
-              </div>
-              <p class="my-1 percent">95%</p>
-            </div>
-            <div class="student-item">
-              <div class="student-profile-logo logo-2"></div>
-              <p class="my-1">Estelle Baldwin</p>
-              <div class="parent-bar-1">
-                <div class="child-bar-1 second-color"></div>
-              </div>
-              <p class="my-1 percent">84%</p>
-            </div>
-            <div class="student-item">
-              <div class="student-profile-logo logo-3"></div>
-              <p class="my-1">Micheal Watts</p>
-              <div class="parent-bar-1">
-                <div class="child-bar-1 third-color"></div>
-              </div>
-              <p class="my-1 percent">90%</p>
-            </div>
-            <div class="student-item">
-              <div class="student-profile-logo logo-4"></div>
-              <p class="my-1">Amanda Wood</p>
-              <div class="parent-bar-1">
-                <div class="child-bar-1 fourth-color"></div>
-              </div>
-              <p class="my-1 percent">72%</p>
-            </div>
-            <div class="student-item">
-              <div class="student-profile-logo logo-5"></div>
-              <p class="my-1">Mitchell Johnson</p>
-              <div class="parent-bar-1">
-                <div class="child-bar-1 fifth-color"></div>
-              </div>
-              <p class="my-1 percent">60%</p>
-            </div>
-          </div>
+          <table class="student-table">
+            <tbody>
+              <tr class="student-table-row">
+                <td class="student-table-data">
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBwgu1A5zgPSvfE83nurkuzNEoXs9DMNr8Ww&usqp=CAU"
+                    alt="profile-img"
+                  />
+                </td>
+                <td>Amelia Colier</td>
+                <td>
+                  <div class="parent-bar-1">
+                    <div class="child-bar-1"></div>
+                  </div>
+                </td>
+                <td>95%</td>
+              </tr>
+              <tr class="student-table-row">
+                <td class="student-table-data">
+                  <img
+                    src="https://media.istockphoto.com/id/1154642632/photo/close-up-portrait-of-brunette-woman.jpg?b=1&s=612x612&w=0&k=20&c=7hgSq1L2mpIbpuuw00KELApMpmZfBkZ-RBxn3Qps5zQ="
+                    alt="profile-img"
+                  />
+                </td>
+                <td>Estelle Baldwin</td>
+                <td>
+                  <div class="parent-bar-1">
+                    <div class="child-bar-1 second-color"></div>
+                  </div>
+                </td>
+                <td>84%</td>
+              </tr>
+              <tr class="student-table-row">
+                <td class="student-table-data">
+                  <img
+                    src="https://thumbs.dreamstime.com/b/headshot-portrait-arabic-businessman-posing-office-young-male-employee-glasses-pose-workplace-profile-picture-successful-207320117.jpg"
+                    alt="profile-img"
+                  />
+                </td>
+                <td>Micheal Watts</td>
+                <td>
+                  <div class="parent-bar-1">
+                    <div class="child-bar-1 third-color"></div>
+                  </div>
+                </td>
+                <td>90%</td>
+              </tr>
+              <tr class="student-table-row">
+                <td class="student-table-data">
+                  <img
+                    src="https://t3.ftcdn.net/jpg/04/32/57/94/240_F_432579409_6vGaEfxzAEoXojwkiE8KQ6b0riuFcoXY.jpg"
+                    alt="profile-img"
+                  />
+                </td>
+                <td>Amanda Wood</td>
+                <td>
+                  <div class="parent-bar-1">
+                    <div class="child-bar-1 fourth-color"></div>
+                  </div>
+                </td>
+                <td>72%</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
     </div>
@@ -91,9 +113,11 @@
         <div class="small-line-media"></div>
         <div class="medDetailsBody">
           <section class="div-body">
-            <table style="border-collapse: separate">
+            <table class="media-table" style="border-collapse: separate">
               <tr class="media-row">
-                <td class="media-list-section section-1">A1</td>
+                <td class="media-list-section">
+                  <p class="section-1">A1</p>
+                </td>
                 <td>Common English</td>
                 <td>Cambridge advanced.pdf</td>
                 <td><li>Only View</li></td>
@@ -101,17 +125,17 @@
                 <td>42MB</td>
               </tr>
               <tr class="media-row">
-                <td id="section-2">B1</td>
+                <td><p id="section-2">B1</p></td>
                 <td class="subject-margin">Speaking Club</td>
                 <td>Speaking skill.docs</td>
                 <td>
-                  <li style="color: cornflowerblue">Edit available</li>
+                  <li style="color: orange">Edit available</li>
                 </td>
                 <td>62 members</td>
                 <td>24MB</td>
               </tr>
               <tr class="media-row">
-                <td id="section-3">C2</td>
+                <td><p id="section-3">C2</p></td>
                 <td>Business English</td>
                 <td>English Dictionary.wav</td>
                 <td><li>Only View</li></td>
@@ -119,7 +143,7 @@
                 <td>34 MB</td>
               </tr>
               <tr class="media-row">
-                <td class="section-1">A2</td>
+                <td><p class="section-1">C1</p></td>
                 <td>Spanish Grammar</td>
                 <td>Easy Learning Book.zip</td>
                 <td><li>Only View</li></td>
@@ -195,42 +219,52 @@
         </div>
         <div class="small-line-task"></div>
         <div class="taskDetailsBody">
-          <div class="task-completed-list">
-            <div class="logo-container">
-              <i class="fa-solid fa-book"></i>
-            </div>
-            <div class="task-list-body">
-              <p>English-Grammar Test</p>
-              <span class="text-muted">Eula Kelly, 6th May</span>
-            </div>
-          </div>
-          <div class="task-completed-list">
-            <div class="logo-container" id="logo-2">
-              <i class="fa-regular fa-envelope"></i>
-            </div>
-            <div class="task-list-body">
-              <p>Irregular Verbs Test</p>
-              <span class="text-muted">Olive Garze, 4th May</span>
-            </div>
-          </div>
-          <div class="task-completed-list">
-            <div class="logo-container" id="logo-3">
-              <i class="fa-regular fa-file"></i>
-            </div>
-            <div class="task-list-body">
-              <p>Spanish Essay</p>
-              <span class="text-muted">Franklin Harvey, 2nd May</span>
-            </div>
-          </div>
-          <div class="task-completed-list">
-            <div class="logo-container">
-              <i class="fa-regular fa-keyboard"></i>
-            </div>
-            <div class="task-list-body">
-              <p>Coding Test</p>
-              <span class="text-muted">Eric Bailley, 2nd May</span>
-            </div>
-          </div>
+          <table class="task-complete-table">
+            <tbody>
+              <tr>
+                <td>
+                  <div class="logo-container">
+                    <i class="fa-solid fa-book"></i>
+                  </div>
+                </td>
+                <td>
+                  <p>English-Grammar Test</p>
+                  <span class="text-muted">Eula Kelly, 6th May</span>
+                </td>
+                <td>
+                  <i class="fa-solid fa-angle-right text-muted"></i>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="logo-container" id="logo-2">
+                    <i class="fa-regular fa-envelope"></i>
+                  </div>
+                </td>
+                <td>
+                  <p>Irregular Verbs Test</p>
+                  <span class="text-muted">Olive Garze, 4th May</span>
+                </td>
+                <td>
+                  <i class="fa-solid fa-angle-right text-muted"></i>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="logo-container" id="logo-3">
+                    <i class="fa-regular fa-file"></i>
+                  </div>
+                </td>
+                <td>
+                  <p>Spanish Essay</p>
+                  <span class="text-muted">Franklin Harvey, 2nd May</span>
+                </td>
+                <td>
+                  <i class="fa-solid fa-angle-right text-muted"></i>
+                </td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
     </div>
@@ -255,7 +289,7 @@
         </div>
 
         <div class="user-text">
-          <p >
+          <p>
             <b>John Mason</b>
             <br />
             <span> username@gmail.com</span>
@@ -757,15 +791,15 @@
                                         </div>
                                       </td>
                                       <td>
-                                        <p>
-                                          English-Grammar Test
-                                        </p>
+                                        <p>English-Grammar Test</p>
                                         <span class="text-muted"
                                           >Eula Kelly, 6th May</span
                                         >
                                       </td>
                                       <td>
-                                        <i class="fa-solid fa-angle-right text-muted"></i>
+                                        <i
+                                          class="fa-solid fa-angle-right text-muted"
+                                        ></i>
                                       </td>
                                     </tr>
                                     <tr>
@@ -781,7 +815,9 @@
                                         >
                                       </td>
                                       <td>
-                                        <i class="fa-solid fa-angle-right text-muted"></i>
+                                        <i
+                                          class="fa-solid fa-angle-right text-muted"
+                                        ></i>
                                       </td>
                                     </tr>
                                     <tr>
@@ -797,7 +833,9 @@
                                         >
                                       </td>
                                       <td>
-                                        <i class="fa-solid fa-angle-right text-muted"></i>
+                                        <i
+                                          class="fa-solid fa-angle-right text-muted"
+                                        ></i>
                                       </td>
                                     </tr>
                                   </tbody>

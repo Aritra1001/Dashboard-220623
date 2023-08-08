@@ -63,6 +63,10 @@
   margin-top: 1.2rem;
 }
 
+.stuDetailsBody .student-table{
+  width: 100%;
+}
+
 .mediaDetails {
   background: aliceblue;
   height: 25rem;
@@ -132,7 +136,7 @@
 
 .medDetailsBody table {
   width: 90%;
-  margin-left: 3rem;
+  /* margin-left: 3rem; */
 }
 
 .medDetailsBody tr td:nth-child(1) {
